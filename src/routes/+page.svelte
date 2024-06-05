@@ -4,10 +4,10 @@
 	import Gallery from './page/Gallery.svelte';
 	import Hero from './page/Hero.svelte';
 	import Pelayanan from './page/Pelayanan.svelte';
+	import Testimoni from './page/Testimoni.svelte';
 	import Umroh from './page/Umroh.svelte';
 
 	export let data;
-	console.log(data);
 
 	let y;
 </script>
@@ -18,3 +18,4 @@
 <Fasilitas />
 <Banner />
 <Gallery />
+<Testimoni />

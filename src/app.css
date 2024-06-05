@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	cursor: pointer;
+	border: 2px #3554d1 solid;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: 40px;
+	height: 40px;
+	border: 2px solid #3554d1;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 20px; /* Adjust icon size */
+	color: #3554d1; /* Icon color */
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: #d9d9d9;
+	opacity: 1;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* Active pagination dot */
+.swiper-pagination-bullet-active {
+	display: block;
+	width: 50px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #3554d1;
+}

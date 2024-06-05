@@ -27,6 +27,8 @@
 		"@melt-ui/pp": "^0.3.2",
 		"@melt-ui/svelte": "^0.81.0",
 		"@sveltejs/enhanced-img": "^0.2.1",
-		"mongodb": "^6.7.0"
+		"mongodb": "^6.7.0",
+		"sass": "^1.77.4",
+		"swiper": "^11.1.4"
 	}
 }
