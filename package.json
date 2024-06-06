@@ -28,6 +28,7 @@
 		"@melt-ui/svelte": "^0.81.0",
 		"@sveltejs/adapter-node": "^5.0.1",
 		"@sveltejs/enhanced-img": "^0.2.1",
+		"material-icons": "^1.13.12",
 		"mongodb": "^6.7.0",
 		"sass": "^1.77.4",
 		"swiper": "^11.1.4"

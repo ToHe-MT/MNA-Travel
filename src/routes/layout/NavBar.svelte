@@ -53,7 +53,7 @@
 		>
 			<div class="image hidden xl:block">
 				<img
-					src="./logo-{scrolled ? 'sky' : 'white'}.png"
+					src="/logo-{activeUrl === '/' ? (scrolled ? 'sky' : 'white') : 'sky'}.png"
 					alt=""
 					class="h-16 w-auto object-cover p-2"
 				/>
@@ -146,10 +146,7 @@
 	<div class="bg-white min-h-20 w-full flex justify-center items-center">
 		<div class="flex justify-between items-center px-4 py-2 w-full">
 			<div class="flex-1 text-center">
-				<a
-					href="/"
-					class="flex flex-col items-center {activeUrl === '/' ? 'active' : ''}"
-				>
+				<a href="/" class="flex flex-col items-center {activeUrl === '/' ? 'active' : ''}">
 					<span class="material-icons">home</span>
 					<span class="text-xs">Home</span>
 				</a>

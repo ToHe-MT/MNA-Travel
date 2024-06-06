@@ -5,10 +5,10 @@
 </script>
 
 <div
-	class="hero relative flex flex-col items-center justify-center w-full h-screen bg-cover bg-center bg-[url('./hero.svg')]"
+	class="hero relative flex flex-col items-center justify-center w-full h-screen bg-cover bg-center" style="background-image: url('./hero.svg');"
 >
 	<div class="flex lg:hidden absolute top-32 z-20">
-		<img src="logo-white.png" alt="" class="max-h-12" />
+		<img src="./logo-white.png" alt="" class="max-h-12" />
 	</div>
 	<div class="absolute inset-0 bg-black/50 z-10"></div>
 	<div class="absolute inset-0 bg-blue-700/10 z-10"></div>

@@ -21,7 +21,7 @@
 					{#if idx === 1}
 						<div class="w-full flex {umroh.length === 2 ? 'sm:justify-start' : ''}  justify-center items-center">
 							<div
-								class="w-[400px] max-w-full bg-gray-100 rounded-lg shadow-lg px-6 text-center divide-y divide-dashed"
+								class="w-full max-w-[400px] bg-gray-100 rounded-lg shadow-lg px-6 text-center divide-y divide-dashed"
 							>
 								<div class="py-6">
 									<h2 class="text-lg font-semibold tracking-wider text-gray-900">{paket.title}</h2>
@@ -58,7 +58,7 @@
 					{:else}
 						<div class="w-full flex {umroh.length === 2 ? 'sm:justify-end' : ''} justify-center items-center">
 							<div
-								class="w-[400px] max-w-full bg-white rounded-lg shadow-lg px-6 text-center divide-y divide-dashed"
+								class="w-full max-w-[400px] bg-white rounded-lg shadow-lg px-6 text-center divide-y divide-dashed"
 							>
 								<div class="py-6">
 									<h2 class="text-lg font-semibold tracking-wider text-gray-900">{paket.title}</h2>
