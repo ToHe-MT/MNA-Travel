@@ -58,13 +58,5 @@
 </div>
 
 <style>
-	@media (max-width: 550px) {
-		.hidden-below-550 {
-			display: none;
-		}
-		.minheihgt {
-			height: 100%;
-			min-height: none;
-		}
-	}
+	
 </style>

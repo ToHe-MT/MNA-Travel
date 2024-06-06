@@ -29,7 +29,7 @@
 					</div>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">location_on</span>
-						<a href="" class="hover:text-blue-700">Jl. Wijaya Kusuma No.30, Pondok Labu</a>
+						<a href="/" class="hover:text-blue-700">Jl. Wijaya Kusuma No.30, Pondok Labu</a>
 					</div>
 				</div>
 			</div>

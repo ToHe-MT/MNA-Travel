@@ -19,7 +19,7 @@
 				lg:grid-cols-4
 				gap-3
 				grid-flow-row-dense
-				lg:px-48"
+				xl:px-48"
 		>
 			<img src="./gallery1.svg" alt="" class="w-full"/>
 			<img src="./gallery-row-2.svg" alt="" class="row-span-1 sm:row-span-2 w-full" />
