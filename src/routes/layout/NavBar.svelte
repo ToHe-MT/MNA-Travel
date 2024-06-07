@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { writable } from 'svelte/store';
 	import { createDropdownMenu, melt } from '@melt-ui/svelte';
+	import Modal from '../../lib/components/modal.svelte';
 
 	const {
 		elements: { trigger, menu, item }
@@ -142,6 +143,7 @@
 		</div>
 	</div>
 </div>
+<!-- NAVBAR -->
 <div class="block lg:hidden fixed bottom-0 left-0 right-0 z-50 transition-all">
 	<div class="bg-white min-h-20 w-full flex justify-center items-center">
 		<div class="flex justify-between items-center px-4 py-2 w-full">
@@ -152,16 +154,20 @@
 				</a>
 			</div>
 			<div class="flex-1 text-center">
-				<a
-					href="/layanan"
-					class="flex flex-col items-center {layananMobileSelected ||
-					activeUrl.startsWith('/layanan')
-						? 'active'
-						: ''}"
-				>
-					<span class="material-icons">view_list</span>
-					<span class="text-xs">Layanan</span>
-				</a>
+				<Modal items={layanan} {activeUrl}>
+					<div
+						class="flex flex-col items-center {layananMobileSelected ||
+						activeUrl.startsWith('/layanan')
+							? 'active'
+							: ''}"
+					>
+						<span class="material-icons">view_list</span>
+						<div class="flex justify-center items-center">
+							<span class="text-xs">Layanan</span>
+							<span class="material-icons material-symbols-outlined"> arrow_drop_up </span>
+						</div>
+					</div>
+				</Modal>
 			</div>
 			<div class="flex-1 text-center">
 				<a

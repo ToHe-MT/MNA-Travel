@@ -8,8 +8,8 @@
 >
 	<div class="container mx-auto p-6">
 		<div class="text-white">
-			<h3 class="text-center text-xl mb-8">Paket Umrah</h3>
-			<h1 class="text-center text-4xl font-semibold tracking-wide mb-8">Layanan Paket Umrah</h1>
+			<h3 class="text-center text-lg md:text-xl md-2 md:mb-6">Paket Umrah</h3>
+			<h1 class="text-center text-2xl md:text-4xl font-semibold tracking-wide mb-8">Layanan Paket Umrah</h1>
 		</div>
 		<div
 			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-{umroh && umroh.length

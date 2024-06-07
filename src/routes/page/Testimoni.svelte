@@ -41,8 +41,8 @@
 >
 	<div class="container mx-auto p-6 flex flex-col flex-grow">
 		<div class="flex-shrink-0">
-			<h3 class="text-center text-xl mb-4 text-blue-700">Testimonials</h3>
-			<h1 class="text-center text-4xl font-semibold tracking-wide mb-4 text-black">
+			<h3 class="text-center text-lg md:text-xl md-2 md:mb-6 text-blue-700">Testimonials</h3>
+			<h1 class="text-center text-2xl md:text-4xl font-semibold tracking-wide mb-4 text-black">
 				Mereka yang sudah berangkat
 			</h1>
 		</div>
@@ -52,8 +52,8 @@
 					{#each Array(6)
 						.fill()
 						.map((_, i) => i + 1) as item,idx}
-						<div class="swiper-slide p-4 {idx%2===0?'md:mt-10':'md:mb-10'}">
-							<div class="w-full bg-white rounded-lg flex flex-col p-10 gap-4 drop-shadow-md">
+						<div class="swiper-slide md:p-4 {idx%2===0?'md:mt-10':'md:mb-10'}">
+							<div class="w-full bg-white rounded-lg flex flex-col p-4 md:p-10 gap-4 drop-shadow-md">
 								<div class="py-6">
 									<svg
 										width="26"
@@ -74,17 +74,17 @@
 										Travel, semoga bisa kembali"
 									</p>
 								</div>
-								<div class="grid grid-cols-4 items-center">
-									<div class="px-4">
+								<div class="flex items-center">
+									<div class="pr-4 md:pr-4">
 										<img
 											src="./profile1.svg"
 											alt="User Photo "
-											class="rounded-full w-16 h-16 mx-auto"
+											class="rounded-full w-12 h-12 md:w-16 md:h-16 mx-auto"
 										/>
 									</div>
 									<div class="flex flex-col col-span-3">
-										<h3 class="font-semibold text-lg">Evangeline Dominica</h3>
-										<p>Branding company</p>
+										<h3 class="font-semibold text-sm md:text-lg">Evangeline Dominica</h3>
+										<p class="text-sm md:text-base">Branding company</p>
 									</div>
 								</div>
 							</div>

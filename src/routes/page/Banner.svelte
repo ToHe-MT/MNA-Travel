@@ -7,9 +7,9 @@
 	style="background-image: url('./banner.svg')"
 >
 	<div class="absolute inset-0 bg-black/50 z-10"></div>
-	<div class="flex justify-center items-start flex-col z-20 px-24 gap-4">
-		<h1 class="text-4xl font-bold text-white">Pengalaman Umrah Terbaik Menanti Anda</h1>
-		<p class="text-white text-lg font-medium">
+	<div class="flex justify-center items-start flex-col z-20 px-4 md:px-24 gap-4">
+		<h1 class="text-2xl md:text-4xl font-bold text-white">Pengalaman Umrah Terbaik Menanti Anda</h1>
+		<p class="text-white text-md md:text-lg font-medium">
 			Dengan Promo Istimewa, Kami Siap Membantu Anda Mendapatkan Pelayanan Terbaik
 		</p>
 		<div>

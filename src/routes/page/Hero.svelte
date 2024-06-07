@@ -15,8 +15,8 @@
 	<div
 		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-5 md:gap-10 px-8 md:px-0"
 	>
-		<h1 class="text-2xl sm:text-3xl lg:text-4xl font-semibold lg:tracking-wide">{heroText1}</h1>
-		<h2 class="text-lg sm:text-xl lg:text-xl font-medium lg:px-16 lg:tracking-widest">
+		<h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold lg:tracking-wide">{heroText1}</h1>
+		<h2 class="text-base sm:text-xl lg:text-xl font-medium lg:px-16 lg:tracking-widest">
 			{heroText2}
 		</h2>
 		<button class="bg-blue-700 px-4 py-4 m-auto rounded-xl font-medium tracking-wide">
