@@ -1,16 +1,16 @@
-# fly.toml app configuration file generated for kartika-web on 2024-03-11T07:03:22+07:00
+# fly.toml app configuration file generated for mna-travel-web on 2024-06-07T15:58:07+07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'kartika-web'
+app = 'mna-travel-web'
 primary_region = 'sin'
 
-[env]
-  VITE_S3_PUBLIC_URL = "https://storage.kartikamas.id"
-  VITE_S3_PUBLIC_URL_2 = "https://storage2.kartikamas.id"
-
 [build]
+
+[env]
+  VITE_S3_PUBLIC_URL = 'https://storage.kartikamas.id'
+  VITE_S3_PUBLIC_URL_2 = 'https://storage2.kartikamas.id'
 
 [http_service]
   internal_port = 3000
