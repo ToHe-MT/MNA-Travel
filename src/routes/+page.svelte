@@ -12,6 +12,10 @@
 	let y;
 </script>
 
+<svelte:head>
+	<title>MNA - Travel | Pelayanan Umroh Terbaik </title>
+</svelte:head>
+
 <Hero />
 <Pelayanan />
 <Umroh umroh={data.umroh} />

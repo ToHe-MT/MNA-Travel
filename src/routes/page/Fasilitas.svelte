@@ -11,7 +11,7 @@
 >
 	<div class="container mx-auto p-4 rounded-md">
 		<div class="grid grid-cols-10 px-8 sm:px-0">
-            <div class="hidden xl:col-span-1 xl:block"></div>
+			<div class="hidden xl:col-span-1 xl:block"></div>
 			<div
 				class=" col-span-10 sm:col-span-9 lg:col-span-5 xl:col-span-4 md:col-span-7 relative h-full sm:min-h-[400px]"
 			>
@@ -102,9 +102,15 @@
 					</div>
 				</div>
 				<div>
-					<Button className="rounded-xl border border-blue-700 text-blue-700 hover:bg-blue-100"
-						>Hubungi Kami</Button
+					<a
+						href="https://wa.me/6282240406568"
+						target="_blank"
+						class="contact flex justify-start align-middle"
 					>
+						<Button className="rounded-xl border border-blue-700 text-blue-700 hover:bg-blue-100"
+							>Hubungi Kami</Button
+						>
+					</a>
 				</div>
 			</div>
 		</div>

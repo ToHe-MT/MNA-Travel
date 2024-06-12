@@ -4,7 +4,7 @@
 			<div class="flex gap-2 flex-col xl:pr-32">
 				<div class="flex gap-4 justify-between items-end pr-8">
 					<img src="/logo-sky.png" alt="MNA Travel Logo" class="py-2 w-24 h-auto" />
-					<div class="flex justify-start items-end gap-4">
+					<!-- <div class="flex justify-start items-end gap-4">
 						<a
 							href="https://www.youtube.com/@MNATravel"
 							target="_blank"
@@ -82,7 +82,7 @@
 								/>
 							</svg>
 						</a>
-					</div>
+					</div> -->
 				</div>
 				<p>
 					Travel umroh dan haji MNA Travel, merupakan salah satu travel sunnah yang memberikan

@@ -12,12 +12,16 @@
 		<p class="text-white text-md md:text-lg font-medium">
 			Dengan Promo Istimewa, Kami Siap Membantu Anda Mendapatkan Pelayanan Terbaik
 		</p>
-		<div>
+		<a
+			href="https://wa.me/6282240406568"
+			target="_blank"
+			class="contact flex justify-start align-middle"
+		>
 			<Button
 				className="rounded-xl border m-auto bg-white/20 hover:bg-blue-100/50 hover:bg-opacity text-white"
 			>
 				Hubungi Kami
 			</Button>
-		</div>
+		</a>
 	</div>
 </div>

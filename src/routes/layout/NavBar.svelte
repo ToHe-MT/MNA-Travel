@@ -46,7 +46,7 @@
 >
 	<div class="container mx-auto px-4" on:scroll={(e) => console.log(e.target.scrollTop)}>
 		<div
-			class="justify-between align-middle hidden lg:flex transition-duration-75 {activeUrl === '/'
+			class="justify-between align-middle hidden lg:flex transition-duration-75 {activeUrl === '/' || activeUrl === '/layanan/paket/umroh'
 				? scrolled
 					? 'text-black min-h-12'
 					: 'text-white min-h-16'
@@ -54,9 +54,9 @@
 		>
 			<div class="image hidden xl:block">
 				<img
-					src="/logo-{activeUrl === '/' ? (scrolled ? 'sky' : 'white') : 'sky'}.png"
+					src="/logo-{activeUrl === '/' || activeUrl === '/layanan/paket/umroh'? (scrolled ? 'sky-long' : 'white-long') : 'sky'}.png"
 					alt=""
-					class="h-16 w-auto object-cover p-2"
+					class="h-16 w-auto object-cover py-2"
 				/>
 			</div>
 			<div class=" content flex justify-center align-middle gap-x-10 m-auto">

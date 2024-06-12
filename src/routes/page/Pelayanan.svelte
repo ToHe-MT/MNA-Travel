@@ -10,7 +10,7 @@
 	<div class="container mx-auto p-4 rounded-md">
 		<div class="grid grid-cols-10">
 			<div class="block lg:col-span-1 lg:block col-span-10 min-h-16"></div>
-			
+
 			<div
 				class="text-left col-span-10 lg:col-span-4 flex content-center justify-center flex-col py-10 lg:py-0"
 			>
@@ -22,11 +22,16 @@
 					Lorem ipsum dolor sit amet consectetur. Orci quam in nulla cursus sed eros laoreet
 					rhoncus. Netus velit lacus id diam tortor.
 				</p>
-				<div>
+
+				<a
+					href="https://wa.me/6282240406568"
+					target="_blank"
+					class="contact flex justify-start"
+				>
 					<Button className="rounded-xl border bg-blue-700 hover:bg-blue-700 text-white"
 						>Hubungi Kami</Button
 					>
-				</div>
+				</a>
 			</div>
 			<div class="hidden lg:col-span-1 lg:block"></div>
 			<div class="lg:col-span-4 col-span-10 sm:relative sm:min-h-[350px] order-first lg:order-last">
@@ -58,5 +63,4 @@
 </div>
 
 <style>
-	
 </style>

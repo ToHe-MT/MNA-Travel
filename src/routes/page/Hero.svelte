@@ -5,7 +5,8 @@
 </script>
 
 <div
-	class="hero relative flex flex-col items-center justify-center w-full h-screen bg-cover bg-center" style="background-image: url('./hero.svg');"
+	class="hero relative flex flex-col items-center justify-center w-full h-screen bg-cover bg-center"
+	style="background-image: url('./hero.svg');"
 >
 	<div class="flex lg:hidden absolute top-32 z-20">
 		<img src="./logo-white.png" alt="" class="max-h-12" />
@@ -19,8 +20,14 @@
 		<h2 class="text-base sm:text-xl lg:text-xl font-medium lg:px-16 lg:tracking-widest">
 			{heroText2}
 		</h2>
-		<button class="bg-blue-700 px-4 py-4 m-auto rounded-xl font-medium tracking-wide">
-			Hubungi Kami
-		</button>
+		<a
+			href="https://wa.me/6282240406568"
+			target="_blank"
+			class="contact flex justify-center align-middle"
+		>
+			<button class="bg-blue-700 px-4 py-4 m-auto rounded-xl font-medium tracking-wide">
+				Hubungi Kami
+			</button>
+		</a>
 	</div>
 </div>
