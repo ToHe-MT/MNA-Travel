@@ -1,9 +1,29 @@
 <script>
 	import Button from '$lib/button.svelte';
+	let items = [
+		'Tiket Pesawat',
+		'Akomodasi Hotel',
+		'Visa Umroh',
+		'Asuransi',
+		'Handling & Lounge Bandara',
+		'Bus Exclusive Saudi',
+		'Free Zam-zam 5 Liter',
+		'Manasik di Hotel Transit Bandara',
+		'Receiver Audio untuk Jamaah',
+		'Bonus City Tour Thaif',
+		'Bonus Haramain Express',
+		'Bonus Perlengkapan',
+		'Bonus Museum Wahyu',
+		'Bonus Albaik',
+		'Bonus Ice Cream Uhud',
+		'Bonus Merchandise',
+		'Bonus Album Digital',
+		'Bonus Fotografer',
+		'Bonus Bus Daerah'
+	];
 
-	const heroText1 = 'Wujudkan Impian Ibadah Anda dengan Layanan Profesional dan Fasilitas Unggulan';
-	const heroText2 =
-		'MNA Travel mengakomodir kebutuhan umat mulai dari Umroh, Haji, hingga Penyewaan transportasi pariwisata.';
+	let firstColumn = items.slice(0, Math.ceil(items.length / 2));
+	let secondColumn = items.slice(Math.ceil(items.length / 2));
 </script>
 
 <div
@@ -30,74 +50,37 @@
 			<div
 				class="text-left col-span-10 lg:col-span-4 flex content-center justify-center flex-col py-10 lg:py-0"
 			>
-				<h1 class="text-2xl sm:text-4xl font-bold mb-4 tracking-wide">
-					Fasilitas Eksklusif untuk Kenyamanan Anda
+				<h1 class="text-lg sm:text-2xl font-bold mb-4 tracking-wide">
+					In Syaa Allah, Anda akan merasakan pengalaman ibadah yang tak terlupakan.
 				</h1>
 				<p class="text-gray-400 mb-0">
-					Lorem ipsum dolor sit amet consectetur. Orci quam in nulla cursus sed eros laoreet
-					rhoncus. Netus velit lacus id diam tortor.
+					MNA Travel menyediakan program eksklusif Umroh dengan fasilitas istimewa untuk memenuhi
+					kebutuhan Anda.
 				</p>
+				<!--*! ANGKA -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 py-5 sm:py-8 gap-3">
 					<div>
-						<ul class="flex flex-col gap-3">
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">1</span>
-								</div>
-								Konsumsi
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">2</span>
-								</div>
-								Visa Haji & Umroh
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">3</span>
-								</div>
-								Perlengkapan Umroh
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">4</span>
-								</div>
-								TL / Mutawwif
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">5</span>
-								</div>
-								Hotel Penginapan
-							</li>
+						<ul class="flex flex-col gap-2">
+							{#each firstColumn as item, idx}
+								<li class="flex gap-4 items-center">
+									<div class="bg-gray-100 rounded-full h-5 w-5 flex justify-center items-center">
+										<span class="font-semibold text-xs">{idx + 1}</span>
+									</div>
+									{item}
+								</li>
+							{/each}
 						</ul>
 					</div>
 					<div>
-						<ul class="flex flex-col gap-3">
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">6</span>
-								</div>
-								Transportasi
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">7</span>
-								</div>
-								Tim Professional Saudi
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">8</span>
-								</div>
-								Tiket Pesawat
-							</li>
-							<li class="flex gap-4 items-center">
-								<div class="bg-gray-100 rounded-full h-6 w-6 flex justify-center items-center">
-									<span class="font-semibold text-sm">9</span>
-								</div>
-								Dokumentasi
-							</li>
+						<ul class="flex flex-col gap-2">
+							{#each secondColumn as item, idx}
+								<li class="flex gap-4 items-center">
+									<div class="bg-gray-100 rounded-full h-5 w-5 flex justify-center items-center">
+										<span class="font-semibold text-xs">{idx + firstColumn.length + 1}</span>
+									</div>
+									{item}
+								</li>
+							{/each}
 						</ul>
 					</div>
 				</div>

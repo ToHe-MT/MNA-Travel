@@ -3,6 +3,10 @@
 	import Button from '$lib/button.svelte';
 	import UmrohCard from '../../../../lib/components/UmrohCard.svelte';
 	import Pagination from '../../../../lib/components/Pagination.svelte';
+	import { goto } from '$app/navigation';
+
+	export let data;
+	$: umroh = data.umroh;
 
 	let JenisPaket = 'Jenis Paket';
 	let Bandara = 'Bandara';
@@ -21,32 +25,59 @@
 		'Berangkat Terlama'
 	];
 
+	function updateURLParams() {
+		const params = new URLSearchParams();
+
+		if (JenisPaket !== 'Jenis Paket') {
+			params.set('jenisPaket', JenisPaket);
+		}
+
+		if (Bandara !== 'Bandara') {
+			params.set('bandara', Bandara);
+		}
+
+		if (RangeHarga !== 'Range Harga') {
+			params.set('rangeHarga', RangeHarga);
+		}
+
+		if (Sort !== 'Sort') {
+			params.set('sort', Sort);
+		}
+
+		const newUrl = `${window.location.pathname}?${params.toString()}`;
+		goto(newUrl, { replaceState: true });
+	}
+
 	function handleMenuJenisPaket(event) {
 		JenisPaket = event.detail.menu;
+		updateURLParams();
 	}
 
 	function handleMenuBandara(event) {
 		Bandara = event.detail.menu;
+		updateURLParams();
 	}
 
 	function handleMenuRangeHarga(event) {
 		RangeHarga = event.detail.menu;
+		updateURLParams();
 	}
 
 	function handleMenuSort(event) {
 		Sort = event.detail.menu;
+		updateURLParams();
 	}
-
-	export let data;
-	$: umroh = data.umroh;
-	// import { currencyFormatter } from '$lib/function/format.js';
 </script>
 
 <svelte:head>
-	<title>MNA - Travel | Pelayanan Umroh Terbaik</title>
-	<meta name="description" content="This is where the description goes for SEO" />
+	<title>MNA - Travel | Layanan Paket Umrah</title>
+	<meta
+		name="description"
+		content="Umroh Terbaik dan Terpercaya di Indonesia. ✔ Biaya Terjangkau, ✔ Profesional, ✔ Pasti Berangkat, ✔ Bonus City Tour Thaif, ✔ Bonus Haramian Express, ✔ Bonus Perlengkapan, ✔ Bonus Museum Wahyu, ✔ Bonus Ice Cream Uhud, ✔ Bonus Merchandise, ✔ Bonus Album Digital, ✔ Bonus Fotografer, ✔ Bonus Bus Daerah"
+	/>
 	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
 </svelte:head>
+
 <div
 	class="hero relative flex flex-col items-center justify-center w-full bg-cover bg-center min-h-[50vh]"
 	style="background-image: url('../../../layanan-paket-umroh.svg');"
@@ -59,31 +90,34 @@
 		<h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold lg:tracking-wide">
 			Pengalaman Umrah Terbaik Menanti Anda
 		</h1>
-		<div class="w-full bg-white grid grid-cols-9 rounded-xl gap-2">
+		<div class="w-full bg-white grid grid-cols-9 rounded-xl">
 			<Dropdown
 				title={JenisPaket}
 				listOption={ListJenisPaket}
 				on:menuSelected={handleMenuJenisPaket}
 				classUpper="border-r border-gray-200 col-span-2"
+				defaultLabel="Semua Paket"
 			/>
 			<Dropdown
 				on:menuSelected={handleMenuBandara}
 				title={Bandara}
 				listOption={ListBandara}
 				classUpper="border-r border-gray-200 col-span-2"
+				defaultLabel="Semua Bandara"
 			/>
 			<Dropdown
 				on:menuSelected={handleMenuRangeHarga}
 				title={RangeHarga}
 				listOption={ListRangeHarga}
 				classUpper="border-r border-gray-200 col-span-2"
+				defaultLabel="Semua Harga"
 			/>
-			<div class="flex justify-center items-center text-black gap-3 px-2 col-span-2">
+			<div class="flex justify-center items-center text-black gap-2 px-4 col-span-2">
 				<span class="material-icons text-gray-400">search</span>
 				<input
 					type="text"
 					placeholder="Search Paket"
-					class="w-full border-none rounded-xl focus:border-red-500/0 focus:ring-red-500/0"
+					class="w-full border-none rounded-xl focus:border-red-500/0 focus:ring-red-500/0 p-1"
 				/>
 			</div>
 			<div class="flex justify-center items-center">
@@ -127,7 +161,7 @@
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket, idx}
-					<UmrohCard {umroh} {paket} {idx} />
+					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 				{/each}
 			{/if}
 		</div>

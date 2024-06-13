@@ -11,9 +11,14 @@ export const load = async ({ url }) => {
 			filter.level_paket = url.searchParams.get('level_paket');
 		}
 
+		if (url.searchParams.get('bandara')) {
+			filter.type_category = url.searchParams.get('bandara');
+		}
+
 		if (url.searchParams.get('category')) {
 			filter.type_category = url.searchParams.get('category');
 		}
+
 
 		const umrohCollection = db.collection('schedule');
 		const umroh = await umrohCollection

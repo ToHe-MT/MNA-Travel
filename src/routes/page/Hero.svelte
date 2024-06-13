@@ -1,7 +1,7 @@
 <script>
-	const heroText1 = 'Wujudkan Impian Ibadah Anda dengan Layanan Profesional dan Fasilitas Unggulan';
+	const heroText1 = 'Pusat Umroh Terbaik di Indonesia \n Aman dan Nyaman Bersama MNA Travel';
 	const heroText2 =
-		'MNA Travel mengakomodir kebutuhan umat mulai dari Umroh, Haji, hingga Penyewaan transportasi pariwisata.';
+		'Menjalankan Umroh dan Haji Khusus yang aman dan nyaman adalah impian setiap Muslim. Bersama MNA Travel, kebutuhan Anda terjamin. Bergabunglah dengan ribuan jamaah untuk ibadah yang khusyuk dan penuh makna.';
 </script>
 
 <div
@@ -14,13 +14,13 @@
 	<div class="absolute inset-0 bg-black/50 z-10"></div>
 	<div class="absolute inset-0 bg-blue-700/10 z-10"></div>
 	<div
-		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-5 md:gap-10 px-8 md:px-0"
+		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-5 md:gap-16 px-8 md:px-0"
 	>
-		<h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold lg:tracking-wide">{heroText1}</h1>
-		<h2 class="text-base sm:text-xl lg:text-xl font-medium lg:px-16 lg:tracking-widest">
+		<h1 class="text-xl sm:text-3xl lg:text-4xl font-bold lg:tracking-wide">Pusat Umroh Terbaik di Indonesia <br> Aman dan Nyaman Bersama MNA Travel</h1>
+		<h2 class="text-base sm:text-xl lg:text-xl font-semibold lg:px-16">
 			{heroText2}
 		</h2>
-		<a
+		<!-- <a
 			href="https://wa.me/6282240406568"
 			target="_blank"
 			class="contact flex justify-center align-middle"
@@ -28,6 +28,6 @@
 			<button class="bg-blue-700 px-4 py-4 m-auto rounded-xl font-medium tracking-wide">
 				Hubungi Kami
 			</button>
-		</a>
+		</a> -->
 	</div>
 </div>

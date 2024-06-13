@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import Floating from './layout/Floating.svelte';
 	import Footer from './layout/Footer.svelte';
 	import NavBar from './layout/NavBar.svelte';
 	import 'material-icons/iconfont/filled.css';
@@ -9,3 +10,4 @@
 <NavBar />
 <slot />
 <Footer />
+<Floating/>

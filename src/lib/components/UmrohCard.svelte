@@ -1,9 +1,11 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { currencyFormatter } from '$lib/function/format.js';
 
 	export let paket;
 	export let idx;
 	export let umroh;
+	export let link;
 </script>
 
 <div
@@ -50,6 +52,7 @@
 				</ul>
 				<div>
 					<button
+					on:click={goto(link+paket.slug)}
 						class="bg-blue-700 w-full text-white px-4 py-2 rounded-xl hover:bg-blue-600 transition duration-300"
 						>Detail Paket</button
 					>

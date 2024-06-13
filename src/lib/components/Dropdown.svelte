@@ -19,17 +19,20 @@
 
 	export let title = 'Options';
 	export let listOption = ['Menu 1', 'Menu 2'];
+	export let defaultLabel = "No Filter"
 	export let classUpper = '';
-	export let buttonClass = 'py-6 text-base';
+	export let buttonClass = 'py-5 text-base font-normal';
 	export let containerClass = '';
 </script>
 
 <div class="relative inline-block text-left {classUpper}">
-	<div class="flex gap-1 justify-center items-center pl-2 hover:bg-gray-50 {containerClass}">
+	<div
+		class="flex gap-1 justify-center items-center pl-2 hover:bg-gray-50 rounded-xl{containerClass}"
+	>
 		<slot />
 		<button
 			type="button"
-			class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 {buttonClass} text-gray-900"
+			class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 {buttonClass}   text-gray-900"
 			on:click={toggleMenu}
 			aria-expanded={isOpen}
 			aria-haspopup="true"
@@ -53,22 +56,25 @@
 	<div
 		class="transition ease-out duration-150 {isOpen
 			? 'transform opacity-100 scale-100'
-			: 'transform opacity-0 scale-95'} absolute left-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex justify-center items-center"
+			: 'transform opacity-0 scale-95'} absolute left-0 z-10 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex justify-center items-center"
 		role="menu"
 		aria-orientation="vertical"
 		aria-labelledby="menu-button"
 		tabindex="-1"
 	>
 		<div class="py-1 w-full flex justify-center flex-col items-center" role="none">
-			{#each listOption as item}
+			{#each listOption as item, idx}
 				<button
 					on:click={() => selectMenu(item)}
-					class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer w-full text-center"
+					class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer w-full text-center {item ===
+					title
+						? 'text-blue-500'
+						: ''}"
 					role="menuitem"
 					tabindex="-1"
 					id="menu-item-{item}"
 				>
-					{item}
+					{idx === 0 ? defaultLabel : item}
 				</button>
 			{/each}
 		</div>
