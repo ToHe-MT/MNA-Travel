@@ -43,9 +43,10 @@
 </script>
 
 <svelte:head>
-	<title>Paket Umroh | MNA - Travel</title>
+	<title>MNA - Travel | Pelayanan Umroh Terbaik</title>
+	<meta name="description" content="This is where the description goes for SEO" />
+	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
 </svelte:head>
-
 <div
 	class="hero relative flex flex-col items-center justify-center w-full bg-cover bg-center min-h-[50vh]"
 	style="background-image: url('../../../layanan-paket-umroh.svg');"
@@ -53,7 +54,7 @@
 	<div class="absolute inset-0 bg-black/50 z-10"></div>
 	<div class="absolute inset-0 bg-blue-700/10 z-10"></div>
 	<div
-		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-2 md:gap-5 px-8 md:px-0 mt-16 container"
+		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-2 md:gap-5 px-8 md:px-0 mt-16"
 	>
 		<h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold lg:tracking-wide">
 			Pengalaman Umrah Terbaik Menanti Anda
@@ -101,7 +102,7 @@
 				Layanan Paket Umrah
 			</h1>
 		</div>
-		<div class="flex justify-between">
+		<div class="flex justify-between container">
 			<div>
 				Menampilkan <span class="font-bold underline underline-offset-2"> 2 </span> dari
 				<span class="font-bold"> 2 </span> Data

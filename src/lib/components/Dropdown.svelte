@@ -29,7 +29,7 @@
 		<slot />
 		<button
 			type="button"
-			class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 {buttonClass}  font-medium text-gray-900"
+			class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-transparent px-3 {buttonClass} text-gray-900"
 			on:click={toggleMenu}
 			aria-expanded={isOpen}
 			aria-haspopup="true"

@@ -156,7 +156,7 @@
 			<div class="flex-1 text-center">
 				<Modal items={layanan} {activeUrl}>
 					<div
-						class="flex flex-col items-center {layananMobileSelected ||
+						class="flex flex-col items-center justify-center {layananMobileSelected ||
 						activeUrl.startsWith('/layanan')
 							? 'active'
 							: ''}"
@@ -164,7 +164,7 @@
 						<span class="material-icons">view_list</span>
 						<div class="flex justify-center items-center">
 							<span class="text-xs">Layanan</span>
-							<span class="material-icons material-symbols-outlined"> arrow_drop_up </span>
+							<!-- <span class="material-icons material-symbols-outlined"> arrow_drop_up </span> -->
 						</div>
 					</div>
 				</Modal>

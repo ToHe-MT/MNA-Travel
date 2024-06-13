@@ -10,7 +10,7 @@
 	class="flex w-full {umroh.length === 2 && idx === 0 ? 'sm:justify-end' : ''}  {umroh.length ===
 		2 && idx === 1
 		? 'sm:justify-start'
-		: ''}  justify-center items-center"
+		: ''}  justify-center items-center gap-4"
 >
 	<div class="card" data-label="9 Hari 8 Malam">
 		<div
@@ -60,7 +60,6 @@
 </div>
 
 <style>
-	*,
 	*::before,
 	*::after {
 		padding: 0;

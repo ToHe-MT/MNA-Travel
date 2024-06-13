@@ -29,17 +29,19 @@
 			}}
 		>
 			<button
-				class="absolute top-4 right-4 text-4xl font-bold text-gray-700 hover:text-gray-900 z-30"
+				class="absolute top-4 right-4 text-2xl text-gray-700 hover:text-gray-900 z-30"
 				{...$close}
 				use:close
 			>
-				&times;
+				X
 			</button>
 			<div class="flex flex-col justify-start items-center h-full gap-6">
 				<div class="flex flex-col justify-center w-full h-full gap-4 p-10">
 					{#each items as item}
 						<!-- content here -->
 						<a
+							{...$close}
+							use:close
 							class="text-2xl text-bold px-4 py-1 transition hover:text-blue-500 {activeUrl ===
 							item.url
 								? 'text-blue-700'
