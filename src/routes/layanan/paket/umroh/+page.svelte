@@ -73,7 +73,7 @@
 	<title>MNA - Travel | Layanan Paket Umrah</title>
 	<meta
 		name="description"
-		content="Umroh Terbaik dan Terpercaya di Indonesia. ✔ Biaya Terjangkau, ✔ Profesional, ✔ Pasti Berangkat, ✔ Bonus City Tour Thaif, ✔ Bonus Haramian Express, ✔ Bonus Perlengkapan, ✔ Bonus Museum Wahyu, ✔ Bonus Ice Cream Uhud, ✔ Bonus Merchandise, ✔ Bonus Album Digital, ✔ Bonus Fotografer, ✔ Bonus Bus Daerah"
+		content="Paket Biaya dan Jadwal Umroh Murah Terbaru 2024 - 2025 1446H, ✔Harga Realistis ✔Pesawat Direct ✔Jaminan 100% Berangkat"
 	/>
 	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
 </svelte:head>
@@ -155,9 +155,7 @@
 			</div>
 		</div>
 		<div
-			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-{umroh && umroh.length
-				? umroh.length
-				: '3'} gap-x-12 gap-y-3"
+			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-3"
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket, idx}

@@ -1,5 +1,5 @@
 <script>
-	const heroText1 = 'Pusat Umroh Terbaik di Indonesia \n Aman dan Nyaman Bersama MNA Travel';
+	const heroText1 = 'Pusat Umroh Terbaik di Indonesia Aman dan Nyaman Bersama MNA Travel';
 	const heroText2 =
 		'Menjalankan Umroh dan Haji Khusus yang aman dan nyaman adalah impian setiap Muslim. Bersama MNA Travel, kebutuhan Anda terjamin. Bergabunglah dengan ribuan jamaah untuk ibadah yang khusyuk dan penuh makna.';
 </script>
@@ -16,7 +16,7 @@
 	<div
 		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-5 md:gap-16 px-8 md:px-0"
 	>
-		<h1 class="text-xl sm:text-3xl lg:text-4xl font-bold lg:tracking-wide">Pusat Umroh Terbaik di Indonesia <br> Aman dan Nyaman Bersama MNA Travel</h1>
+		<h1 class="text-xl sm:text-3xl lg:text-4xl font-bold lg:tracking-wide">Pusat Umroh Terbaik di Indonesia <br> Aman dan Nyaman Bersama MNA Travel</h1>
 		<h2 class="text-base sm:text-xl lg:text-xl font-semibold lg:px-16">
 			{heroText2}
 		</h2>

@@ -1,3 +1,11 @@
+<svelte:head>
+	<title> MNA Travel | Penyelenggara Umroh & Haji Profesional Indonesia </title>
+	<meta
+		name="description"
+		content="MNA Travel | Pusat Umroh & Haji Indonesia memberikan solusi layanan penyelenggara Umroh & Haji yang ramah dan profesional bagi seluruh kaum Muslim."
+	/>
+</svelte:head>
+
 <div class="hero relative flex items-center justify-center w-full h-screen bg-cover bg-center">
 	<div class="container mx-auto p-4 rounded-md">
 		<div class="grid grid-cols-10">
@@ -16,17 +24,17 @@
 					MNA Travel, Anda dapat merasakan ibadah yang khusyuk dan penuh makna. Mari bergabung
 					dengan ribuan jamaah yang telah mempercayakan perjalanan ibadah mereka kepada kami.
 					<br /><br />
-                     MNA Travel memahami pentingnya perencanaan yang matang untuk setiap perjalanan
-					umroh. Oleh karena itu, kami menawarkan berbagai paket umroh yang disesuaikan dengan kebutuhan
-					Anda. Biaya umroh yang kami tawarkan sangat kompetitif, sehingga dapat mewujudkan impian ke
-					Tanah Suci. Selain itu, MNA Travel memastikan semua rukun umroh terpenuhi dengan baik, sehingga
-					menjadikan ibadah Anda sah dan mabrur. 
-                    <br><br>Sebagai travel umroh terpercaya, kami berkomitmen memberikan
-					pelayanan terbaik mulai dari persiapan keberangkatan hingga kembali ke tanah air. Harga umroh
-					yang kami tetapkan sebanding dengan fasilitas dan layanan yang Anda dapatkan. Paket umroh 2024
-					kami dirancang khusus untuk memberikan pengalaman ibadah yang nyaman dan penuh kesan. Jadi,
-					jangan ragu untuk memilih MNA Travel sebagai mitra perjalanan ibadah Anda, dan rasakan pengalaman
-					umroh yang berbeda bersama kami.
+					MNA Travel memahami pentingnya perencanaan yang matang untuk setiap perjalanan umroh. Oleh
+					karena itu, kami menawarkan berbagai paket umroh yang disesuaikan dengan kebutuhan Anda. Biaya
+					umroh yang kami tawarkan sangat kompetitif, sehingga dapat mewujudkan impian ke Tanah Suci.
+					Selain itu, MNA Travel memastikan semua rukun umroh terpenuhi dengan baik, sehingga menjadikan
+					ibadah Anda sah dan mabrur.
+					<br /><br />Sebagai travel umroh terpercaya, kami berkomitmen memberikan pelayanan terbaik
+					mulai dari persiapan keberangkatan hingga kembali ke tanah air. Harga umroh yang kami
+					tetapkan sebanding dengan fasilitas dan layanan yang Anda dapatkan. Paket umroh 2024 kami
+					dirancang khusus untuk memberikan pengalaman ibadah yang nyaman dan penuh kesan. Jadi,
+					jangan ragu untuk memilih MNA Travel sebagai mitra perjalanan ibadah Anda, dan rasakan
+					pengalaman umroh yang berbeda bersama kami.
 				</p>
 
 				<!-- <a
@@ -40,12 +48,10 @@
 				</a> -->
 			</div>
 			<div class="hidden lg:col-span-1 lg:block"></div>
-			<div class="lg:col-span-4 col-span-10 order-first lg:order-last flex justify-center items-center">
-				<img
-					src="./logo-sky.png"
-					alt="foto"
-					class="rounded-md w-full sm:w-auto"
-				/>
+			<div
+				class="lg:col-span-4 col-span-10 order-first lg:order-last flex justify-center items-center"
+			>
+				<img src="./logo-sky.png" alt="foto" class="rounded-md w-full sm:w-auto" />
 			</div>
 			<div class="hidden lg:col-span-1 lg:block lg:order-last"></div>
 		</div>

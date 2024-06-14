@@ -1,6 +1,6 @@
 <script>
 	export let umroh;
-	import { currencyFormatter } from '$lib/function/format.js';
+	import { currencyFormatter } from '$lib/function/format.js';l
 </script>
 
 <div

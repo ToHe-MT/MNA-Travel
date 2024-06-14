@@ -5,6 +5,6 @@ const client = new MongoClient(env.MONGODB_URI);
 
 await client.connect();
 
-const db = client.db('kartikamas');
+const db = client.db('mnatravel');
 
 export default db;

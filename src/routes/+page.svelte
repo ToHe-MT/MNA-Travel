@@ -14,8 +14,12 @@
 </script>
 
 <svelte:head>
-	<title>MNA - Travel | Pelayanan Umroh Terbaik </title>
-	<meta name="description" content="This is where the description goes for SEO" />
+	<title>MNA - Travel | Pelayanan Umroh Terbaik</title>
+	<meta
+		name="description"
+		content="Umroh Terbaik dan Terpercaya di Indonesia. ✔ Biaya Terjangkau, ✔ Profesional, ✔ Pasti Berangkat, ✔ Bonus City Tour Thaif, ✔ Bonus Haramian Express, ✔ Bonus Perlengkapan, ✔ Bonus Museum Wahyu, ✔ Bonus Ice Cream Uhud, ✔ Bonus Merchandise, ✔ Bonus Album Digital, ✔ Bonus Fotografer, ✔ Bonus Bus Daerah"
+	/>
+	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
 </svelte:head>
 
 <Hero />
@@ -25,5 +29,3 @@
 <!-- <Banner /> -->
 <!-- <Gallery /> -->
 <!-- <Testimoni /> -->
-
-
