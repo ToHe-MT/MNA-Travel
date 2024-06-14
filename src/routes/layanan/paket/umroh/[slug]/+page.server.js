@@ -7,41 +7,6 @@ export const load = async ({ params, locals, url, query }) => {
 			.collection('schedule')
 			.aggregate([
 				{ $match: { slug: params.slug } },
-				// { $unwind: { path: '$rooms', preserveNullAndEmptyArrays: true } },
-				// {
-				// 	$lookup: {
-				// 		from: 'jamaah',
-				// 		let: { participants: { $ifNull: ['$rooms.participants', []] } },
-				// 		pipeline: [
-				// 			{ $match: { $expr: { $in: ['$jamaah_id', '$$participants'] } } },
-				// 			{ $project: { _id: 0 } }
-				// 		],
-				// 		as: 'room_participants'
-				// 	}
-				// },
-				// {
-				// 	$group: {
-				// 		_id: '$_id',
-				// 		doc: { $first: '$$ROOT' },
-				// 		rooms: {
-				// 			$push: {
-				// 				room_type: '$rooms.room_type',
-				// 				room_id: '$rooms.room_id',
-				// 				created_at: '$rooms.created_at',
-				// 				kapasitas: '$rooms.kapasitas',
-				// 				participants: '$room_participants',
-				// 				room_name: '$rooms.room_name'
-				// 			}
-				// 		}
-				// 	}
-				// },
-				// {
-				// 	$replaceRoot: {
-				// 		newRoot: {
-				// 			$mergeObjects: ['$$ROOT.doc', { rooms: { $ifNull: ['$rooms', []] } }]
-				// 		}
-				// 	}
-				// },
 				{
 					$project: {
 						_id: 0
@@ -56,6 +21,33 @@ export const load = async ({ params, locals, url, query }) => {
 		error(404, 'Data not found');
 	}
 
+	const pipelinePenginapan = [
+		{ $match: { slug: params.slug } },
+		{ $sort: { check_in: 1 } },
+		{
+			$lookup: {
+				from: 'hotel',
+				localField: 'hotel_id',
+				foreignField: 'hotel_id',
+				as: 'hotels'
+			}
+		},
+		{
+			$unwind: {
+				path: '$hotels',
+				preserveNullAndEmptyArrays: true
+			}
+		},
+		{
+			$project: {
+				_id: 0,
+				'hotels._id': 0
+			}
+		}
+	];
+
+	const penginapan = await db.collection('penginapan').aggregate(pipelinePenginapan).toArray();
+	console.log(penginapan);
 	return {
 		info_paket: data[0]
 	};

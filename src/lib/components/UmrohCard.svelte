@@ -1,6 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
-	import { currencyFormatter } from '$lib/function/format.js';
+	import { formatRupiah } from '$lib/function/format.js';
 
 	export let paket;
 	export let idx;
@@ -24,7 +24,7 @@
 			<div class="py-4 flex flex-col gap-2">
 				<p class="text-gray-400 text-xs">Harga mulai dari</p>
 				<p class="text-blue-600 text-2xl font-bold py-2">
-					{currencyFormatter(paket.base_price)}
+					{formatRupiah(paket.base_price)}
 				</p>
 			</div>
 			<div class="py-4">

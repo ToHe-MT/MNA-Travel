@@ -3,19 +3,15 @@
 	import 'swiper/css';
 	import { Navigation, Pagination } from 'swiper/modules';
 	import { onMount } from 'svelte';
-	import AccordionIncluded from '../../../../../lib/components/AccordionIncluded.svelte';
+	import AccordionIncluded from '$lib/components/AccordionIncluded.svelte';
+	import Form from './Form.svelte';
 
 	export let data;
-	console.log(data);
 
 	const paket = data.info_paket || {};
-	function formatDateToIndonesian(date) {
-		return date.toLocaleDateString('id-ID', {
-			day: 'numeric',
-			month: 'long',
-			year: 'numeric'
-		});
-	}
+	const { bonus, included, not_included, itinerari, images, hotel, flights } = paket;
+
+	import { formatRupiah, formatDateToIndonesian, capitalizeWords } from '$lib/function/format.js';
 
 	var swiper;
 	onMount(() => {
@@ -35,6 +31,8 @@
 			modules: [Navigation, Pagination]
 		});
 	});
+
+	console.log(paket);
 </script>
 
 {#if paket}
@@ -51,12 +49,12 @@
 	<!-- ? Content -->
 	<div class="container mx-auto py-12">
 		<div class="grid grid-cols-3">
-			<div class="col-span-2">
+			<div class="col-span-2 px-5">
 				<!-- ! Swiper JS Gallery -->
-				{#if paket.images && paket.images.length > 0}
+				{#if images && images.length > 0}
 					<div class="swiper property-gallery-slider relative flex justify-center items-center">
 						<div class="swiper-wrapper flex content-center">
-							{#each paket.images as image}
+							{#each images as image}
 								<div class="swiper-slide" style="width: auto;">
 									<div
 										class="link property-gallery property-card__img flex justify-center items-center"
@@ -82,23 +80,157 @@
 							<span class="material-icons">chevron_right</span>
 						</div>
 					</div>
+				{:else}
+					<div class="min-h-[400px] w-full border flex justify-center items-center border-gray-400">
+						<div class="flex justify-center items-center h-full">
+							<h1 class="text-gray-600">Gambar Belum Tersedia</h1>
+						</div>
+					</div>
 				{/if}
 				<!-- ! Content -->
+				<div class="w-full py-5">
+					<!-- ? Long Description -->
+					{#if paket.long_description}
+						<div>
+							<p>
+								{paket.long_description}
+							</p>
+						</div>
+					{/if}
+					<!-- ? Detail Paket -->
+					<div class="grid grid-cols-2 gap-">
+						<div class="flex flex-col gap-4">
+							{#if paket.title}
+								<div class="flex flex-col gap-0">
+									<div>
+										<h1 class="font-semibold">Judul Paket</h1>
+										<p>{capitalizeWords(paket.title)}</p>
+									</div>
+								</div>
+							{/if}
+							{#if paket.tour_guide}
+								<div class="flex flex-col gap-0">
+									<h1 class="font-semibold">Tour Guide</h1>
+									<p>{paket.tour_guide}</p>
+								</div>
+							{/if}
+							{#if paket.departure_from}
+								<div class="flex flex-col gap-0">
+									<h1 class="font-semibold">Keberangkatan Dari</h1>
+									<p>{paket.departure_from}</p>
+								</div>
+							{/if}
+							{#if paket.departure_date}
+								<div class="flex flex-col gap-0">
+									<h1 class="font-semibold">Departure Date</h1>
+									<p>{formatDateToIndonesian(paket.departure_date)}</p>
+								</div>
+							{/if}
+							{#if paket.return_date}
+								<div class="flex flex-col gap-0">
+									<h1 class="font-semibold">Return Date</h1>
+									<p>{formatDateToIndonesian(paket.return_date)}</p>
+								</div>
+							{/if}
+						</div>
+						<div class="flex flex-col gap-4">
+							{#if hotel && hotel.length > 0}
+								<div class="flex flex-col gap-0">
+									<div>
+										<h1 class="font-semibold">Judul Paket</h1>
+										<p>{capitalizeWords(paket.title)}</p>
+									</div>
+								</div>
+							{/if}
+							{#if paket.hotel_price_quad || paket.hotel_price_triple || paket.hotel_price_double}
+								<div class="flex flex-col gap-0">
+									<div>
+										<h1 class="font-semibold">Judul Paket</h1>
+										{#if paket.hotel_price_quad}
+											<div>
+												Quad - 4 Person <span class="font-medium text-blue-500"
+													>{formatRupiah(paket.hotel_price_quad)}</span
+												>/pax
+											</div>
+										{/if}
+										{#if paket.hotel_price_triple}
+											<div>
+												Triple - 3 Person <span class="font-medium text-blue-500"
+													>{formatRupiah(paket.hotel_price_triple)}</span
+												>/pax
+											</div>
+										{/if}
+										{#if paket.hotel_price_quad}
+											<div>
+												Double - 2 Person <span class="font-medium text-blue-500"
+													>{formatRupiah(paket.hotel_price_double)}</span
+												>/pax
+											</div>
+										{/if}
+									</div>
+								</div>
+							{/if}
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-span-1">
+			<div class="col-span-1 flex flex-col gap-3">
 				<!-- ! Included -->
-				 <AccordionIncluded/>
+				{#if included && included.length > 0}
+					<!-- content here -->
+					<AccordionIncluded title="What's Included">
+						<div class="flex flex-col p-3 gap-2">
+							{#each included as item}
+								<div class="flex gap-5 justify-start items-center">
+									<div class="rounded-full bg-blue-100/50 h-6 w-6 flex justify-center items-center">
+										<span
+											class="material-icons"
+											style="color: #5277DF; font-weight:100; font-size:14px">check</span
+										>
+									</div>
+
+									<h1>
+										{item}
+									</h1>
+								</div>
+							{/each}
+						</div>
+					</AccordionIncluded>
+				{/if}
 				<!-- ! Not Included -->
+				{#if not_included && not_included.length > 0}
+					<!-- content here -->
+					<AccordionIncluded title="What's Not Included">
+						<div class="flex flex-col p-3 gap-2">
+							{#each not_included as item}
+								<div class="flex gap-5 justify-start items-center">
+									<div class="rounded-full bg-red-100/50 h-6 w-6 flex justify-center items-center">
+										<span
+											class="material-icons"
+											style="color: #F60F0F; font-weight:100; font-size:14px">close</span
+										>
+									</div>
+
+									<h1>
+										{item}
+									</h1>
+								</div>
+							{/each}
+						</div>
+					</AccordionIncluded>
+				{/if}
 				<!-- ! Booking Form -->
+				<Form {paket} />
 			</div>
+			<div class="col-span-2"></div>
 		</div>
 	</div>
 {/if}
 
 <style>
 	.material-icons {
-		font-size: 24px; 
-		color: black; 
+		font-size: 24px;
+		color: black;
 		font-weight: 100;
 	}
 	.swiper-button-prev,

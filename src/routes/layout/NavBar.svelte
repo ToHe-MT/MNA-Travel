@@ -35,7 +35,7 @@
 	let y = 0;
 	let scrolled = false;
 
-	$: scrolled = y > 200;
+	$: scrolled = y > 50;
 </script>
 
 <svelte:window bind:scrollY={y} />

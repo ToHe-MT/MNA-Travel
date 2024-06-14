@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { createAccordion, melt } from '@melt-ui/svelte';
+	import { sleep } from '@melt-ui/svelte/internal/helpers';
 	import { slide } from 'svelte/transition';
 
 	const {
@@ -9,58 +10,50 @@
 		defaultValue: 'item-1'
 	});
 
-	export let title = "What's Included";
-	export let listItem = [
-		'TIdak ada',
-		'TIdak ada',
-		'TIdak ada',
-		'TIdak ada',
-		'TIdak ada',
-		'TIdak ada'
-	];
+	export let title = 'TItle Please';
 
 	export let className = '';
 </script>
 
-<div
-	class="mx-auto w-[18rem] max-w-full rounded-xl bg-white sm:w-[25rem] {className}"
-	{...$root}
->
-	<div
-		{...$item(title)}
-		use:item
-		class="overflow-hidden transition-colors"
-	>
+<div class="mx-auto w-full max-w-full px-6 rounded-xl bg-white {className}" {...$root}>
+	<div {...$item(title)} use:item class="overflow-hidden transition-colors">
 		<h2 class="flex">
 			<button
 				{...$trigger(title)}
 				use:trigger
-				class="flex flex-1 cursor-pointer items-center justify-between bg-blue-300 px-5 py-5 text-base font-medium leading-none text-black transition-colors hover:bg-blue-400 focus:!ring-0 focus-visible:text-magnum-800"
+				class="flex justify-between w-full cursor-pointer items-center bg-blue-200 px-4 py-2
+				text-base font-medium leading-none text-gray-700 transition-colors hover:bg-blue-300 focus:!ring-0 focus-visible:text-magnum-800"
 			>
-				{title}
+				<h1>
+					{title}
+				</h1>
+				<div class="icon-wrapper relative inline-block w-6 h-6">
+					<span
+						class="material-icons absolute inset-0 transition duration-300 {$isSelected(title)
+							? 'opacity-100 '
+							: 'opacity-100 rotate-90'}">remove</span
+					>
+					<span
+						class="material-icons absolute inset-0 transition duration-300">remove</span
+					>
+				</div>
 			</button>
 		</h2>
 		{#if $isSelected(title)}
 			<div
-				class={'content overflow-hidden bg-white text-sm text-neutral-600'}
+				class={'overflow-hidden bg-white text-sm text-neutral-600'}
 				{...$content(title)}
 				use:content
 				transition:slide
 			>
-				<div class="flex flex-col p-5">
-					{#each listItem as item}
-						<div>
-							{item}
-						</div>
-					{/each}
-				</div>
+				<slot />
 			</div>
 		{/if}
 	</div>
 </div>
 
 <style lang="postcss">
-	.content {
+	/* .content {
 		box-shadow: inset 0px 1px 0px theme('colors.neutral.300');
-	}
+	} */
 </style>

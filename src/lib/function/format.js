@@ -1,4 +1,4 @@
-const currencyFormatter = (amount) => {
+const formatRupiah = (amount) => {
 	const formatter = new Intl.NumberFormat('id-ID', {
 		style: 'currency',
 		currency: 'IDR',
@@ -9,4 +9,20 @@ const currencyFormatter = (amount) => {
 	return formatter.format(amount);
 };
 
-export { currencyFormatter };
+function formatDateToIndonesian(date) {
+	return date.toLocaleDateString('id-ID', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric'
+	});
+}
+function capitalizeWords(str) {
+	return str
+		.split(' ')
+		.map((word) => {
+			return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+		})
+		.join(' ');
+}
+
+export { formatRupiah, capitalizeWords, formatDateToIndonesian };
