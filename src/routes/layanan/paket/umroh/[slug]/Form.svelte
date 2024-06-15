@@ -47,9 +47,28 @@
 	function handleListPaket(event) {
 		selected_paket = event.detail.menu;
 	}
+
+	let form;
+	async function handleSubmit(event) {
+		event.preventDefault();
+
+		const formData = new FormData(form);
+
+		const response = await fetch('', {
+			method: 'POST',
+			body: formData
+		});
+
+		const result = await response.json();
+		const result_data = JSON.parse(result.data);
+
+		if (result.type === 'success') {
+			window.open(result_data[1], '_blank');
+		}
+	}
 </script>
 
-<form class="w-full px-6">
+<form class="w-full px-0 lg:px-6" bind:this={form} on:submit={handleSubmit}>
 	<div
 		class="flex flex-col rounded-lg border"
 		style="box-shadow: 2px 2px 12px 0px #0000000F;box-shadow: -1px -1px 5px 0px #0000000F;"
@@ -94,50 +113,52 @@
 							>
 						</div>
 						<input
-							type="text"
+							type="number"
 							name="no_whatsapp"
 							id="no_whatsapp"
 							class="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-							placeholder="Nama Pemesan"
+							placeholder="+6281386960157"
 						/>
 					</div>
 				</div>
-				<div>
-					<div class="flex justify-between">
-						<h1>Total Pax</h1>
-						<div class="flex">
-							<button
-								type="button"
-								on:click={minusTotalPax}
-								class="h-full flex justify-center items-center"
-							>
-								<span class="material-icons" style="color: #2C2D2E80; opacity:70%; font-size:20px"
-									>remove</span
+				{#if selected_paket !== 'Custom'}
+					<div>
+						<div class="flex justify-between">
+							<h1>Total Pax</h1>
+							<div class="flex">
+								<button
+									type="button"
+									on:click={minusTotalPax}
+									class="h-full flex justify-center items-center"
 								>
-							</button>
-							<input
-								type="number"
-								name="total_pax"
-								id="total_pax"
-								placeholder="Masukan Total Jamaah"
-								style="display: none;"
-								bind:value={total_pax}
-							/>
-							<div class="flex justify-center items-center px-4">
-								<h1>{total_pax}</h1>
+									<span class="material-icons" style="color: #2C2D2E80; opacity:70%; font-size:20px"
+										>remove</span
+									>
+								</button>
+								<input
+									type="number"
+									name="total_pax"
+									id="total_pax"
+									placeholder="Masukan Total Jamaah"
+									style="display: none;"
+									bind:value={total_pax}
+								/>
+								<div class="flex justify-center items-center px-4">
+									<h1>{total_pax}</h1>
+								</div>
+								<button
+									type="button"
+									on:click={plusTotalPax}
+									class="h-full flex justify-center items-center"
+								>
+									<span class="material-icons" style="color: #2C2D2E80; opacity:70%; font-size:20px"
+										>add</span
+									>
+								</button>
 							</div>
-							<button
-								type="button"
-								on:click={plusTotalPax}
-								class="h-full flex justify-center items-center"
-							>
-								<span class="material-icons" style="color: #2C2D2E80; opacity:70%; font-size:20px"
-									>add</span
-								>
-							</button>
 						</div>
 					</div>
-				</div>
+				{/if}
 				<div>
 					<div class="flex justify-between">
 						<h1>Jenis Kamar</h1>
@@ -149,6 +170,12 @@
 							listOption={listPaket}
 							on:menuSelected={handleListPaket}
 							isSelected={true}
+						/>
+						<input
+							type="text"
+							name="jenis_kamar"
+							bind:value={selected_paket}
+							style="display: none;"
 						/>
 					</div>
 				</div>
@@ -272,6 +299,24 @@
 					{/each}
 					<div>
 						<div class="flex justify-between">
+							<h1>Total Pax</h1>
+							<div class="flex">
+								<input
+									type="number"
+									name="total_pax"
+									id="total_pax"
+									placeholder="Masukan Total Jamaah"
+									style="display: none;"
+									value={jumlah_pax.quad + jumlah_pax.triple + jumlah_pax.double}
+								/>
+								<div class="flex justify-center items-center px-4">
+									<h1>{jumlah_pax.quad + jumlah_pax.triple + jumlah_pax.double}</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="flex justify-between">
 							<h1 class="font-semibold">Total Harga</h1>
 							<input
 								type="number"
@@ -292,7 +337,11 @@
 			</div>
 		</div>
 		<div class=" w-full px-5 pb-5">
-			<button class=" w-full flex justify-center items-center p-2 px-2 rounded-xl bg-blue-500">
+			<button
+				type="submit"
+				on:click={handleSubmit}
+				class=" w-full flex justify-center items-center p-2 px-2 rounded-xl bg-blue-500"
+			>
 				<h1 class="text-base font-medium text-white">Konsultasi Paket</h1>
 			</button>
 		</div>

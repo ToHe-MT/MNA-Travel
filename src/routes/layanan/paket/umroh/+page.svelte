@@ -95,33 +95,33 @@
 				title={JenisPaket}
 				listOption={ListJenisPaket}
 				on:menuSelected={handleMenuJenisPaket}
-				classUpper="border-r border-gray-200 col-span-2"
+				classUpper="border-r border-gray-200  col-span-9 sm:col-span-3 md:col-span-2"
 				defaultLabel="Semua Paket"
 			/>
 			<Dropdown
 				on:menuSelected={handleMenuBandara}
 				title={Bandara}
 				listOption={ListBandara}
-				classUpper="border-r border-gray-200 col-span-2"
+				classUpper="border-r border-gray-200 col-span-9 sm:col-span-3 md:col-span-2"
 				defaultLabel="Semua Bandara"
 			/>
 			<Dropdown
 				on:menuSelected={handleMenuRangeHarga}
 				title={RangeHarga}
 				listOption={ListRangeHarga}
-				classUpper="border-r border-gray-200 col-span-2"
+				classUpper="border-r border-gray-200 col-span-9 sm:col-span-3 md:col-span-2"
 				defaultLabel="Semua Harga"
 			/>
-			<div class="flex justify-center items-center text-black gap-2 px-4 col-span-2">
+			<div class="flex justify-center items-center text-black gap-2 px-4  sm:pl-20 md:pl-0 col-span-9 sm:col-span-5 md:col-span-2 p-4">
 				<span class="material-icons text-gray-400">search</span>
 				<input
 					type="text"
 					placeholder="Search Paket"
-					class="w-full border-none rounded-xl focus:border-red-500/0 focus:ring-red-500/0 p-1"
+					class="w-24 md:w-full border-none rounded-xl focus:border-red-500/0 focus:ring-red-500/0 p-1"
 				/>
 			</div>
-			<div class="flex justify-center items-center">
-				<Button className="rounded-lg text-center bg-blue-700 text-white" href="/">Search</Button>
+			<div class="flex justify-center items-center col-span-9 sm:col-span-4 md:col-span-1 p-4">
+				<Button className="rounded-lg text-center bg-blue-700 text-white w-full" href="/">Search</Button>
 			</div>
 		</div>
 	</div>
@@ -155,7 +155,7 @@
 			</div>
 		</div>
 		<div
-			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-3"
+			class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-3"
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket, idx}

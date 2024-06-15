@@ -9,7 +9,10 @@
 	export let data;
 
 	const paket = data.info_paket || {};
-	const { bonus, included, not_included, itinerari, images, hotel, flights } = paket;
+	const { bonus, included, not_included, itinerari, images } = paket;
+	const flights = data.flights || [];
+	const hotel = data.penginapan || [];
+	console.log(itinerari);
 
 	import { formatRupiah, formatDateToIndonesian, capitalizeWords } from '$lib/function/format.js';
 
@@ -37,36 +40,55 @@
 
 {#if paket}
 	<!-- ! Header -->
-	<div class="container mx-auto mt-10 lg:mt-20">
-		<div class="flex justify-center items-center flex-col gap-2 py-16">
+	<div class="container mx-auto mt-10 lg:mt-20 px-5 sm:px-0">
+		<div class="flex justify-center items-center flex-col gap-2 pt-24">
 			<h6 class="font-semibold text-blue-700">{formatDateToIndonesian(paket.departure_date)}</h6>
-			<h1 class="text-4xl font-semibold">{paket.title}</h1>
+			<h1 class="text-4xl font-semibold text-center">{paket.title}</h1>
 			<!-- <p class="w-full sm:w-full md:w-1/2 lg:w-1/3 text-center">
                 Lorem ipsum dolor sit amet consectetur. Eu congue sodales ac egestas a adipiscing imperdiet nulla. Tortor eu quis ut egestas arcu
             </p> -->
 		</div>
 	</div>
 	<!-- ? Content -->
-	<div class="container mx-auto py-12">
+	<div class="container mx-auto py-12 px-5 sm:px-0">
 		<div class="grid grid-cols-3">
-			<div class="col-span-2 px-5">
+			<div class="col-span-3 lg:col-span-2">
 				<!-- ! Swiper JS Gallery -->
 				{#if images && images.length > 0}
 					<div class="swiper property-gallery-slider relative flex justify-center items-center">
 						<div class="swiper-wrapper flex content-center">
 							{#each images as image}
-								<div class="swiper-slide" style="width: auto;">
-									<div
-										class="link property-gallery property-card__img flex justify-center items-center"
-									>
-										<img
-											src="https://blog.principal.co.id/sites/default/files/styles/article_image/public/media/Ingin%20Umroh%20Dulu%20sebelum%20Pergi%20Haji_%20Cek%20Pertimbangan%20Berikut.jpeg?itok=U8gNpACY"
-											alt="foto hotel"
-											class="img-fluid h-auto w-full"
-											style="object-fit: cover"
-										/>
+								{#if image.primary === true}
+									<div class="swiper-slide" style="width: auto;">
+										<div
+											class="link property-gallery property-card__img flex justify-center items-center"
+										>
+											<img
+												src="../../../Sementara.jpg"
+												alt="Foto Label"
+												class="img-fluid h-auto w-full"
+												style="object-fit: cover"
+											/>
+										</div>
 									</div>
-								</div>
+								{/if}
+							{/each}
+							{#each images as image}
+								{#if image.primary === false}
+									<div class="swiper-slide" style="width: auto;">
+										<div
+											class="link property-gallery property-card__img flex justify-center items-center"
+										>
+											<!-- src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}" -->
+											<img
+												src="../../../Sementara2.jpg"
+												alt="foto hotel"
+												class="img-fluid h-auto w-full"
+												style="object-fit: cover"
+											/>
+										</div>
+									</div>
+								{/if}
 							{/each}
 						</div>
 						<div
@@ -135,10 +157,29 @@
 						</div>
 						<div class="flex flex-col gap-4">
 							{#if hotel && hotel.length > 0}
-								<div class="flex flex-col gap-0">
+								<div class="flex flex-col gap-">
 									<div>
-										<h1 class="font-semibold">Judul Paket</h1>
-										<p>{capitalizeWords(paket.title)}</p>
+										<h1 class="font-semibold">Hotel</h1>
+										<div class="grid gap-1.5 py-1">
+											{#each hotel as item}
+												{#if item.hotels && Object.keys(item.hotels).length > 0}
+													<div class="flex gap-1.5 justify-start items-center">
+														<div class="w-3 h-3 rounded-full bg-gray-300"></div>
+														<div>{item.hotels.city}, {item.hotels.name}</div>
+														<div class="flex justify-center items-center gap-0.5">
+															{#if item.hotels.star}
+																{#each { length: parseInt(item.hotels.star) } as asd}
+																	<span
+																		class="material-icons"
+																		style="font-size:14px;color: #F3E459;">star</span
+																	>
+																{/each}
+															{/if}
+														</div>
+													</div>
+												{/if}
+											{/each}
+										</div>
 									</div>
 								</div>
 							{/if}
@@ -174,7 +215,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-span-1 flex flex-col gap-3">
+			<div class="col-span-3 lg:col-span-1 flex flex-col gap-3">
+				<!-- ! Booking Form -->
+				<Form {paket} />
 				<!-- ! Included -->
 				{#if included && included.length > 0}
 					<!-- content here -->
@@ -219,10 +262,80 @@
 						</div>
 					</AccordionIncluded>
 				{/if}
-				<!-- ! Booking Form -->
-				<Form {paket} />
 			</div>
-			<div class="col-span-2"></div>
+			<div class="col-span-3 lg:col-span-2 flex flex-col gap-3 py-3">
+				<!-- ! Itinerary -->
+				{#if itinerari && itinerari.length > 0}
+					<AccordionIncluded title="Itinerary" className="px-0">
+						<div class="flex flex-col p-3 gap-2">
+							{#each itinerari as item}
+								<div class="flex gap-3">
+									<span class="font-bold">Hari Ke-{item.hari}</span>
+									<span>{capitalizeWords(item.route)}</span>
+								</div>
+							{/each}
+						</div>
+					</AccordionIncluded>
+				{/if}
+				<!-- ! Persyaratan Umroh -->
+				<AccordionIncluded title="Persyaratan Umroh" className="px-0">
+					<div class="bg-white w-full p-5">
+						<h1 class="text-xl font-bold mb-4">DP Umroh Minimal Rp 10.000.000 (Tahap 1)</h1>
+
+						<div class="mb-6">
+							<h2 class="text-lg font-semibold">Paspor Asli</h2>
+							<p class="text-gray-700">
+								Nama minimal 2 suku kata, dengan masa berlaku minimal 9 bulan.
+							</p>
+						</div>
+
+						<div class="mb-6">
+							<h2 class="text-lg font-semibold">
+								Paspor foto terbaru berwarna dengan latar belakang putih
+							</h2>
+							<ul class="list-disc list-inside text-gray-700">
+								<li>80% ukuran kepala (fokus wajah).</li>
+								<li>Warna baju/hijab kontras dengan latar (bukan putih atau senada).</li>
+								<li>Tidak memakai peci.</li>
+								<li>Tidak memakai seragam dinas.</li>
+							</ul>
+						</div>
+
+						<div class="mb-6">
+							<h2 class="text-lg font-semibold">Ukuran foto :</h2>
+							<ul class="list-disc list-inside text-gray-700">
+								<li>3x4 = 4 lembar</li>
+								<li>4x6 = 6 lembar</li>
+								<li>2x3 = 2 lembar</li>
+							</ul>
+						</div>
+
+						<div class="mb-6">
+							<h2 class="text-lg font-semibold">Fotocopy KTP yang masih berlaku 2 lembar</h2>
+						</div>
+
+						<div class="mb-6">
+							<h2 class="text-lg font-semibold">Persyaratan lain :</h2>
+							<ul class="list-disc list-inside text-gray-700">
+								<li>
+									Suami istri : Buku nikah asli + Fotocopy 3 lembar, Kartu keluarga asli + Fotocopy
+									1 lembar
+								</li>
+								<li>
+									Suami istri + Anak : Buku nikah asli + Fotocopy 3 lembar, Kartu keluarga asli +
+									Fotocopy 1 lembar
+								</li>
+								<li>
+									Adik + Kakak : Akte kelahiran anak asli + Fotocopy 2 lembar, Akte kelahiran
+									masing-masing anak + Fotocopy 2 lembar, Kartu keluarga asli + Fotocopy 1 lembar
+								</li>
+							</ul>
+						</div>
+
+						<p class="text-gray-700">Wanita yang berangkat sendiri dikenakan biaya Muhrim</p>
+					</div>
+				</AccordionIncluded>
+			</div>
 		</div>
 	</div>
 {/if}

@@ -120,13 +120,17 @@
 					</div>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">location_on</span>
-						<a href="/" class="hover:text-blue-700">Jl. Wijaya Kusuma No.30, Pondok Labu</a>
+						<a href="https://maps.app.goo.gl/87dQtUcz9yLyk4fi9" target="_blank" class="hover:text-blue-700"
+							>Jl. Raya Condet No.34, Balekambang, Kota Jakarta Timur </a
+						>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container mx-auto flex justify-center items-center text-gray-400 mt-4 px-4 pb-16 lg:pb-0 text-xs md:text-base">
+	<div
+		class="container mx-auto flex justify-center items-center text-gray-400 mt-4 px-4 pb-16 lg:pb-0 text-xs md:text-base"
+	>
 		© Copyright 2024. All Rights Reserved by MNA Travel
 	</div>
 </div>
