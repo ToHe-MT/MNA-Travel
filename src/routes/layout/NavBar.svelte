@@ -15,7 +15,7 @@
 	const dashboard = [
 		{ label: 'Beranda', url: '/', type: 'normal' },
 		{ label: 'Paket Haji Umroh', url: '/layanan/paket/umroh', type: 'normal' },
-		{ label: 'Perlengkapan Umroh', url: '/perlengkapan-umroh', type: 'normal' },
+		// { label: 'Perlengkapan Umroh', url: '/perlengkapan-umroh', type: 'normal' },
 		{ label: 'Blog', url: '/blog', type: 'normal' },
 		{ label: 'Tentang Kami', url: '/tentang-kami', type: 'normal' }
 	];
@@ -174,7 +174,7 @@
 					<span class="text-xs">Haji/Umroh</span>
 				</a>
 			</div>
-			<div class="flex-1 text-center">
+			<!-- <div class="flex-1 text-center">
 				<a
 					href="/perlengkapan-umroh"
 					class="flex flex-col items-center {activeUrl === '/perlengkapan-umroh' ? 'active' : ''}"
@@ -182,7 +182,7 @@
 					<span class="material-icons">shopping_bag</span>
 					<span class="text-xs">Perlengkapan</span>
 				</a>
-			</div>
+			</div> -->
 			<div class="flex-1 text-center">
 				<a
 					href="/blog"

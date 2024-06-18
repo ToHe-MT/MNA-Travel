@@ -58,7 +58,17 @@
 				{#each data.blog as item}
 					<div class="rounded-xl shadow-md drop-shadow">
 						{#if item.images && item.images.length > 0}
-							<img src="{import.meta.env.VITE_S3_PUBLIC_URL}/blog/{item.images[0].picture_id}" alt="" class="rounded-t-xl"/>
+							<img
+								src="{import.meta.env.VITE_S3_PUBLIC_URL}/blog/{item.images[0].picture_id}"
+								alt=""
+								class="rounded-t-xl"
+							/>
+						{:else}
+							<img
+								src="./hero.svg"
+								alt=""
+								class="rounded-t-xl"
+							/>
 						{/if}
 
 						<div class="p-5">

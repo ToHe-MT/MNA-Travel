@@ -95,15 +95,13 @@
 					<h3 class="font-bold py-2">Quick Link</h3>
 					<a href="/tentang-kami" class="hover:text-blue-700">Tentang</a>
 					<a href="/layanan/paket/umroh" class="hover:text-blue-700">Paket Umroh</a>
-					<a href="/layanan/sewa-transportasi" class="hover:text-blue-700">Sewa Transportasi</a>
-					<a href="/layanan/wisata-domestik" class="hover:text-blue-700">Paket Wisata Domestik</a>
 				</div>
 				<div class="flex flex-col gap-2">
 					<h3 class="font-bold py-2">Kontak Kami</h3>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">email</span>
-						<a href="mailto:admin@mnatravel.com" target="_blank" class="hover:text-blue-700"
-							>admin@mnatravel.com</a
+						<a href="mailto:cs@mnatravel.com" target="_blank" class="hover:text-blue-700"
+							>cs@mnatravel.com</a
 						>
 					</div>
 					<div class="flex items-center">
