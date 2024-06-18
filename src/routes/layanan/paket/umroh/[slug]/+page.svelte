@@ -12,7 +12,6 @@
 	const { bonus, included, not_included, itinerari, images } = paket;
 	const flights = data.flights || [];
 	const hotel = data.penginapan || [];
-	console.log(itinerari);
 
 	import { formatRupiah, formatDateToIndonesian, capitalizeWords } from '$lib/function/format.js';
 
@@ -51,7 +50,7 @@
 	</div>
 	<!-- ? Content -->
 	<div class="container mx-auto py-12 px-5 sm:px-0">
-		<div class="grid grid-cols-3">
+		<div class="grid grid-cols-3" style="grid-auto-flow: col dense;">
 			<div class="col-span-3 lg:col-span-2">
 				<!-- ! Swiper JS Gallery -->
 				{#if images && images.length > 0}

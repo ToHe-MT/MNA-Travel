@@ -29,7 +29,7 @@ export const load = async ({ url }) => {
 						uuid: 1
 					}
 				},
-				{ $limit: 3 }
+				{ $limit: 1 }
 			])
 			.toArray();
 

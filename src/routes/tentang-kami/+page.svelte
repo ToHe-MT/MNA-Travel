@@ -6,7 +6,7 @@
 	/>
 </svelte:head>
 
-<div class="hero relative flex items-center justify-center w-full h-screen bg-cover bg-center">
+<div class="hero relative flex items-center justify-center w-full min-h-screen bg-cover bg-center">
 	<div class="container mx-auto p-4 rounded-md">
 		<div class="grid grid-cols-10">
 			<div class="block lg:col-span-1 lg:block col-span-10 min-h-16"></div>

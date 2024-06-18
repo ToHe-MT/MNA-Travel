@@ -7,6 +7,8 @@
 	import Pelayanan from './page/Pelayanan.svelte';
 	import Testimoni from './page/Testimoni.svelte';
 	import Umroh from './page/Umroh.svelte';
+	import Flyer from './page/Flyer.svelte';
+	import PopUp from './page/PopUp.svelte';
 
 	export let data;
 
@@ -26,6 +28,8 @@
 <Pelayanan />
 <Umroh umroh={data.umroh} />
 <Fasilitas />
-<!-- <Banner /> -->
-<!-- <Gallery /> -->
-<!-- <Testimoni /> -->
+<Flyer />
+<Banner />
+<Gallery />
+<Testimoni />
+<PopUp/>

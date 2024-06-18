@@ -109,7 +109,7 @@
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">phone</span>
 						<a href="https://wa.me/6282240406568" target="_blank" class="hover:text-blue-700"
-							>+62 822-4040-656</a
+							>+62 822-4040-6568</a
 						>
 					</div>
 					<div class="flex items-center">
@@ -120,9 +120,13 @@
 					</div>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">location_on</span>
-						<a href="https://maps.app.goo.gl/87dQtUcz9yLyk4fi9" target="_blank" class="hover:text-blue-700"
-							>Jl. Raya Condet No.34, Balekambang, Kota Jakarta Timur </a
-						>
+						<a
+							href="https://maps.app.goo.gl/zn92phrH1Uyebe117"
+							target="_blank"
+							class="hover:text-blue-700"
+							>Jl. Raya Condet No.35, RT.5/RW.4, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,
+							Daerah Khusus Ibukota Jakarta 13530
+						</a>
 					</div>
 				</div>
 			</div>

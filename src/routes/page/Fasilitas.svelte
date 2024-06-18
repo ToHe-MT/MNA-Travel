@@ -54,11 +54,16 @@
 					In Syaa Allah, Anda akan merasakan pengalaman ibadah yang tak terlupakan.
 				</h1>
 				<p class="text-gray-400 mb-0">
-					MNA Travel menyediakan program eksklusif Umroh dengan fasilitas istimewa untuk memenuhi
-					kebutuhan Anda.
+					Melaksanakan umroh sesuai dengan tuntunan Al-Qur'an adalah impian setiap muslim. MNA
+					Travel hadir untuk membantu Anda mewujudkan niat suci ini dengan memberikan penawaran
+					istimewa bagi para calon tamu-tamu Allah. Dengan bimbingan dari para ustadz berpengalaman
+					dan pelayanan terbaik, kami memastikan setiap langkah Anda dalam menjalankan ibadah umroh
+					sesuai syariat dan penuh keberkahan. Dengan penawaran biaya Umroh dan Haji yang
+					terjangkau, MNA Travel juga berikan fasilitas yang akan memberikan kenyamanan beribadah.
+					Segera Hubungi MNA Travel sekarang dan dapatkan penawaran spesial kami.
 				</p>
 				<!--*! ANGKA -->
-				<div class="grid grid-cols-1 sm:grid-cols-2 py-5 sm:py-8 gap-3">
+				<!-- <div class="grid grid-cols-1 sm:grid-cols-2 py-5 sm:py-8 gap-3">
 					<div>
 						<ul class="flex flex-col gap-2">
 							{#each firstColumn as item, idx}
@@ -83,14 +88,15 @@
 							{/each}
 						</ul>
 					</div>
-				</div>
-				<div>
+				</div> -->
+				<div class="py-4">
 					<a
 						href="https://wa.me/6282240406568"
 						target="_blank"
 						class="contact flex justify-start align-middle"
 					>
-						<Button className="rounded-xl border border-blue-700 text-blue-700 hover:bg-blue-100"
+						<Button padding="px-6 py-4"
+						className="rounded-xl border border-blue-700 text-blue-700 hover:bg-blue-100 text-lg"
 							>Hubungi Kami</Button
 						>
 					</a>

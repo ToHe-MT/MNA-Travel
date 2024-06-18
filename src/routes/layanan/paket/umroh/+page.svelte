@@ -159,6 +159,9 @@
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket, idx}
+
+					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 				{/each}
 			{/if}

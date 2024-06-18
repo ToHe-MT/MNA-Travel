@@ -52,3 +52,53 @@
 	border-radius: 5px;
 	background-color: #3554d1;
 }
+
+/* Example CSS for paragraphs */
+.blogblogblog p {
+	font-size: 1rem; /* Adjust size as needed */
+	line-height: 1.5; /* Adjust line height as needed */
+	color: #666; /* Adjust color as needed */
+	margin-bottom: 1rem; /* Adjust margin as needed */
+}
+/* Example CSS for headings */
+.blogblogblog h1 {
+	font-size: 2.5rem; /* Adjust size as needed */
+	font-weight: bold;
+	color: #333; /* Adjust color as needed */
+	margin-bottom: 1rem; /* Adjust margin as needed */
+}
+
+.blogblogblog h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #444;
+	margin-bottom: 0.75rem;
+}
+
+.blogblogblog h3 {
+	font-size: 1.75rem;
+	font-weight: bold;
+	color: #555;
+	margin-bottom: 0.5rem;
+}
+
+.blogblogblog h4 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 0.5rem;
+}
+
+.blogblogblog h5 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #777;
+	margin-bottom: 0.25rem;
+}
+
+.blogblogblog h6 {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #888;
+	margin-bottom: 0.25rem;
+}

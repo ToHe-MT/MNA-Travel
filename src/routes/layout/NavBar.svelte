@@ -14,7 +14,7 @@
 
 	const dashboard = [
 		{ label: 'Beranda', url: '/', type: 'normal' },
-		{ label: 'Layanan', url: '/layanan', type: 'dropdown' },
+		{ label: 'Paket Haji Umroh', url: '/layanan/paket/umroh', type: 'normal' },
 		{ label: 'Perlengkapan Umroh', url: '/perlengkapan-umroh', type: 'normal' },
 		{ label: 'Blog', url: '/blog', type: 'normal' },
 		{ label: 'Tentang Kami', url: '/tentang-kami', type: 'normal' }
@@ -22,8 +22,8 @@
 
 	const layanan = [
 		{ label: 'Paket Umroh', url: '/layanan/paket/umroh' },
-		{ label: 'Sewa Transportasi', url: '/layanan/sewa-transportasi' },
-		{ label: 'Wisata Domestik', url: '/layanan/paket-wisata-domestik' }
+		{ label: 'Haji-Furoda', url: '/layanan/paket/haji-furoda' }
+		// { label: 'Wisata Domestik', url: '/layanan/paket-wisata-domestik' }
 	];
 
 	let layananSelected = false;
@@ -46,7 +46,8 @@
 >
 	<div class="container mx-auto px-4" on:scroll={(e) => console.log(e.target.scrollTop)}>
 		<div
-			class="justify-between align-middle hidden lg:flex transition-duration-75 {activeUrl === '/' || activeUrl === '/layanan/paket/umroh'
+			class="justify-between align-middle hidden lg:flex transition-duration-75 {activeUrl ===
+				'/' || activeUrl === '/layanan/paket/umroh'
 				? scrolled
 					? 'text-black min-h-12'
 					: 'text-white min-h-16'
@@ -54,13 +55,17 @@
 		>
 			<div class="image hidden xl:block">
 				<img
-					src="/logo-{activeUrl === '/' || activeUrl === '/layanan/paket/umroh'? (scrolled ? 'sky-long' : 'white-long') : 'sky'}.png"
+					src="/logo-{activeUrl === '/' || activeUrl === '/layanan/paket/umroh'
+						? scrolled
+							? 'sky-long'
+							: 'white-long'
+						: 'sky'}.png"
 					alt=""
 					class="h-16 w-auto object-cover py-2"
 				/>
 			</div>
 			<div class=" content flex justify-center align-middle gap-x-10 m-auto">
-				{#each dashboard.slice(0, 1) as item}
+				{#each dashboard.slice(0, 2) as item}
 					{#if item.type === 'normal'}
 						<a
 							class=" transition-duration-75 px-3 py-1 rounded-xl hover:text-blue-500 hover:bg-white {activeUrl ===
@@ -71,7 +76,7 @@
 						>
 					{/if}
 				{/each}
-				<div class="relative">
+				<!-- <div class="relative">
 					<button
 						{...$trigger}
 						use:trigger
@@ -105,21 +110,14 @@
 							use:item
 							href={layanan[1].url}>{layanan[1].label}</a
 						>
-						<a
-							class="px-4 py-1 transition hover:text-blue-500 {activeUrl === layanan[2].url
-								? 'text-blue-700'
-								: 'bg-transparent'}"
-							{...$item}
-							use:item
-							href={layanan[2].url}>{layanan[2].label}</a
-						>
 					</div>
-				</div>
+				</div> -->
 				{#each dashboard.slice(2, 5) as item}
 					{#if item.type === 'normal'}
 						<a
-							class="px-3 py-1 rounded-xl transition hover:text-blue-500 hover:bg-white {activeUrl ===
-							item.url
+							class="px-3 py-1 rounded-xl transition hover:text-blue-500 hover:bg-white {activeUrl.startsWith(
+								item.url
+							)
 								? 'bg-white text-blue-700'
 								: 'bg-transparent'}"
 							href={item.url}>{item.label}</a
@@ -154,7 +152,7 @@
 				</a>
 			</div>
 			<div class="flex-1 text-center">
-				<Modal items={layanan} {activeUrl}>
+				<!-- <Modal items={layanan} {activeUrl}>
 					<div
 						class="flex flex-col items-center justify-center {layananMobileSelected ||
 						activeUrl.startsWith('/layanan')
@@ -164,10 +162,17 @@
 						<span class="material-icons">view_list</span>
 						<div class="flex justify-center items-center">
 							<span class="text-xs">Layanan</span>
-							<!-- <span class="material-icons material-symbols-outlined"> arrow_drop_up </span> -->
+							<span class="material-icons material-symbols-outlined"> arrow_drop_up </span>
 						</div>
 					</div>
-				</Modal>
+				</Modal> -->
+				<a
+					href="layanan/paket/umroh"
+					class="flex flex-col items-center {activeUrl === '/layanan/paket/umroh' ? 'active' : ''}"
+				>
+					<span class="material-icons">mosque</span>
+					<span class="text-xs">Haji/Umroh</span>
+				</a>
 			</div>
 			<div class="flex-1 text-center">
 				<a
@@ -179,7 +184,10 @@
 				</a>
 			</div>
 			<div class="flex-1 text-center">
-				<a href="/blog" class="flex flex-col items-center {activeUrl === '/blog' ? 'active' : ''}">
+				<a
+					href="/blog"
+					class="flex flex-col items-center {activeUrl.startsWith('/blog') ? 'active' : ''}"
+				>
 					<span class="material-icons">article</span>
 					<span class="text-xs">Blog</span>
 				</a>
