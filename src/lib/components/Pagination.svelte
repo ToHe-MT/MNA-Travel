@@ -1,13 +1,17 @@
 <script lang="ts">
+
+	export let totalData: number;
+	export let limit:number;
+	export let page:number;
 	import { createPagination, melt } from '@melt-ui/svelte';
 
 	const {
 		elements: { root, pageTrigger, prevButton, nextButton },
 		states: { pages, range }
 	} = createPagination({
-		count: 100,
-		perPage: 10,
-		defaultPage: 1,
+		count: totalData,
+		perPage: limit,
+		defaultPage: page,
 		siblingCount: 1
 	});
 </script>

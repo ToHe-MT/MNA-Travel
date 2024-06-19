@@ -27,7 +27,6 @@
 
 	export let changeFirst = true;
 	let isSelected;
-	console.log(title);
 </script>
 
 <div class="relative inline-block text-left {classUpper}">
