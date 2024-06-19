@@ -34,7 +34,8 @@
 		});
 	});
 
-	console.log(paket);
+
+console.log(data.info_paket.departure_from);
 </script>
 
 {#if paket}
@@ -135,10 +136,11 @@
 									<p>{paket.tour_guide}</p>
 								</div>
 							{/if}
-							{#if paket.departure_from}
+							
+							{#if paket.departure_from && paket.departure_from.length>0 && paket.departure_from[0].name}
 								<div class="flex flex-col gap-0">
 									<h1 class="font-semibold">Keberangkatan Dari</h1>
-									<p>{paket.departure_from}</p>
+									<p>{paket.departure_from[0].name} - {paket.departure_from[0].city}</p>
 								</div>
 							{/if}
 							{#if paket.departure_date}

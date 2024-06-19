@@ -2,14 +2,26 @@ import db from '$lib/server/db.js';
 import { formatRupiah } from '$lib/function/format.js';
 export const load = async ({ params, locals, url, query }) => {
 	let data;
+
+	
+
 	try {
 		data = await db
 			.collection('schedule')
 			.aggregate([
 				{ $match: { slug: params.slug } },
 				{
+					$lookup: {
+						from: 'airports',
+						localField: 'departure_from',
+						foreignField: 'objectID',
+						as: 'departure_from'
+					}
+				},
+				{
 					$project: {
-						_id: 0
+						_id: 0,
+						'departure_from._id': 0
 					}
 				}
 			])
@@ -104,7 +116,7 @@ export const load = async ({ params, locals, url, query }) => {
 	];
 
 	const flights = await db.collection('flights').aggregate(pipelineFlights).toArray();
-	
+
 	return {
 		info_paket: data[0],
 		flights,
@@ -127,8 +139,6 @@ export const actions = {
 		const info = infos[0];
 
 		const data = await request.formData();
-
-		console.log(data);
 		const newOrder = {
 			slug: params.slug,
 

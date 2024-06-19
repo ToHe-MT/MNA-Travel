@@ -11,11 +11,11 @@
 		double: 0
 	};
 	let selected_paket = paket.hotel_price_quad
-		? 'Quad'
+		? 'quad'
 		: paket.hotel_price_double
-			? 'Double'
+			? 'double'
 			: paket.hotel_price_triple
-				? 'Triple'
+				? 'triple'
 				: '';
 
 	let listPaket = [];
@@ -23,13 +23,13 @@
 	$: total_harga = total_pax * paket.base_price;
 
 	if (paket.hotel_price_quad) {
-		listPaket.push('Quad');
+		listPaket.push('quad');
 	}
 	if (paket.hotel_price_triple) {
-		listPaket.push('Triple');
+		listPaket.push('triple');
 	}
 	if (paket.hotel_price_double) {
-		listPaket.push('Double');
+		listPaket.push('double');
 	}
 	if (listPaket.length > 1) {
 		listPaket.push('Custom');
@@ -49,26 +49,38 @@
 	}
 
 	let form;
+
+	let name, whatsapp;
 	async function handleSubmit(event) {
 		event.preventDefault();
-
-		const formData = new FormData(form);
-
-		const response = await fetch('', {
-			method: 'POST',
-			body: formData
-		});
-
-		const result = await response.json();
-		const result_data = JSON.parse(result.data);
-
-		if (result.type === 'success') {
-			window.open(result_data[1], '_blank');
+		let text;
+		if (selected_paket === 'Custom') {
+			text = `Halo, Nama Saya ${name} (${whatsapp})\n\nIngin Memesan Paket ${paket.title} dari MNA Travel. \n \n Jenis Kamar : ${selected_paket} \n\n`;
+			if (jumlah_pax.quad > 0) {
+				text += `Total Pax Quad : ${jumlah_pax.quad} Pax \n Harga Quad Per Pax: ${formatRupiah(paket.hotel_price_quad)} \n\n`;
+			}
+			if (jumlah_pax.triple > 0) {
+				text += `Total Pax Triple : ${jumlah_pax.triple} Pax \n Harga Triple Per Pax: ${formatRupiah(paket.hotel_price_triple)} \n\n`;
+			}
+			if (jumlah_pax.double > 0) {
+				text += `Total Pax Double : ${jumlah_pax.double} Pax \n Harga Double Per Pax: ${formatRupiah(paket.hotel_price_double)} \n\n`;
+			}
+			text += `Total Harga: ${formatRupiah(
+				jumlah_pax.quad * paket.hotel_price_quad +
+					jumlah_pax.triple * paket.hotel_price_triple +
+					jumlah_pax.double * paket.hotel_price_double
+			)} \n Total Pax: ${jumlah_pax.quad + jumlah_pax.triple + jumlah_pax.double}`;
+		} else {
+			text = `Halo, Nama Saya ${name} (${whatsapp})\n\nIngin Memesan Paket ${paket.title} dari MNA Travel. \n \n Jenis Kamar : ${selected_paket} \n Total Pax: ${total_pax} Pax \n Harga Per Pax: ${formatRupiah(paket[`hotel_price_${selected_paket}`])} \n\n Total Harga: ${formatRupiah(total_harga)}`;
 		}
+
+		console.log(text);
+		const url = `https://wa.me/6282240406568?text=${encodeURIComponent(text)}`;
+		window.open(url, '_blank');
 	}
 </script>
 
-<form class="w-full px-0 lg:px-6" bind:this={form} on:submit={handleSubmit}>
+<form class="w-full px-0 lg:px-6" on:submit={handleSubmit}>
 	<div
 		class="flex flex-col rounded-lg border"
 		style="box-shadow: 2px 2px 12px 0px #0000000F;box-shadow: -1px -1px 5px 0px #0000000F;"
@@ -96,6 +108,7 @@
 							>
 						</div>
 						<input
+							bind:value={name}
 							type="text"
 							name="nama_pemesan"
 							id="nama_pemesan"
@@ -113,6 +126,7 @@
 							>
 						</div>
 						<input
+							bind:value={whatsapp}
 							type="number"
 							name="no_whatsapp"
 							id="no_whatsapp"
@@ -179,10 +193,10 @@
 						/>
 					</div>
 				</div>
-				{#if selected_paket === 'Quad'}
+				{#if selected_paket === 'quad'}
 					<div>
 						<div class="flex justify-between">
-							<h1>Quad</h1>
+							<h1>quad</h1>
 							<h1 class="px-3">{formatRupiah(paket.hotel_price_quad)}</h1>
 							<input type="number" bind:value={total_pax} name="pax_quad" style="display: none;" />
 						</div>
@@ -199,10 +213,10 @@
 							<h1 class="font-semibold px-3">{formatRupiah(total_pax * paket.hotel_price_quad)}</h1>
 						</div>
 					</div>
-				{:else if selected_paket === 'Triple'}
+				{:else if selected_paket === 'triple'}
 					<div>
 						<div class="flex justify-between">
-							<h1>Triple</h1>
+							<h1>triple</h1>
 							<input
 								type="number"
 								bind:value={total_pax}
@@ -226,10 +240,10 @@
 							</h1>
 						</div>
 					</div>
-				{:else if selected_paket === 'Double'}
+				{:else if selected_paket === 'double'}
 					<div>
 						<div class="flex justify-between">
-							<h1>Double</h1>
+							<h1>double</h1>
 							<input
 								type="number"
 								bind:value={total_pax}

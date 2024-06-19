@@ -13,7 +13,7 @@
 	let RangeHarga = 'Range Harga';
 	let Sort = 'Sort';
 
-	let ListJenisPaket = ['Jenis Paket', 'Silver', 'Gold', 'Platinum'];
+	let ListJenisPaket = ['Jenis Paket', 'Super Hemat', 'Premium', 'Precious', 'Exclusive'];
 	let ListBandara = ['Bandara', 'Jakarta'];
 	let ListRangeHarga = ['Range Harga', 'Dibawah 30jt', '30 Jt - 40 Jt'];
 	let ListSort = [
@@ -24,12 +24,13 @@
 		'Berangkat Terdekat',
 		'Berangkat Terlama'
 	];
+	let search;
 
 	function updateURLParams() {
 		const params = new URLSearchParams();
 
 		if (JenisPaket !== 'Jenis Paket') {
-			params.set('jenisPaket', JenisPaket);
+			params.set('level_paket', JenisPaket);
 		}
 
 		if (Bandara !== 'Bandara') {
@@ -38,6 +39,15 @@
 
 		if (RangeHarga !== 'Range Harga') {
 			params.set('rangeHarga', RangeHarga);
+		}
+
+		console.log(search);
+		if (search !=="" || search!== undefined) {
+			params.set('search', search);
+		}
+		console.log(params.get('search'));
+		if (params.get('search') === 'undefined' || params.get('search')=="") {
+			params.delete('search');
 		}
 
 		if (Sort !== 'Sort') {
@@ -112,24 +122,31 @@
 				classUpper="border-r border-gray-200 col-span-9 sm:col-span-3 md:col-span-2"
 				defaultLabel="Semua Harga"
 			/>
-			<div class="flex justify-center items-center text-black gap-2 px-4  sm:pl-20 md:pl-0 col-span-9 sm:col-span-5 md:col-span-2 p-4">
+			<div
+				class="flex justify-center items-center text-black gap-2 px-4 sm:pl-20 md:pl-10 col-span-9 sm:col-span-5 md:col-span-3 lg:col-span-2 m-auto"
+			>
 				<span class="material-icons text-gray-400">search</span>
 				<input
+					bind:value={search}
 					type="text"
 					placeholder="Search Paket"
 					class="w-24 md:w-full border-none rounded-xl focus:border-red-500/0 focus:ring-red-500/0 p-1"
+					on:keydown={(e) => e.key === 'Enter' && updateURLParams()}
 				/>
 			</div>
-			<div class="flex justify-center items-center col-span-9 sm:col-span-4 md:col-span-1 p-4">
-				<Button className="rounded-lg text-center bg-blue-700 text-white w-full" href="/">Search</Button>
+			<div
+				class="flex justify-center items-center col-span-9 sm:col-span-4 md:col-span-9 xl:col-span-1 py-2 px-4 md:px-3 lg:pr-3"
+			>
+				<Button
+					className="rounded-lg text-center bg-blue-700 text-white w-full"
+					onClick={()=>updateURLParams()}>Search</Button
+				>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div
-	class="hero relative flex items-center justify-center w-full min-h-screen bg-cover bg-center bg-white"
->
+<div class="hero relative flex items-center justify-center w-full bg-cover bg-center bg-white">
 	<div class="container mx-auto p-6 flex flex-col gap-8">
 		<div class="text-black">
 			<h1 class="text-center text-2xl md:text-4xl font-semibold tracking-wide mb-8">
@@ -138,8 +155,8 @@
 		</div>
 		<div class="flex justify-between container">
 			<div>
-				Menampilkan <span class="font-bold underline underline-offset-2"> 2 </span> dari
-				<span class="font-bold"> 2 </span> Data
+				Menampilkan <span class="font-bold underline underline-offset-2"> {data.limit} </span> dari
+				<span class="font-bold"> {data.totalData} </span> Data
 			</div>
 			<div>
 				<Dropdown
@@ -154,20 +171,23 @@
 				</Dropdown>
 			</div>
 		</div>
-		<div
-			class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-3"
-		>
-			{#if umroh && umroh.length > 0}
+		{#if umroh && umroh.length > 0}
+			<div
+				class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-3"
+			>
 				{#each umroh as paket, idx}
-
 					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 				{/each}
-			{/if}
-		</div>
+			</div>
+		{:else}
+			<div class="w-full border flex justify-center items-center min-h-96">
+				<h1 class="text-lg font-semibold">Paket Tidak Tersedia</h1>
+			</div>
+		{/if}
 		<div class="flex justify-end">
-			<Pagination />
+			<Pagination limit={data.limit} totalData={data.totalData} page={data.page}/>
 		</div>
 	</div>
 </div>
