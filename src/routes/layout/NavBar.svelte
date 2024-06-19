@@ -44,7 +44,7 @@
 		? 'bg-white shadow-xl'
 		: 'bg-transparent'} top-0 left-0 right-0 z-50 transition-all"
 >
-	<div class="container mx-auto px-4" on:scroll={(e) => console.log(e.target.scrollTop)}>
+	<div class="container mx-auto px-4">
 		<div
 			class="justify-between align-middle hidden lg:flex transition-duration-75 {activeUrl ===
 				'/' || activeUrl === '/layanan/paket/umroh'
@@ -65,7 +65,7 @@
 				/>
 			</div>
 			<div class=" content flex justify-center align-middle gap-x-10 m-auto">
-				{#each dashboard.slice(0, 2) as item}
+				{#each dashboard.slice(0, 1) as item}
 					{#if item.type === 'normal'}
 						<a
 							class=" transition-duration-75 px-3 py-1 rounded-xl hover:text-blue-500 hover:bg-white {activeUrl ===
@@ -112,7 +112,7 @@
 						>
 					</div>
 				</div> -->
-				{#each dashboard.slice(2, 5) as item}
+				{#each dashboard.slice(1, 4) as item}
 					{#if item.type === 'normal'}
 						<a
 							class="px-3 py-1 rounded-xl transition hover:text-blue-500 hover:bg-white {activeUrl.startsWith(

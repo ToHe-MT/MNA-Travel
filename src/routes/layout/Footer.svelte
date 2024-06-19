@@ -95,6 +95,8 @@
 					<h3 class="font-bold py-2">Quick Link</h3>
 					<a href="/tentang-kami" class="hover:text-blue-700">Tentang</a>
 					<a href="/layanan/paket/umroh" class="hover:text-blue-700">Paket Umroh</a>
+					<a href="/blog" class="hover:text-blue-700">Blog</a>
+					<a href="/tentang-kami" class="hover:text-blue-700">Tentang Kami</a>
 				</div>
 				<div class="flex flex-col gap-2">
 					<h3 class="font-bold py-2">Kontak Kami</h3>

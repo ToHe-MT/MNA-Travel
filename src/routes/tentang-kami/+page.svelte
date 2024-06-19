@@ -1,11 +1,29 @@
+<script>
+	import Part1 from './Part1.svelte';
+	import Part2 from './Part2.svelte';
+	import Part3 from './Part3.svelte';
+	import Part4 from './Part4.svelte';
+	import Part5 from './Part5.svelte';
+</script>
+
 <svelte:head>
-	<title> MNA Travel | Penyelenggara Umroh & Haji Profesional Indonesia </title>
+	<title>MNA Travel | Penyelenggara Umroh & Haji Profesional Indonesia</title>
 	<meta
 		name="description"
 		content="MNA Travel | Pusat Umroh & Haji Indonesia memberikan solusi layanan penyelenggara Umroh & Haji yang ramah dan profesional bagi seluruh kaum Muslim."
 	/>
 </svelte:head>
 
+<Part1 />
+
+<Part2 />
+
+<Part3 />
+
+<Part4 />
+
+<Part5 />
+<!-- 
 <div class="hero relative flex items-center justify-center w-full min-h-screen bg-cover bg-center">
 	<div class="container mx-auto p-4 rounded-md">
 		<div class="grid grid-cols-10">
@@ -14,7 +32,7 @@
 			<div
 				class="text-left col-span-10 lg:col-span-4 flex content-center justify-center flex-col py-10 lg:py-0"
 			>
-				<!-- <p class="text-blue-600 mb-2 font-medium tracking-wider text-base">Pengalaman Kami</p> -->
+				<p class="text-blue-600 mb-2 font-medium tracking-wider text-base">Pengalaman Kami</p>
 				<h1 class="text-2xl sm:text-4xl font-bold mb-4 tracking-wide">Tentang Kami</h1>
 				<p class="text-gray-600 mb-6">
 					Menjalankan ibadah Umroh dan Haji Khusus aman , nyaman & terpercaya adalah impian setiap
@@ -36,16 +54,6 @@
 					jangan ragu untuk memilih MNA Travel sebagai mitra perjalanan ibadah Anda, dan rasakan
 					pengalaman umroh yang berbeda bersama kami.
 				</p>
-
-				<!-- <a
-					href="https://wa.me/6282240406568"
-					target="_blank"
-					class="contact flex justify-start"
-				>
-					<Button className="rounded-xl border bg-blue-700 hover:bg-blue-700 text-white"
-						>Hubungi Kami</Button
-					>
-				</a> -->
 			</div>
 			<div class="hidden lg:col-span-1 lg:block"></div>
 			<div
@@ -56,4 +64,4 @@
 			<div class="hidden lg:col-span-1 lg:block lg:order-last"></div>
 		</div>
 	</div>
-</div>
+</div> -->

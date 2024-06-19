@@ -2,7 +2,6 @@
 	import { goto } from '$app/navigation';
 	export let umroh;
 	import { formatRupiah } from '$lib/function/format.js';
-	console.log(umroh.length);
 </script>
 
 <div

@@ -32,7 +32,6 @@ export const load = async ({ url }) => {
 			])
 			.toArray();
 
-		console.log(blog[0]);
 		return { blog };
 	} catch (error) {
 		console.error('Error loading data:', error);

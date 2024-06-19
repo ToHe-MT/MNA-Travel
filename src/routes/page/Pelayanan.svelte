@@ -1,15 +1,11 @@
 <script>
 	import Button from '$lib/button.svelte';
-
-	const heroText1 = 'Wujudkan Impian Ibadah Anda dengan Layanan Profesional dan Fasilitas Unggulan';
-	const heroText2 =
-		'MNA Travel mengakomodir kebutuhan umat mulai dari Umroh, Haji, hingga Penyewaan transportasi pariwisata.';
 </script>
 
 <div class="hero relative flex items-center justify-center w-full h-screen bg-cover bg-center">
 	<div class="container mx-auto p-4 rounded-md">
 		<div class="grid grid-cols-10">
-			<div class="block lg:col-span-1 lg:block col-span-10 min-h-16"></div>
+			<div class="hidden lg:col-span-1 lg:block col-span-10 min-h-16"></div>
 
 			<div
 				class="text-left col-span-10 lg:col-span-4 flex content-center justify-center flex-col py-10 lg:py-0"

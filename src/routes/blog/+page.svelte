@@ -20,7 +20,6 @@
 	import { formatDateToIndonesian } from '$lib/function/format.js';
 
 	export let data;
-	console.log(data.blog);
 </script>
 
 <div
