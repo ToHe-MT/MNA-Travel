@@ -1,7 +1,5 @@
 <script>
 	export let data;
-
-	import './desc.css';
 	import { formatDateToIndonesian } from '$lib/function/format.js';
 	const { title, content_html, images, blog_id, created_at, created_by, slug } = data.blog;
 </script>

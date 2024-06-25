@@ -25,6 +25,7 @@
 		'Berangkat Terlama'
 	];
 	let search;
+	let page = data.page;
 
 	function updateURLParams() {
 		const params = new URLSearchParams();
@@ -40,18 +41,20 @@
 		if (RangeHarga !== 'Range Harga') {
 			params.set('rangeHarga', RangeHarga);
 		}
-
-		console.log(search);
-		if (search !=="" || search!== undefined) {
+		
+		if (search !== '' || search !== undefined) {
 			params.set('search', search);
 		}
-		console.log(params.get('search'));
-		if (params.get('search') === 'undefined' || params.get('search')=="") {
+		if (params.get('search') === 'undefined' || params.get('search') == '') {
 			params.delete('search');
 		}
 
 		if (Sort !== 'Sort') {
 			params.set('sort', Sort);
+		}
+
+		if (page !== 1) {
+			params.set('page', page);
 		}
 
 		const newUrl = `${window.location.pathname}?${params.toString()}`;
@@ -75,6 +78,19 @@
 
 	function handleMenuSort(event) {
 		Sort = event.detail.menu;
+		updateURLParams();
+	}
+
+	function handleChangePage(event) {
+		page =(event.detail.page);
+		updateURLParams();
+	}
+	function handleNextPage(event) {
+		page = page + 1;
+		updateURLParams();
+	}
+	function handlePrevPage(event) {
+		page = page + 1;
 		updateURLParams();
 	}
 </script>
@@ -139,7 +155,7 @@
 			>
 				<Button
 					className="rounded-lg text-center bg-blue-700 text-white w-full"
-					onClick={()=>updateURLParams()}>Search</Button
+					onClick={() => updateURLParams()}>Search</Button
 				>
 			</div>
 		</div>
@@ -187,7 +203,15 @@
 			</div>
 		{/if}
 		<div class="flex justify-end">
-			<Pagination limit={data.limit} totalData={data.totalData} page={data.page}/>
+			<Pagination
+				limit={data.limit}
+				totalData={data.totalData}
+				page={data.page}
+				on:next={handleNextPage}
+				on:prev={handlePrevPage}
+				on:page={handleChangePage}
+				bind:data
+			/>
 		</div>
 	</div>
 </div>
