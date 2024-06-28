@@ -1,5 +1,5 @@
 <script>
-	export let className;
+	export let className = "font-semibold";
 	export let onClick = () => {};
 	export let href;
 	export let padding = ' px-4 py-2';

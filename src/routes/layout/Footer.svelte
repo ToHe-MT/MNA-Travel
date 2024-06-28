@@ -1,6 +1,6 @@
 <div class="bg-blue-100 min-h-96 py-10">
-	<div class="container mx-auto px-6 sm:px-24 py-12 lg:py-32">
-		<div class="grid grid-cols-1 lg:grid-cols-2 w-full gap-16">
+	<div class="mx-auto px-6 sm:px-24 py-12 lg:py-32">
+		<div class="grid grid-cols-1 xl:grid-cols-2 w-full">
 			<div class="flex gap-2 flex-col xl:pr-32">
 				<div class="flex gap-4 justify-between items-end pr-8">
 					<img src="/logo-sky.png" alt="MNA Travel Logo" class="py-2 w-24 h-auto" />
@@ -90,16 +90,16 @@
 					sunnah.
 				</p>
 			</div>
-			<div class="grid md:grid-cols-2 lg:pl-12 gap-8 md:gap-0">
-				<div class="flex flex-col gap-2">
-					<h3 class="font-bold py-2">Quick Link</h3>
+			<div class="flex flex-col xl:flex-row gap-12 lg:gap-6 py-12">
+				<div class="flex flex-col gap-2 min-w-48">
+					<h3 class="font-bold">Quick Link</h3>
 					<a href="/tentang-kami" class="hover:text-blue-700">Tentang</a>
 					<a href="/layanan/paket/umroh" class="hover:text-blue-700">Paket Umroh</a>
 					<a href="/blog" class="hover:text-blue-700">Blog</a>
 					<a href="/tentang-kami" class="hover:text-blue-700">Tentang Kami</a>
 				</div>
 				<div class="flex flex-col gap-2">
-					<h3 class="font-bold py-2">Kontak Kami</h3>
+					<h3 class="font-bold">Kontak Kami</h3>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">email</span>
 						<a href="mailto:cs@mnatravel.com" target="_blank" class="hover:text-blue-700"

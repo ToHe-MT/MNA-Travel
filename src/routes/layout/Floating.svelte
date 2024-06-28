@@ -1,9 +1,9 @@
-<div class="hidden lg:flex group fixed bottom-0 right-0 p-5 items-end justify-end w-32 h-32 z-30">
+<div class="flex group fixed bottom-0 right-0 p-5 items-end justify-end w-24 h-24 md:w-32 md:h-32 z-30">
 	<!-- main -->
 	<div
 		class="text-white shadow-xl flex items-center justify-center p-4 rounded-full bg-blue-500 z-50 absolute cursor-pointer"
 	>
-		<span class="material-icons material-symbols-outlined" style="font-size: 36px;">support_agent</span>
+		<span class="material-icons material-symbols-outlined text-[30px] md:text-[36px]" >support_agent</span>
 	</div>
 	<!-- sub left -->
 	<a
@@ -11,14 +11,14 @@
 		target="_blank"
 		class="absolute rounded-full transition-all duration-[0.2s] ease-out scale-y-0 group-hover:scale-y-100 group-hover:-translate-x-20 group-hover:-translate-y-4 flex p-3 hover:p-4 bg-green-500 scale-100 hover:bg-green-600 text-white cursor-pointer"
 	>
-		<span class="material-icons" style="font-size: 32px;">call</span>
+		<span class="material-icons text-[30px] md:text-[36px]">call</span>
 	</a>
 	<!-- sub top -->
 	<a
 		href="mailto:admin@mnatravel.com"
 		class="absolute rounded-full transition-all duration-[0.2s] ease-out scale-x-0 group-hover:scale-x-100 group-hover:-translate-y-20 group-hover:-translate-x-4 flex p-3 hover:p-4 bg-blue-500 hover:bg-blue-700 text-white"
 	>
-		<span class="material-icons" style="font-size: 32px;">mail</span>
+		<span class="material-icons text-[30px] md:text-[36px]">mail</span>
 	</a>
 	<!-- sub middle -->
 	<!-- <div

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createDialog, melt } from '@melt-ui/svelte';
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	/** Internal helpers */
 	import { fade, scale } from 'svelte/transition';
 
@@ -35,6 +35,19 @@
 		const url = `https://wa.me/6282240406568?text=${encodeURIComponent(text)}`;
 		window.open(url, '_blank');
 	}
+
+	function handleKeyDown(event: KeyboardEvent) {
+		if (event.key === 'Escape' && $open) {
+			close();
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('keydown', handleKeyDown);
+		return () => {
+			window.removeEventListener('keydown', handleKeyDown);
+		};
+	});
 </script>
 
 <svelte:window bind:scrollY={y} />

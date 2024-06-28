@@ -37,13 +37,13 @@
 </script>
 
 <div
-	class="hero relative flex items-center justify-center w-full h-screen bg-cover bg-center bg-white overflow-hidden"
+	class="hero relative flex items-center justify-center w-full bg-cover bg-center bg-gray-50 overflow-hidden"
 >
-	<div class="container mx-auto p-6 flex flex-col flex-grow">
-		<div class="flex-shrink-0">
-			<h3 class="text-center text-lg md:text-xl md-2 md:mb-6 text-blue-700">Testimonials</h3>
-			<h1 class="text-center text-2xl md:text-4xl font-semibold tracking-wide mb-4 text-black">
-				Mereka yang sudah berangkat
+	<div class="container mx-auto p-6 flex flex-col flex-grow py-12">
+		<div class="text-black flex justify-center items-center flex-col">
+			<h3 class="text-center text-blue-700 text-lg md:text-lg md-2 md:mb-2 syne font-semibold">Testimonial</h3>
+			<h1 class="text-center text-lg md:text-xl tracking-wider mb-2 max-w-[600px]">
+				Client Review dan Feedback
 			</h1>
 		</div>
 		<div class="flex-grow">
@@ -52,7 +52,7 @@
 					{#each Array(6)
 						.fill()
 						.map((_, i) => i + 1) as item,idx}
-						<div class="swiper-slide md:p-4 {idx%2===0?'md:mt-10':'md:mb-10'}">
+						<div class="swiper-slide md:p-0">
 							<div class="w-full bg-white rounded-lg flex flex-col p-4 md:p-10 gap-4 drop-shadow-md">
 								<div class="py-6">
 									<svg

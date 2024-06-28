@@ -4,7 +4,7 @@ export const load = async ({ url }) => {
 	try {
 		const filter = {
 			jenis_paket: 'umroh',
-			status: 'inactive'
+			status: 'active'
 		};
 
 		if (url.searchParams.get('level_paket')) {
@@ -49,7 +49,6 @@ export const load = async ({ url }) => {
 		}
 
 		const page = url.searchParams.get('page') ? url.searchParams.get('page') : 1;
-		console.log(page);
 
 		const limit = 1;
 		const skip = (parseInt(page) - 1) * limit;
@@ -81,7 +80,12 @@ export const load = async ({ url }) => {
 		const umroh = await umrohCollection.aggregate(pipeline).toArray();
 
 		const totalData = await umrohCollection.aggregate([{ $match: filter }]).toArray();
-		console.log(totalData.length);
+
+		console.log(umroh);
+		console.log(totalData);
+		console.log(limit);
+		console.log( Math.ceil(totalData.length / limit));
+		console.log(page);
 		return {
 			umroh,
 			limit,

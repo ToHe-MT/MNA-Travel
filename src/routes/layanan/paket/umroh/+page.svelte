@@ -4,10 +4,11 @@
 	import UmrohCard from '../../../../lib/components/UmrohCard.svelte';
 	import Pagination from '../../../../lib/components/Pagination.svelte';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 	export let data;
-	$: umroh = data.umroh;
-
+	console.log("ASD");
+	console.log(data);
 	let JenisPaket = 'Jenis Paket';
 	let Bandara = 'Bandara';
 	let RangeHarga = 'Range Harga';
@@ -25,7 +26,8 @@
 		'Berangkat Terlama'
 	];
 	let search;
-	let page = data.page;
+	$: page = data?.page;
+	$: umroh = data?.umroh;
 
 	function updateURLParams() {
 		const params = new URLSearchParams();
@@ -41,7 +43,7 @@
 		if (RangeHarga !== 'Range Harga') {
 			params.set('rangeHarga', RangeHarga);
 		}
-		
+
 		if (search !== '' || search !== undefined) {
 			params.set('search', search);
 		}
@@ -82,17 +84,24 @@
 	}
 
 	function handleChangePage(event) {
-		page =(event.detail.page);
+		page = (event.detail.page);
 		updateURLParams();
 	}
+
 	function handleNextPage(event) {
 		page = page + 1;
 		updateURLParams();
 	}
+
 	function handlePrevPage(event) {
 		page = page + 1;
 		updateURLParams();
 	}
+	onMount(()=>{
+		console.log(data);
+	})
+
+
 </script>
 
 <svelte:head>
@@ -155,7 +164,8 @@
 			>
 				<Button
 					className="rounded-lg text-center bg-blue-700 text-white w-full"
-					onClick={() => updateURLParams()}>Search</Button
+					onClick={() => updateURLParams()}>Search
+				</Button
 				>
 			</div>
 		</div>
@@ -170,10 +180,12 @@
 			</h1>
 		</div>
 		<div class="flex justify-between container">
-			<div>
-				Menampilkan <span class="font-bold underline underline-offset-2"> {data.limit} </span> dari
-				<span class="font-bold"> {data.totalData} </span> Data
-			</div>
+			{#if data?.limit && data?.totalData}
+				<div>
+					Menampilkan <span class="font-bold underline underline-offset-2"> {data.limit} </span> dari
+					<span class="font-bold"> {data.totalData} </span> Data
+				</div>
+			{/if}
 			<div>
 				<Dropdown
 					on:menuSelected={handleMenuSort}
@@ -192,9 +204,9 @@
 				class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-3"
 			>
 				{#each umroh as paket, idx}
-					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
-					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
-					<UmrohCard {umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCard umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCard umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCard umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 				{/each}
 			</div>
 		{:else}
@@ -203,15 +215,19 @@
 			</div>
 		{/if}
 		<div class="flex justify-end">
-			<Pagination
-				limit={data.limit}
-				totalData={data.totalData}
-				page={data.page}
-				on:next={handleNextPage}
-				on:prev={handlePrevPage}
-				on:page={handleChangePage}
-				bind:data
-			/>
+			{#if data && data.limit && data.totalData && data.page}
+
+
+				<Pagination
+					limit={data?.limit}
+					totalData={data?.totalData}
+					page={data?.page}
+					on:next={handleNextPage}
+					on:prev={handlePrevPage}
+					on:page={handleChangePage}
+					bind:data
+				/>
+			{/if}
 		</div>
 	</div>
 </div>

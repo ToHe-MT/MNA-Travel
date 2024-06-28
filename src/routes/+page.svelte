@@ -9,6 +9,12 @@
 	import Umroh from './page/Umroh.svelte';
 	import Flyer from './page/Flyer.svelte';
 	import PopUp from './page/PopUp.svelte';
+	import Tentang from './page/Tentang.svelte';
+	import Layanan from './page/Layanan.svelte';
+	import Blog from './page/Blog.svelte';
+	import Kontak from './page/Kontak.svelte';
+	import Partner from './page/Partner.svelte';
+	import Faq from './page/Faq.svelte';
 
 	export let data;
 
@@ -25,11 +31,17 @@
 </svelte:head>
 
 <Hero />
-<Pelayanan />
+<Tentang/>
+<!--<Pelayanan />-->
 <Umroh umroh={data.umroh} />
-<Fasilitas />
-<Flyer />
-<Banner />
-<Gallery />
+<Layanan/>
+<!--<Fasilitas />-->
+<!--<Flyer />-->
+<!--<Banner />-->
 <Testimoni />
-<PopUp/>
+<Gallery />
+<Blog/>
+<Kontak/>
+<Faq/>
+<Partner/>
+<!--<PopUp/>-->
