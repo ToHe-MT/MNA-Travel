@@ -15,39 +15,19 @@ import AccordionIncluded from '$lib/components/AccordionIncluded.svelte';
 			</h1>
 		</div>
 		<div class="flex gap-5 justify-center items-center flex-wrap py-12">
-			<AccordionIncluded title="Lrem Ipsum Dolor Sit" className="px-0 max-w-[800px]">
-				<div class="bg-white w-full p-5">
-					<div class="mb-6">
-						<h2 class="text-lg font-semibold">Lorem</h2>
-						<p class="text-gray-700">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda delectus dicta dolorem, doloribus eaque explicabo illo incidunt inventore magni maxime necessitatibus nesciunt obcaecati perferendis, repellendus saepe tempora voluptates.
-						</p>
-					</div>
-
-				</div>
-			</AccordionIncluded>
-			<AccordionIncluded title="Lrem Ipsum Dolor Sit" className="px-0 max-w-[800px]">
-				<div class="bg-white w-full p-5">
-					<div class="mb-6">
-						<h2 class="text-lg font-semibold">Lorem</h2>
-						<p class="text-gray-700">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda delectus dicta dolorem, doloribus eaque explicabo illo incidunt inventore magni maxime necessitatibus nesciunt obcaecati perferendis, repellendus saepe tempora voluptates.
-						</p>
-					</div>
-
-				</div>
-			</AccordionIncluded>
-			<AccordionIncluded title="Lrem Ipsum Dolor Sit" className="px-0 max-w-[800px]">
-				<div class="bg-white w-full p-5">
-					<div class="mb-6">
-						<h2 class="text-lg font-semibold">Lorem</h2>
-						<p class="text-gray-700">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda delectus dicta dolorem, doloribus eaque explicabo illo incidunt inventore magni maxime necessitatibus nesciunt obcaecati perferendis, repellendus saepe tempora voluptates.
-						</p>
-					</div>
-
-				</div>
-			</AccordionIncluded>
+			{#each {length:3} as item}
+				 <AccordionIncluded title="Lorem Ipsum Dolor Sit" className="px-0 max-w-[800px]">
+					 <div class="bg-white w-full p-5">
+						 <div class="mb-6">
+							 <h2 class="text-lg font-semibold">Lorem</h2>
+							 <p class="text-gray-700">
+								 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda delectus dicta dolorem, doloribus eaque explicabo illo incidunt inventore magni maxime necessitatibus nesciunt obcaecati perferendis, repellendus saepe tempora voluptates.
+							 </p>
+						 </div>
+	 
+					 </div>
+				 </AccordionIncluded>
+			{/each}
 		</div>
 
 	</div>

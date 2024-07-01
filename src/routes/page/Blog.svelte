@@ -23,7 +23,7 @@ py-10"
 		>
 			{#if blog && blog.length > 0}
 				{#each blog as item}
-					<div class="rounded-xl shadow-md drop-shadow">
+					<div class="rounded-xl shadow-md drop-shadow bg-white">
 						{#if item.images && item.images.length > 0}
 							<img
 								src="{import.meta.env.VITE_S3_PUBLIC_URL}/blog/{item.images[0].picture_id}"
