@@ -10,17 +10,12 @@
 		>
 			<p class="text-blue-600 mb-2 font-medium tracking-wider text-base">Pengalaman Kami</p>
 			<h1 class="text-base sm:text-xl font-bold syne">
-				Menjadi penyedia layanan Umroh terpercaya yang memberikan pengalaman spiritual mendalam dan pelayanan terbaik
+				Fasilitator Para Tamu Allah yang Mulia
 			</h1>
-			<p class="text-gray-700">Menyediakan layanan Umroh yang profesional, aman, dan nyaman bagi seluruh jamaah
-			</p>
-			<p class="text-gray-500">
-				Apakah Anda sedang merencanakan perjalanan umroh yang penuh berkah? Kami dari MNA Travel
-				hadir untuk membantu mewujudkan niat suci Anda. Dengan pengalaman dalam memberikan
-				pelayanan terbaik, kami memastikan perjalanan Anda nyaman dan khusyuk. Dapatkan penawaran
-				spesial untuk keberangkatan umroh dan haji 2024-2025 dan rasakan pengalaman yang tak
-				terlupakan bersama kami. Hubungi kami sekarang untuk informasi lebih lanjut dan kami siap
-				membuat ibadah anda sah dan mambrur.
+			<!-- <p class="text-gray-700">Menyediakan layanan Umroh yang profesional, aman, dan nyaman bagi seluruh jamaah
+			</p> -->
+			<p class="text-gray-500 max-w-[900px]"	>
+				Jumlah penduduk muslim di Indonesia yang mencapai 200 juta menjadi amanah besar bagi kami sebagai fasilitator para tamu Allah yang mulia. Meskipun banyak penyelenggara Haji Khusus dan Umrah yang juga berkomitmen untuk memberikan pelayanan terbaik bagi seluruh jamaahnya, MNA Travel hadir bersama mitra-mitra terbaik untuk memberikan solusi layanan penyelenggaraan Haji Khusus dan Umrah bagi seluruh kaum muslimin dengan niat tulus sebagai fasilitator terbaik bagi para tamu Allah yang mulia. Semoga ini menjadi ladang pahala bagi kami semua. Aamiin Allahumma Aamiin.
 			</p>
 
 			<a
@@ -35,7 +30,7 @@
 			</a>
 		</div>
 		<div
-			class="flex justify-center items-center sm:min-h-[350px] order-first lg:order-last col-span-3 md:col-span-1"
+			class="flex justify-start items-start sm:min-h-[350px] order-first lg:order-last col-span-3 md:col-span-1"
 		>
 			<img src="./tentang-1.svg" alt="foto" class="w-full h-auto" />
 		</div>

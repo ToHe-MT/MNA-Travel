@@ -4,6 +4,7 @@
 	import Part3 from './Part3.svelte';
 	import Part4 from './Part4.svelte';
 	import Part5 from './Part5.svelte';
+	import Part6 from './Part6.svelte';
 </script>
 
 <svelte:head>
@@ -23,6 +24,8 @@
 <Part4 />
 
 <Part5 />
+
+<Part6/>
 <!-- 
 <div class="hero relative flex items-center justify-center w-full min-h-screen bg-cover bg-center">
 	<div class="container mx-auto p-4 rounded-md">
