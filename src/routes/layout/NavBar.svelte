@@ -15,7 +15,8 @@
 	const dashboard = [
 		{ label: 'Beranda', url: '/', type: 'normal' },
 		{ label: 'Tentang Kami', url: '/tentang-kami', type: 'normal' },
-		{ label: 'Paket Haji Umroh', url: '/layanan/paket/umroh', type: 'normal' },
+		{ label: 'Paket Umroh', url: '/layanan/paket/umroh', type: 'normal' },
+		{ label: 'Haji Furoda', url: '/layanan/haji-furoda', type: 'normal' },
 		// { label: 'Perlengkapan Umroh', url: '/perlengkapan-umroh', type: 'normal' },
 		{ label: 'Blog', url: '/blog', type: 'normal' },
 		{ label: 'Kontak', url: '/kontak', type: 'normal' }
@@ -153,7 +154,7 @@
 	</div>
 </div>
 <div id="mobileNav"
-		 class="lg:hidden shadow-xl transition-all duration-500 fixed top-0 w-full bg-white flex flex-col z-40 h-[350px] {mobileOpen ? 'translate-y-0 opacity-100': 'opacity-100 -translate-y-full'}">
+		 class="lg:hidden shadow-xl transition-all duration-500 fixed top-0 w-full bg-white flex flex-col z-40 h-[400px] {mobileOpen ? 'translate-y-0 opacity-100': 'opacity-100 -translate-y-full'}">
 <!--	<div class="flex justify-end p-4">-->
 <!--		<button id="closeButton" class="text-blue-400 hover:text-blue-700 focus:outline-none"-->
 <!--						on:click={() => (mobileOpen = !mobileOpen)}>-->
@@ -177,12 +178,11 @@
 		<a href="/"
 			 class="text-xl {activeUrl ==='/' ? 'text-blue-700': 'text-gray-700'}  hover:text-blue-500"
 			 on:click={() => (mobileOpen = false)}>Beranda</a>
-		<a href="/tentang-kami" class="text-xl text-gray-700 hover:text-blue-500" on:click={() => (mobileOpen = false)}>Tentang
-			Kami</a>
-		<a href="/layanan-paket-umroh" class="text-xl text-gray-700 hover:text-blue-500"
-			 on:click={() => (mobileOpen = false)}>Paket Haji / Umroh</a>
-		<a href="/blog" class="text-xl text-gray-700 hover:text-blue-500" on:click={() => (mobileOpen = false)}>Blog</a>
-		<a href="/kontak" class="text-xl text-gray-700 hover:text-blue-500" on:click={() => (mobileOpen = false)}>Kontak</a>
+		{#each dashboard.slice(1) as item}
+
+		<a href={item.url} class="text-xl {activeUrl.startsWith(item.url) ? 'text-blue-700': 'text-gray-700'} hover:text-blue-500" on:click={() => (mobileOpen = false)}>{item.label}</a>
+		{/each}
+
 	</div>
 </div>
 <style>
