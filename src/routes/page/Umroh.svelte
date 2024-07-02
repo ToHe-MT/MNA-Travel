@@ -8,16 +8,16 @@
 <div
 	class="hero relative flex items-center justify-center w-full min-h-screen bg-cover bg-center bg-white opensans"
 >
-	<div class="container mx-auto p-6">
+	<div class="container mx-auto p-6 py-20">
 		<div class="text-black flex justify-center items-center flex-col">
 			<h3 class="text-center text-blue-700 text-lg md:text-lg md-2 md:mb-2 syne font-semibold">Paket Umrah</h3>
 			<h1 class="text-center text-lg md:text-xl tracking-wider mb-8 max-w-[600px]">
-				Lorem ipsum dolor sit amet consectetur. Dictumst cras sed dui eu.
+				Paket Umroh September 2024
 			</h1>
 		</div>
 		<div
 			class="grid grid-cols-1 md:grid-cols-1 {umroh && umroh.length ? umroh.length : '2'}
-			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-1 gap-y-3 md:py-12"
+			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-1 gap-y-3 md:py-4"
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket}

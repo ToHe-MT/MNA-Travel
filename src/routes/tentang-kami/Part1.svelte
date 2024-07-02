@@ -16,8 +16,9 @@
 				Bersama Kami Menuju Tanah Suci
 			</h1>
 			<p class="text-gray-600 mb-6">
-				Lorem ipsum dolor sit amet consectetur. Pharetra posuere enim purus vitae facilisi mi
-				pellentesque
+				Travel umroh dan haji MNA Travel, merupakan salah satu travel sunnah yang memberikan
+				bimbingan ibadah umroh dan haji sesuai sunnah Rasulullah juga pembimbing ustadz-ustadz
+				sunnah.
 			</p>
 		</div>
 		<div class="hidden xl:col-span-1 xl:block"></div>

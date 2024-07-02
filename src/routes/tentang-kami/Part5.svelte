@@ -6,7 +6,7 @@
 		</h1>
 	</div>
 	<div class="container mx-auto">
-		<div class="grid md:grid-cols-3 gap-10">
+		<div class="grid lg:grid-cols-3 gap-10 px-5 md:px-10">
 			<div class="rounded-lg bg-white flex justify-center items-center flex-col p-8 py-12 gap-6">
 				<h1 class="text-xl font-semibold">ISO 14001</h1>
 				<p class="text-gray-600">

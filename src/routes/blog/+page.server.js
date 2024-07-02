@@ -6,18 +6,6 @@ export const load = async ({ url }) => {
 			status: 'public'
 		};
 
-		// if (url.searchParams.get('level_paket')) {
-		// 	filter.level_paket = url.searchParams.get('level_paket');
-		// }
-
-		// if (url.searchParams.get('bandara')) {
-		// 	filter.type_category = url.searchParams.get('bandara');
-		// }
-
-		// if (url.searchParams.get('category')) {
-		// 	filter.type_category = url.searchParams.get('category');
-		// }
-
 		const blogCollection = db.collection('blog');
 		const blog = await blogCollection
 			.aggregate([

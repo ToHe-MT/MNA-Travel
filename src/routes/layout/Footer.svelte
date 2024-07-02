@@ -1,5 +1,5 @@
 <div class="bg-blue-100 min-h-96 py-10">
-	<div class="mx-auto px-6 sm:px-24 py-12 lg:py-32">
+	<div class="mx-auto px-6 sm:px-24 pt-12 lg:pt-20">
 		<div class="grid grid-cols-1 xl:grid-cols-2 w-full">
 			<div class="flex gap-2 flex-col xl:pr-32">
 				<div class="flex gap-4 justify-between items-end pr-8">
@@ -133,7 +133,7 @@
 		</div>
 	</div>
 	<div
-		class="container mx-auto flex justify-center items-center text-gray-400 mt-4 px-4 pb-16 lg:pb-0 text-xs md:text-base"
+		class="container mx-auto flex justify-center items-center text-gray-400 mt-4 px-4 text-xs md:text-base"
 	>
 		© Copyright 2024. All Rights Reserved by MNA Travel
 	</div>

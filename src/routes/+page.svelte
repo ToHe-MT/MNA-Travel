@@ -40,7 +40,7 @@
 <!--<Banner />-->
 <Testimoni />
 <Gallery />
-<Blog/>
+<Blog blog={data.blog}/>
 <Kontak/>
 <Faq/>
 <Partner/>
