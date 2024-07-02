@@ -12,10 +12,10 @@
 
 	export let title = 'TItle Please';
 
-	export let className = 'px-0 lg:px-6 max-w-full';
+	export let className = 'px-0 lg:px-6';
 </script>
 
-<div class="mx-auto w-full rounded-xl bg-white {className}" {...$root}>
+<div class="mx-auto w-full max-w-full rounded-xl bg-white {className}" {...$root}>
 	<div {...$item(title)} use:item class="overflow-hidden transition-colors">
 		<h2 class="flex">
 			<button

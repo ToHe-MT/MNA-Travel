@@ -37,7 +37,7 @@
 </script>
 
 <div
-	class="hero relative flex items-center justify-center w-full bg-cover bg-center bg-gray-50 overflow-hidden"
+	class="testimoni hero relative flex items-center justify-center w-full bg-cover bg-center bg-gray-50 overflow-hidden"
 >
 	<div class="container mx-auto p-6 flex flex-col flex-grow py-12">
 		<div class="text-black flex justify-center items-center flex-col">
