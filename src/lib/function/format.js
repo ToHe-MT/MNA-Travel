@@ -17,6 +17,7 @@ function formatDateToIndonesian(date) {
 	});
 }
 function capitalizeWords(str) {
+	str = str.toLowerCase()
 	return str
 		.split(' ')
 		.map((word) => {
