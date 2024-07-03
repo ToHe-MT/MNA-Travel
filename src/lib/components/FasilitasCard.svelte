@@ -9,5 +9,5 @@
 		<span class="material-icons material-symbols-outlined  text-white" style="font-size: 32px">{icon}</span>
 	</div>
 	<h1 class="syne text-xl font-semibold text-blue-700">{name}</h1>
-	<p class="text-gray-500 tracking-wider">{text}</p>
+	<p class="text-gray-500 tracking-wider leading-relaxed">{text}</p>
 </div>

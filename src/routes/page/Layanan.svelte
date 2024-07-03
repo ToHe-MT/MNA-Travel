@@ -20,10 +20,8 @@
 >
 	<div class="container mx-auto p-6">
 		<div class="text-black flex justify-center items-center flex-col">
-			<h3 class="text-center text-blue-700 text-lg md:text-lg md-2 md:mb-2 syne font-semibold">Layanan Kami</h3>
-			<h1 class="text-center text-lg md:text-xl tracking-wider mb-8 max-w-[600px]">
-				Lorem ipsum dolor sit amet consectetur. Dictumst cras sed dui eu.
-			</h1>
+			<h3 class="text-center text-blue-700 text-lg md:text-xl mb-8 md:mb-16 syne font-semibold ">Mengapa harus Haji & Umroh bersama MNA Travel?
+			</h3>
 		</div>
 	<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 		{#each Layanan as item}

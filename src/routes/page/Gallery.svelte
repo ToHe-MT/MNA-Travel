@@ -6,8 +6,8 @@
 >
 	<div class="container mx-auto p-6">
 		<div class="text-black flex justify-center items-center flex-col">
-			<h3 class="text-center text-blue-700 text-lg md:text-lg md-2 md:mb-2 syne font-semibold">Galeri</h3>
-			<h1 class="text-center text-lg md:text-xl tracking-wider mb-8 max-w-[600px]">
+			<h3 class="text-center text-blue-700 text-lg md:text-xl md-2 md:mb-2 syne font-semibold">Galeri</h3>
+			<h1 class="text-center text-lg md:text-2xl tracking-wide mb-8 max-w-[1000px]">
 				Lorem ipsum dolor sit amet consectetur. Dictumst cras sed dui eu.
 			</h1>
 		</div>

@@ -9,14 +9,14 @@ import AccordionIncluded from '$lib/components/AccordionIncluded.svelte';
 >
 	<div class="container mx-auto p-6 flex flex-col flex-grow py-12">
 		<div class="text-black flex justify-center items-center flex-col">
-			<h3 class="text-center text-blue-700 text-lg md:text-lg md-2 md:mb-2 syne font-semibold">FAQ</h3>
-			<h1 class="text-center text-md md:text-lg tracking-wider mb-2 max-w-[1000px]">
+			<h3 class="text-center text-blue-700 text-lg md:text-xl md-2 md:mb-2 syne font-semibold">FAQ</h3>
+			<h1 class="text-center text-lg md:text-2xl tracking-wide mb-8 max-w-[1000px]">
 				Lorem Ipsum Dolor Sir AMet
 			</h1>
 		</div>
-		<div class="flex gap-5 justify-center items-center flex-wrap py-12">
+		<div class="flex flex-col gap-5 justify-center items-center flex-wrap py-6">
 			{#each {length:3} as item}
-				 <AccordionIncluded title="Lorem Ipsum Dolor Sit" className="px-0 max-w-[800px]">
+				 <AccordionIncluded title="Lorem Ipsum Dolor Sit" className="px-0 w-full max-w-[800px]">
 					 <div class="bg-white w-full p-5">
 						 <div class="mb-6">
 							 <h2 class="text-lg font-semibold">Lorem</h2>

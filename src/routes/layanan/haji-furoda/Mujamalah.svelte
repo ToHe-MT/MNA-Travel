@@ -20,21 +20,20 @@
 				<div class="grid gap-4 lg:pr-16">
 
 					<p>
-						<span class="font-bold"> Alhamdulillah, seluruh Visa Haji untuk Jamaah Haji Furoda Indonesia tahun 2024 telah diterbitkan sejak 17 Mei 2024 </span>
-						In Syaa Allah, keberangkatan akan dilakukan pada 5 dan 6 Juni 2024.
+						<span class="font-bold">Haji Furoda 2025 Haji Tanpa Antri/ Haji Prioritas dengan Visa Mujamalah (Program Langsung Pemerintah Arab Saudi)
+</span>
 					</p>
-					<p>Haji Furoda 2025 Prioritas Resmi! Kami menyediakan garansi uang kembali dan keberangkatan langsung tanpa
-						antri dengan Visa Haji Mujamalah, juga dikenal sebagai Visa Haji Furoda dari pemerintah Arab Saudi. Solusi
-						ini menawarkan keamanan dan kenyamanan dalam beribadah tanpa kekhawatiran terkait masalah hukum.
-					</p>
-					<p>
-						Haji Furoda 2025 Prioritas adalah layanan khusus Haji tanpa antrian dengan jaminan pengembalian uang 100%
-						jika Visa calon jamaah tidak disetujui atau tidak terbit. Setiap jamaah yang mendaftar akan mendapatkan
-						prioritas untuk memperoleh Visa Haji Resmi.
+					<p>Haji Khusus Tanpa Antre dengan <span class="font-bold">Visa Furoda</span> atau <span class="font-bold">Visa Mujamalah</span>, Resmi, dan
+						<span class="font-bold">Garansi Uang Kembali 100%</span>
+						apabila Visa Haji tidak terbit.
+
 					</p>
 					<p>
-						Jadikan kesempatan berhaji tanpa masa tunggu dengan program Haji Furoda 2025 Prioritas. Daftarkan segera,
-						Insha Allah, bisa berhaji pada tahun 2025. Aamiin Allahumma Aamiin.
+						<span class="font-bold">Haji Furoda 2025/1446 H</span> adalah program ibadah Haji khusus tanpa antre yang memberikan kemudahan bagi jamaah untuk melaksanakan ibadah Haji pada musim Haji mendatang.
+
+					</p>
+					<p>
+						Visa yang digunakan adalah visa resmi untuk melaksanakan ibadah Haji dan terdaftar di sistem Courtesy Hajj & Nusuk pemerintah Arab Saudi sebagai jamaah Haji. In syaa Allah aman dan penuh berkah.
 					</p>
 				</div>
 				<a
@@ -42,10 +41,19 @@
 					target="_blank"
 					class="contact py-4"
 				>
-					<button class="bg-blue-700 px-6 py-3 rounded-xl font-medium tracking-wide opensans text-white flex justify-center items-center gap-2">
-						Informasi Pendaftaran <div class="w-7 h-7">
-						<svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="0.8399999999999999" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-					</div>
+					<button
+						class="bg-blue-700 px-6 py-3 rounded-xl font-medium tracking-wide opensans text-white flex justify-center items-center gap-2">
+						Informasi Pendaftaran
+						<div class="w-7 h-7">
+							<svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+								<g id="SVGRepo_iconCarrier">
+									<path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="0.8399999999999999"
+												stroke-linecap="round" stroke-linejoin="round"></path>
+								</g>
+							</svg>
+						</div>
 					</button>
 				</a>
 			</div>

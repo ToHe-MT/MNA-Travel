@@ -10,21 +10,35 @@
 			<div class="w-full lg:px-0 min-w-[480px]">
 				<img src="/tentang-profile.svg" alt="" class="w-full">
 			</div>
-			<div class="grid gap-1 lg:pr-16 md:text-lg opensans">
+			<div class="grid gap-2 lg:pr-16 md:text-lg opensans">
 				<h1 class="text-blue-600 text-2xl font-semibold">MNA Profile</h1>
 				<p>
-					Bismillah, <br>
-					Assalammu ‘alaikum warohmatullahi wabarokatuh,
-				</p>
-				<p>Dengan jumlah penduduk muslim di Indonesia yang mencapai 200 juta jiwa, kami merasa bertanggung jawab untuk melayani tamu-tamu Allah dengan sebaik-baiknya. Walaupun ada banyak penyelenggara Haji dan Umroh lainnya yang juga berkomitmen memberikan pelayanan terbaik bagi seluruh Jemaah.
-				</p>
-				<p>
-					Pusat Haji Umroh Indonesia, yang memiliki domain internet pusathajiumroh.id, adalah sebuah Merk Dagang yang berada di bawah naungan Penyelenggara Perjalanan Ibadah Umroh (PPIU) resmi. Pusat ini sudah terdaftar di Sistem Informasi Manajemen dan Pelaporan Umrah (SIMPU) Kementerian Agama Republik Indonesia.
+					Tentunya, dengan semangat dan niat yang tulus, MNA Travel berupaya keras untuk memfasilitasi calon jamaah
+					dalam merencanakan perjalanan
+					<span class="font-bold">Ibadah Haji</span> dan <span class="font-bold">Umrah</span> dengan penuh ikhlas. MNA
+					Travel mengambil langkah-langkah konkret untuk memanfaatkan teknologi informasi sebagai alat utama dalam
+					menyediakan informasi yang akurat dan terpercaya mengenai
+					<span class="font-bold">Biaya Umrah 2024</span> dan <span class="font-bold">Haji Furoda 2025</span> . Melalui
+					platform online MNA Travel, para calon jamaah dapat dengan mudah mengakses berbagai paket
+					<span class="font-bold">Umrah Terbaik</span> , termasuk paket <span class="font-bold">Umrah Hemat</span> dan
+					Haji yang MNA Travel tawarkan.
+
 
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur. Proin sit adipiscing sapien ipsum quam eget. Tristique vulputate volutpat eu congue nam luctus turpis vitae morbi.
+				<p>MNA Travel berkomitmen untuk menjadi <span class="font-bold">Biro Umrah Terpercaya</span> yang tidak hanya
+					mengutamakan kemudahan akses, tetapi juga kualitas pelayanan yang tinggi. Dengan menghadirkan layanan online,
+					MNA Travel memastikan bahwa proses pendaftaran, pengurusan <span class="font-bold">Visa Haji</span> , dan
+					penyediaan
+					<span class="font-bold">Paket Umrah private
+										keluarga</span> dapat dilakukan dengan cepat dan efisien. Kepercayaan dari para tamu-tamu Allah
+					adalah modal utama
+					yang memandu MNA Travel dalam menjalankan setiap tahapan perjalanan ini.
 				</p>
+				<p>Dalam menjalankan amanah ini, MNA Travel tidak hanya berfokus pada aspek teknologi, tetapi juga pada
+					nilai-nilai keislaman yang MNA Travel junjung tinggi. MNA Travel memastikan bahwa setiap proses, mulai dari
+					<span class="font-bold">Harga Umrah 2024</span> hingga layanan travel Umrah terbaik di Indonesia, dilakukan dengan penuh kehati-hatian dan
+					tanggung jawab yang tinggi. Semoga upaya MNA Travel ini diberkahi dan menjadi sarana bagi para jamaah untuk
+					mencapai keberkahan dalam perjalanan spiritual mereka.</p>
 			</div>
 		</div>
 	</div>

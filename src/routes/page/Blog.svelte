@@ -8,10 +8,8 @@ export let blog = [{title:"asd",created_at:new Date(), slug:'/blog'},{title:"asd
 >
 	<div class="container mx-auto p-6">
 		<div class="text-white flex justify-center items-center flex-col">
-			<h3 class="text-center text-lg md:text-lg md-2 md:mb-2 syne font-semibold">Artikel</h3>
-			<h1 class="text-center text-lg md:text-xl tracking-wider mb-8 max-w-[600px]">
-				Lorem ipsum dolor sit amet consectetur. Dictumst cras sed dui eu.
-			</h1>
+			<h3 class="text-center text-white text-lg md:text-xl mb-6 md:mb-6 syne font-semibold">Artikel</h3>
+
 		</div>
 		<div
 			class="grid
