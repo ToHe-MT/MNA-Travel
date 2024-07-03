@@ -40,7 +40,7 @@
 
 </script>
 
-<div class="p-8 md:p-20 flex flex-col items-center justify-center md:gap-6 bg-blue-50/50 relative">
+<div class="p-5 md:p-20 flex flex-col items-center justify-center md:gap-6 bg-blue-50/50 relative">
 	<div class="grid gap-6 container mx-auto max-w-[860px]">
 		<h1 class="font-semibold text-xl md:text-2xl">Biaya Haji Furoda Prioritas</h1>
 		<p class="text-lg md:leading-8">Untuk tahun 2025, biaya Haji Furoda Prioritas yang kami tawarkan adalah sebesar
@@ -58,13 +58,13 @@
 			<tbody>
 			{#each data as item}
 				<tr class="even:bg-white odd:bg-slate-50 grid px-4 py-3 gap-0 sm:py-0 sm:px-0 sm:gap-0 sm:table-row ">
-					<td class="sm:py-3 px-4 lg:pr-10 font-semibold w-full sm:w-auto block sm:table-cell">{item.title}</td>
-					<td class="sm:py-3 px-4 w-full sm:w-auto block sm:table-cell">{item.text}</td>
+					<td class="sm:py-3 sm:px-4 lg:pr-10 font-semibold w-full sm:w-auto block sm:table-cell">{item.title}</td>
+					<td class="sm:py-3 sm:px-4 w-full sm:w-auto block sm:table-cell">{item.text}</td>
 				</tr>
 			{/each}
 			<tr class="even:bg-white odd:bg-slate-50 grid px-4 py-3 gap-1 sm:py-0 sm:px-0 sm:gap-0 sm:table-row ">
-				<td class="sm:py-3 px-4 lg:pr-10 font-semibold w-full sm:w-auto block sm:table-cell">Kuota</td>
-				<td class="sm:py-3 px-4 w-full sm:w-auto block sm:table-cell font-semibold text-blue-700">Tersedia</td>
+				<td class="sm:py-3 sm:px-4 lg:pr-10 font-semibold w-full sm:w-auto block sm:table-cell">Kuota</td>
+				<td class="sm:py-3 sm:px-4 w-full sm:w-auto block sm:table-cell font-semibold text-blue-700">Tersedia</td>
 			</tr>
 			</tbody>
 		</table>
