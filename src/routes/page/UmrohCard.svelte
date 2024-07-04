@@ -58,8 +58,8 @@
 				{#if paket.bonus && paket.bonus.length > 0}
 					{#each paket.bonus as item}
 						<li class="flex items-center gap-4 py-1 {idx===1?'text-white':'text-gray-500'}">
-														<span class="material-icons material-symbols-outlined {idx===1?'text-white':'text-blue-700'}" style="font-size: 32px">
-															check_box
+														<span class="material-icons material-symbols-outlined {idx===1?'text-white':'text-blue-700'}" style="font-size: 20px">
+															{item.logo}
 														</span>
 							{item.title}
 						</li>

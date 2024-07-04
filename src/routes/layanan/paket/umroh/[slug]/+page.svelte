@@ -267,7 +267,7 @@ console.log(data.info_paket.departure_from);
 			<div class="col-span-3 lg:col-span-2 flex flex-col gap-3 py-3">
 				<!-- ! Itinerary -->
 				{#if itinerari && itinerari.length > 0}
-					<AccordionIncluded title="Itinerary" className="px-0">
+					<AccordionIncluded title="Itinerary" className="px-0 w-full">
 						<div class="flex flex-col p-3 gap-2">
 							{#each itinerari as item}
 								<div class="flex gap-3">
@@ -279,7 +279,7 @@ console.log(data.info_paket.departure_from);
 					</AccordionIncluded>
 				{/if}
 				<!-- ! Persyaratan Umroh -->
-				<AccordionIncluded title="Persyaratan Umroh" className="px-0">
+				<AccordionIncluded title="Persyaratan Umroh" className="px-0 w-full">
 					<div class="bg-white w-full p-5">
 						<h1 class="text-xl font-bold mb-4">DP Umroh Minimal Rp 10.000.000 (Tahap 1)</h1>
 

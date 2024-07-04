@@ -5,6 +5,7 @@
 	import Pagination from '../../../../lib/components/Pagination.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import UmrohCardNew from '../../../page/UmrohCardNew.svelte';
 
 	export let data;
 	console.log("ASD");
@@ -204,9 +205,9 @@
 				class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-3"
 			>
 				{#each umroh as paket, idx}
-					<UmrohCard umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
-					<UmrohCard umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
-					<UmrohCard umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 				{/each}
 			</div>
 		{:else}

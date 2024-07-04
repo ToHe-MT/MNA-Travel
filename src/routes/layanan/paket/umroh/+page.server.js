@@ -80,12 +80,85 @@ export const load = async ({ url }) => {
 		const umroh = await umrohCollection.aggregate(pipeline).toArray();
 
 		const totalData = await umrohCollection.aggregate([{ $match: filter }]).toArray();
+		try {
+			for (const paket of umroh) {
+				const penginapan = db.collection('penginapan');
+				const hotels = await penginapan
+					.aggregate(
+						[
+							{
+								$match: {
+									schedule_id: paket.uuid
+								}
+							},
+							{
+								$lookup: {
+									from: 'hotel',
+									localField: 'hotel_id',
+									foreignField: 'hotel_id',
+									as: 'hotels'
+								}
+							},
+							{
+								$unwind: '$hotels'
+							},
+							{
+								$project: {
+									_id: 0,
+									hotels: {
+										name: 1,
+										city: 1,
+										country: 1,
+										link: 1,
+										address: 1,
+										star: 1
+									}
+								}
+							}
+						])
+					.toArray();
+				paket.hotels = hotels;
+			}
+		} catch (e) {
+			console.log(e);
+		}
+		try {
+			for (const paket of umroh) {
+				const flight = db.collection('flights');
+				const airlines = await flight
+					.aggregate(
 
-		console.log(umroh);
-		console.log(totalData);
-		console.log(limit);
-		console.log( Math.ceil(totalData.length / limit));
-		console.log(page);
+						[
+							{
+								"$match": {
+									"schedule_id": "KPUR6OBBF"
+								}
+							},
+							{
+								"$lookup": {
+									"from": "airlines",
+									"localField": "airline_id",
+									"foreignField": "airline_id",
+									"as": "airline_data"
+								}
+							},
+							{
+								"$unwind": "$airline_data"
+							},
+							{
+								"$project": {
+									"airline_label": "$airline_data.label",
+									"_id": 0
+								}
+							}
+						]
+					)
+					.toArray();
+				paket.airlines = airlines;
+			}
+		} catch (e) {
+			console.log(e);
+		}
 		return {
 			umroh,
 			limit,

@@ -4,6 +4,7 @@
 	export let umroh;
 	import { formatRupiah, capitalizeWords } from '$lib/function/format.js';
 	import UmrohCard from './UmrohCard.svelte';
+	import UmrohCardNew from './UmrohCardNew.svelte';
 </script>
 
 <div
@@ -18,12 +19,12 @@
 		</div>
 		<div
 			class="grid grid-cols-1 md:grid-cols-1 {umroh && umroh.length ? umroh.length : '2'}
-			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-1 gap-y-4 md:py-4"
+			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-6 gap-y-4 md:py-4 items-center"
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket}
 					{#each { length: 3 } as item,idx}
-						<UmrohCard paket={paket} {idx}/>
+						<UmrohCardNew paket={paket} {idx}/>
 					{/each}
 				{/each}
 			{/if}

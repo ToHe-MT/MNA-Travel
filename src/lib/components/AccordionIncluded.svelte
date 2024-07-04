@@ -12,12 +12,12 @@
 
 	export let title = 'TItle Please';
 
-	export let className = 'px-0 lg:px-6 w-full max-w-full';
+	export let className = "px-0 lg:px-6 w-full max-w-full";
 </script>
 
 <div class="mx-auto  rounded-xl bg-white {className}" {...$root}>
-	<div {...$item(title)} use:item class="overflow-hidden transition-colors">
-		<h2 class="flex">
+	<div {...$item(title)} use:item class="overflow-hidden transition-colors w-full">
+		<h2 class="flex w-full">
 			<button
 				{...$trigger(title)}
 				use:trigger

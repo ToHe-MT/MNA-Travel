@@ -17,6 +17,7 @@ function formatDateToIndonesian(date) {
 	});
 }
 function capitalizeWords(str) {
+	if( !str) return ""
 	str = str.toLowerCase()
 	return str
 		.split(' ')
@@ -26,4 +27,12 @@ function capitalizeWords(str) {
 		.join(' ');
 }
 
-export { formatRupiah, capitalizeWords, formatDateToIndonesian };
+function getDifferenceInDays(start, end) {
+	const startDate = new Date(start);
+	const endDate = new Date(end);
+	endDate.setDate(endDate.getDate() + 1); // Include the end date in the calculation
+	const difference = endDate - startDate;
+	return Math.ceil(difference / (1000 * 3600 * 24));
+}
+
+export { formatRupiah, capitalizeWords, formatDateToIndonesian,getDifferenceInDays };

@@ -38,21 +38,30 @@
 	let testimonials = [
 		{
 			picture_id: './testimoni-1.jpg',
-			description: 'umroh sama orang tua salah satu cita-cita saya, alhamdulillah bisa terwujud. Thank youuuu MNA TRAVEL'
+			description: 'Umroh sama orang tua salah satu cita-cita saya, alhamdulillah bisa terwujud. Thank youuuu MNA TRAVEL',
+			name: 'Ahmad Subagio',
+			occupation: 'Pengusaha'
 		},
 		{
 			picture_id: './testimoni-2.jpg',
-			description: "Udah nabung buat umroh dari pas sekolah, terus ga nyangka banget bisa terwujud. Happy bgt bisa umroh sama MNA travel🥹✨❤"
+			description: "Udah nabung buat umroh dari pas sekolah, terus ga nyangka banget bisa terwujud. Happy bgt bisa umroh sama MNA travel🥹✨❤",
+			name: 'Siti Nurhaliza',
+			occupation: 'Guru'
 		},
 		{
 			picture_id: './testimoni-3.jpg',
-			description: "Mashaallah aku seneng banget, udah bisa berangkat umroh di usia muda bareng MNA Travel, pilihan paketnya bener2 affordable buat anak2 muda"
+			description: "Mashaallah aku seneng banget, udah bisa berangkat umroh di usia muda bareng MNA Travel, pilihan paketnya bener2 affordable buat anak2 muda",
+			name: 'Lesti Rahman',
+			occupation: 'Mahasiswa'
 		},
 		{
 			picture_id: './testimoni-4.jpg',
-			description: "Alhamdulillah bisa umroh bareng Ibu, pelayanan dari MNA travel juga ok banget, semoga bisa balik lagi ke tanah suci✨"
+			description: "Alhamdulillah bisa umroh bareng Ibu, pelayanan dari MNA travel juga ok banget, semoga bisa balik lagi ke tanah suci✨",
+			name: 'Lina Aisyah',
+			occupation: 'Ibu Rumah Tangga'
 		},
 	];
+
 </script>
 
 <div
@@ -70,7 +79,7 @@
 				<div class="swiper-wrapper py-10">
 					{#each testimonials as item,idx}
 						<div class="swiper-slide md:p-0 h-[400px]">
-							<div class="flex w-full bg-white rounded-lg drop-shadow-md min-h-[400px]">
+							<div class="flex w-full bg-white rounded-lg drop-shadow-md h-[400px]">
 								<div class="w-[300px]">
 									<img src={item.picture_id} alt="" class="h-full w-auto rounded-l-lg object-cover">
 								</div>
@@ -96,8 +105,8 @@
 									</div>
 									<div class="flex items-center">
 										<div class="flex flex-col col-span-3">
-											<h3 class="font-semibold text-sm md:text-lg">Evangeline Dominica</h3>
-											<p class="text-sm md:text-base">Branding company</p>
+											<h3 class="font-semibold text-sm md:text-lg">{item.name}</h3>
+											<p class="text-sm md:text-base">{item.occupation}</p>
 										</div>
 									</div>
 								</div>
