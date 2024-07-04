@@ -19,7 +19,7 @@
 			Bersama <span class="text-blue-700 font-bold"> MNA&nbsp;Travel </span> Haji & Umroh Anda akan terlaksana dengan baik. 
 			</h1>
 		<a
-			href="https://wa.me/6282240406568"
+			href="https://wa.me/6282240406568?text={encodeURIComponent('Assalamualaikum, Saya ingin Mendaftar Paket Umroh')}"
 			target="_blank"
 			class="contact"
 		>

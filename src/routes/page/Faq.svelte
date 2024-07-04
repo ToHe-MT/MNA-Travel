@@ -11,7 +11,7 @@ import AccordionIncluded from '$lib/components/AccordionIncluded.svelte';
 		<div class="text-black flex justify-center items-center flex-col">
 			<h3 class="text-center text-blue-700 text-lg md:text-xl md-2 md:mb-2 syne font-semibold">FAQ</h3>
 			<h1 class="text-center text-lg md:text-2xl tracking-wide mb-8 max-w-[1000px]">
-				Lorem Ipsum Dolor Sir AMet
+				Frequently Asked Question
 			</h1>
 		</div>
 		<div class="flex flex-col gap-5 justify-center items-center flex-wrap py-6">
@@ -24,7 +24,7 @@ import AccordionIncluded from '$lib/components/AccordionIncluded.svelte';
 								 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam assumenda delectus dicta dolorem, doloribus eaque explicabo illo incidunt inventore magni maxime necessitatibus nesciunt obcaecati perferendis, repellendus saepe tempora voluptates.
 							 </p>
 						 </div>
-	 
+
 					 </div>
 				 </AccordionIncluded>
 			{/each}

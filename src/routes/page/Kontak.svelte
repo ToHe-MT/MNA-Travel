@@ -23,9 +23,8 @@
 				<div class="grid gap-1">
 					<h1 class="syne text-blue-500 font-semibold text-lg"> Kontak </h1>
 					<h1 class="text-2xl tracking-wide"> Get In Touch With Us</h1>
-					<p class="text-gray-700 tracking-wide">Lorem ipsum dolor sit amet consectetur. Netus commodo sapien varius in
-						arcu
-						condimentum</p>
+					<p class="text-gray-700 tracking-wide">
+						Kami akan merespon pesan anda secepat mungkin, segera hubungi kami dan booking umroh untuk perjalanan anda.</p>
 				</div>
 			</div>
 			<div class="flex flex-col gap-6 justify-start items-start w-full md:py-3">

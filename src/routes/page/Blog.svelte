@@ -1,6 +1,11 @@
 <script>
-import { formatDateToIndonesian } from '$lib/function/format.js';
-export let blog = [{title:"asd",created_at:new Date(), slug:'/blog'},{title:"asd",created_at:new Date(), slug:'/blog'},{title:"asd",created_at:new Date(), slug:'/blog'}];
+	import { formatDateToIndonesian } from '$lib/function/format.js';
+
+	export let blog = [{ title: 'asd', created_at: new Date(), slug: '/blog' }, {
+		title: 'asd',
+		created_at: new Date(),
+		slug: '/blog'
+	}, { title: 'asd', created_at: new Date(), slug: '/blog' }];
 </script>
 
 <div
@@ -36,12 +41,23 @@ py-10"
 							/>
 						{/if}
 
-						<div class="p-5 bg-white rounded-b-xl">
+						<div class="grid p-5 bg-white rounded-b-xl gap-4">
 							<h1 class="text-lg font-semibold">{item.title}</h1>
-							<p class="text-sm font-light">{formatDateToIndonesian(item.created_at)}</p>
-							<p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur. Malesuada nibh pellentesque nulla mus at purus. Lectus aliquam ut venenatis enim consectetur.</p>
-							<a href="/blog/{item.slug}" class="text-blue-700"> Baca Selengkapnya -></a>
-						</div>
+							<div><p class="text-sm font-light">{formatDateToIndonesian(item.created_at)}</p>
+								<p class="text-sm font-light">{item.title}.</p>
+							</div>
+							<a href="/blog/{item.slug}" class="text-blue-700 flex gap-1 justify-start items-center"> Baca Selengkapnya
+								<div class="w-6 h-6">
+									<svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+										<g id="SVGRepo_iconCarrier">
+											<path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="0.8399999999999999"
+														stroke-linecap="round" stroke-linejoin="round"></path>
+										</g>
+									</svg>
+								</div>
+							</a></div>
 					</div>
 				{/each}
 			{/if}

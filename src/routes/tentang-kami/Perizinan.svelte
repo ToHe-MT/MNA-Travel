@@ -8,7 +8,7 @@
 			<h3 class="text-start text-black text-xl md:text-3xl font-medium leading-relaxed">Lampiran Perizinan Resmi</h3>
 		</div>
 		<div class="grid gap-4 w-full justify-center items-center">
-			<img src="/tentang-izin.svg" alt="">
+			<img src="https://dummyimage.com/500x700/ffffff/000000&text=Izin" alt="">
 			<a
 				href="https://wa.me/6282240406568"
 				target="_blank"

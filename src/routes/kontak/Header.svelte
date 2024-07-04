@@ -13,8 +13,8 @@
 		</h1>
 		<div class="flex gap-3 justify-center items-center w-full text-blue-700">
 		<p class="text-lg">Beranda</p>
-			<div class="w-2 h-2 rounded-full bg-blue-700"> </div>
-		<p class="text-lg">Kontak</p>
+			<div class="w-1.5 h-1.5 rounded-full bg-blue-700"> </div>
+		<p class="text-lg">Blog</p>
 		</div>
 	</div>
 </div>

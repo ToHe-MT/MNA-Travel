@@ -30,7 +30,7 @@
 </svelte:head>
 
 <div
-  class=" relative flex items-center justify-center w-full bg-cover bg-center bg-white "
+  class=" relative flex items-center justify-center w-full bg-cover bg-center bg-white pt-16"
 >
   <div class="container mx-auto p-6 flex flex-col">
     <div class="grid lg:grid-cols-2 pb-10">
@@ -109,10 +109,10 @@
             src="{import.meta.env.VITE_S3_PUBLIC_URL}/blog/{images[0]
               .picture_id}"
             alt=""
-            class="rounded-t-xl w-full h-auto max-h-[500px]"
+            class="rounded-t-xl w-full"
           />
         {:else}
-          <img src="/Sementara.jpg" alt="" class="rounded-t-xl max-h-[500px]" />
+          <img src="/Sementara.jpg" alt="" class="rounded-t-xl w-full" />
         {/if}
       </div>
     </div>

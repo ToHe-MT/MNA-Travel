@@ -21,7 +21,7 @@
 			<button
 				{...$trigger(title)}
 				use:trigger
-				class="flex justify-between w-full cursor-pointer items-center bg-blue-200 px-4 py-2
+				class="flex justify-between w-full cursor-pointer items-center bg-blue-200 px-4 py-4
 				text-base font-medium leading-none text-gray-700 transition-colors hover:bg-blue-300 focus:!ring-0 focus-visible:text-magnum-800"
 			>
 				<h1>

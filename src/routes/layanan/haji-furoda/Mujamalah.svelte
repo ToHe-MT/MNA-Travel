@@ -37,7 +37,7 @@
 					</p>
 				</div>
 				<a
-					href="https://wa.me/6282240406568"
+					href="https://wa.me/6282240406568?text={encodeURIComponent('Assalamualaikum, Saya ingin dijelaskan tentang Informasi Pendaftaran Haji Furoda 2025')}"
 					target="_blank"
 					class="contact py-4"
 				>

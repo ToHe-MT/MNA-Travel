@@ -1,0 +1,58 @@
+<script>
+	import { formatDateToIndonesian } from '$lib/function/format.js';
+
+	export let data = []
+</script>
+
+<div
+	class="hero relative flex items-center justify-center w-full bg-cover bg-center bg-white py-12"
+>
+	<div class="container mx-auto p-6 flex flex-col gap-8">
+		<div
+			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 xl:px-12"
+		>
+			{#if data.blog && data.blog.length > 0}
+				{#each data.blog as item}
+					<div class="rounded-xl shadow-md drop-shadow bg-white">
+						{#if item.images && item.images.length > 0}
+							<img
+								src="{import.meta.env.VITE_S3_PUBLIC_URL}/blog/{item.images[0].picture_id}"
+								alt=""
+								class="rounded-t-xl"
+							/>
+						{:else}
+							<img
+								src="./hero.svg"
+								alt=""
+								class="rounded-t-xl"
+							/>
+						{/if}
+
+						<div class="grid p-5 bg-white rounded-b-xl gap-4">
+							<h1 class="text-lg font-semibold">{item.title}</h1>
+							<div><p class="text-sm font-light">{formatDateToIndonesian(item.created_at)}</p>
+								<p class="text-sm font-light">Lorem ipsum dolor sit amet consectetur. Malesuada nibh pellentesque nulla
+									mus at purus. Lectus aliquam ut venenatis enim consectetur.</p>
+							</div>
+							<a href="/blog/{item.slug}" class="text-blue-700 flex gap-1 justify-start items-center"> Baca Selengkapnya
+								<div class="w-6 h-6">
+									<svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+										<g id="SVGRepo_iconCarrier">
+											<path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="0.8399999999999999"
+														stroke-linecap="round" stroke-linejoin="round"></path>
+										</g>
+									</svg>
+								</div>
+							</a></div>
+					</div>
+				{/each}
+			{/if}
+			<div></div>
+		</div>
+		<!-- <div class="flex justify-end">
+			<Pagination />
+		</div> -->
+	</div>
+</div>

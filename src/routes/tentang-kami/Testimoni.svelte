@@ -19,10 +19,10 @@
 				prevEl: '.swiper-button-prev'
 			},
 			breakpoints: {
-				1000: {
+				1200: {
 					slidesPerView: 2
 				},
-				1300: {
+				1600: {
 					slidesPerView: 3
 				}
 			},
@@ -56,12 +56,12 @@
 </script>
 
 <div
-	class="testimoni hero relative flex items-center justify-center w-full bg-cover bg-center bg-white overflow-hidden"
+	class="testimoni hero relative flex items-center justify-center w-full bg-cover bg-center bg-gray-50 overflow-hidden"
 >
 	<div class="container mx-auto p-6 flex flex-col flex-grow py-12">
 		<div class="text-black flex justify-center items-center flex-col">
-			<h3 class="text-center text-blue-700 text-lg md:text-lg md-2 md:mb-2 syne font-semibold">Testimonial</h3>
-			<h1 class="text-center text-lg md:text-xl tracking-wider mb-2 max-w-[600px]">
+			<h3 class="text-center text-blue-700 text-lg md:text-xl md-2 md:mb-2 syne font-semibold">Testimonial</h3>
+			<h1 class="text-center text-lg md:text-2xl tracking-wide mb-8 max-w-[1000px]">
 				Client Review dan Feedback
 			</h1>
 		</div>
@@ -70,11 +70,11 @@
 				<div class="swiper-wrapper py-10">
 					{#each testimonials as item,idx}
 						<div class="swiper-slide md:p-0 h-[400px]">
-							<div class="flex w-full bg-white rounded-lg drop-shadow-md h-[400px]">
+							<div class="flex w-full bg-white rounded-lg drop-shadow-md min-h-[400px]">
 								<div class="w-[300px]">
 									<img src={item.picture_id} alt="" class="h-full w-auto rounded-l-lg object-cover">
 								</div>
-								<div class="w-full bg-white rounded-lg flex flex-col justify-between p-4 md:p-10 gap-4 h-full ">
+								<div class="w-full bg-white rounded-lg flex flex-col justify-between p-10 gap-4 h-full ">
 									<div class="py-6">
 										<svg
 											width="26"

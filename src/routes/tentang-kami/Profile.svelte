@@ -3,14 +3,14 @@
 </script>
 
 <div
-	class="hero relative flex items-center justify-center w-full bg-cover bg-center bg-white py-10"
+	class="hero relative flex items-center justify-center w-full bg-cover bg-center bg-white py-10 pt-16"
 >
-	<div class="container mx-auto p-6 flex flex-col gap-6 lg:gap-16 xl:px-24">
+	<div class="container mx-auto p-6 flex flex-col gap-4 xl:gap-6 xl:px-24" style="text-align: justify">
 		<div class="flex flex-col xl:flex-row gap-12 lg:gap-12 pt-12">
 			<div class="w-full lg:px-0 min-w-[480px]">
 				<img src="/tentang-profile.svg" alt="" class="w-full">
 			</div>
-			<div class="grid gap-2 lg:pr-16 md:text-lg opensans">
+			<div class="grid gap-2 md:text-lg opensans">
 				<h1 class="text-blue-600 text-2xl font-semibold">MNA Profile</h1>
 				<p>
 					Tentunya, dengan semangat dan niat yang tulus, MNA Travel berupaya keras untuk memfasilitasi calon jamaah
@@ -34,13 +34,14 @@
 					adalah modal utama
 					yang memandu MNA Travel dalam menjalankan setiap tahapan perjalanan ini.
 				</p>
-				<p>Dalam menjalankan amanah ini, MNA Travel tidak hanya berfokus pada aspek teknologi, tetapi juga pada
-					nilai-nilai keislaman yang MNA Travel junjung tinggi. MNA Travel memastikan bahwa setiap proses, mulai dari
-					<span class="font-bold">Harga Umrah 2024</span> hingga layanan travel Umrah terbaik di Indonesia, dilakukan dengan penuh kehati-hatian dan
-					tanggung jawab yang tinggi. Semoga upaya MNA Travel ini diberkahi dan menjadi sarana bagi para jamaah untuk
-					mencapai keberkahan dalam perjalanan spiritual mereka.</p>
+
 			</div>
 		</div>
+		<p class="md:text-lg opensans">Dalam menjalankan amanah ini, MNA Travel tidak hanya berfokus pada aspek teknologi, tetapi juga pada
+			nilai-nilai keislaman yang MNA Travel junjung tinggi. MNA Travel memastikan bahwa setiap proses, mulai dari
+			<span class="font-bold">Harga Umrah 2024</span> hingga layanan travel Umrah terbaik di Indonesia, dilakukan dengan penuh kehati-hatian dan
+			tanggung jawab yang tinggi. Semoga upaya MNA Travel ini diberkahi dan menjadi sarana bagi para jamaah untuk
+			mencapai keberkahan dalam perjalanan spiritual mereka.</p>
 	</div>
 
 
