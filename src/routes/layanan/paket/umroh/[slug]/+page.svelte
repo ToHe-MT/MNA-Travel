@@ -63,8 +63,10 @@ console.log(data.info_paket.departure_from);
 										<div
 											class="link property-gallery property-card__img flex justify-center items-center"
 										>
+<!--											src="../../../Sementara.jpg"-->
 											<img
-												src="../../../Sementara.jpg"
+												src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}"
+
 												alt="Foto Label"
 												class="img-fluid h-auto w-full"
 												style="object-fit: cover"
@@ -79,9 +81,9 @@ console.log(data.info_paket.departure_from);
 										<div
 											class="link property-gallery property-card__img flex justify-center items-center"
 										>
-											<!-- src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}" -->
+<!--												src="../../../Sementara2.jpg"-->
 											<img
-												src="../../../Sementara2.jpg"
+											 src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}"
 												alt="foto hotel"
 												class="img-fluid h-auto w-full"
 												style="object-fit: cover"
