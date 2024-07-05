@@ -22,10 +22,8 @@
 			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-6 gap-y-4 md:py-4 items-center"
 		>
 			{#if umroh && umroh.length > 0}
-				{#each umroh as paket}
-					{#each { length: 3 } as item,idx}
+				{#each umroh as paket,idx}
 						<UmrohCardNew paket={paket} {idx}/>
-					{/each}
 				{/each}
 			{/if}
 		</div>

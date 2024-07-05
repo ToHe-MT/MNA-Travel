@@ -206,8 +206,6 @@
 			>
 				{#each umroh as paket, idx}
 					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
-					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
-					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
 				{/each}
 			</div>
 		{:else}

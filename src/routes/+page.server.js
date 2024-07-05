@@ -29,7 +29,7 @@ export const load = async ({ url }) => {
 						type_flight:1,
 					}
 				},
-				{ $limit: 1 }
+				{ $limit: 3 }
 			])
 			.toArray();
 	} catch (error) {

@@ -18,7 +18,7 @@
 </script>
 
 <a href="/layanan/paket/umroh/{paket.slug}"
-	 class="hover:scale-105 transition-all drop-shadow-lg {idx===1?'border-blue-700 border-2 rounded-lg':''}">
+	 class="hover:scale-105 transition-all drop-shadow-lg {idx===1?'border-blue-700 border-2 rounded-lg h-max':''}">
 	{#if idx === 1 }
 		<div class="bg-blue-700 text-white p-4 flex text-center justify-center">
 			<h1> Paling Banyak Dipilih</h1>
@@ -47,7 +47,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="bg-white rounded-b-lg p-6 grid gap-4">
+	<div class="bg-white rounded-b-lg p-6 grid gap-4 h-max">
 		{#if paket.airlines && paket.airlines.length>0}
 			{#each paket.airlines.slice(1) as item}
 			<li class="flex items-center gap-4 text-black">
@@ -108,14 +108,23 @@
 		{/if}
 		{#if paket.bonus && paket.bonus.length > 0}
 			{#each paket.bonus as item}
+				{#if item.logo === ""}
 				<li class="flex items-center gap-4 text-black">
+					<img src="{import.meta.env.VITE_S3_PUBLIC_URL}/icon/{item.custom_icon}" alt="" height=18 width="18">
+
+					{@html item.title}
+				</li>
+				{:else}
+					<li class="flex items-center gap-4 text-black">
 																		<span
 																			class="material-icons material-symbols-outlined {idx===1?'text-black':'text-black'}"
 																			style="font-size: 18px">
 																			{item.logo}
 																		</span>
-					{item.title}
+
+					{@html item.title}
 				</li>
+				{/if}
 			{/each}
 		{/if}
 	</div>

@@ -50,7 +50,7 @@ export const load = async ({ url }) => {
 
 		const page = url.searchParams.get('page') ? url.searchParams.get('page') : 1;
 
-		const limit = 1;
+		const limit = 3;
 		const skip = (parseInt(page) - 1) * limit;
 
 		const umrohCollection = db.collection('schedule');
