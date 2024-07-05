@@ -7,10 +7,12 @@
 		</div>
 		<div class="grid gap-6 lg:pr-16 text-lg leading-relaxed text-white">
 			<p>
-				MNA Travel mempunyai kantor sendiri yang beralamat di Jl. Raya Condet No. 35, RT 5/RW 4, Batu Ampar, Kec. Kramat Jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta, 13530.
+				MNA Travel mempunyai kantor sendiri yang beralamat di Jl. Raya Condet No. 35, RT 5/RW 4, Batu Ampar, Kec. Kramat
+				Jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta, 13530.
 			</p>
 			<p>
-				Bagi yang berminat berangkat ke tanah suci bersama MNA Travel, juga dapat menghubungi kami melalui kontak yang tertera, dan juga kami membuka keagenan bagi seluruh masyarakat di Indonesia.</p>
+				Bagi yang berminat berangkat ke tanah suci bersama MNA Travel, juga dapat menghubungi kami melalui kontak yang
+				tertera, dan juga kami membuka keagenan bagi seluruh masyarakat di Indonesia.</p>
 		</div>
 		<div class="min-h-[400px] w-full">
 			<iframe

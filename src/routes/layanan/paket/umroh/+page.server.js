@@ -65,7 +65,12 @@ export const load = async ({ url }) => {
 					bonus: 1,
 					base_price: 1,
 					slug: 1,
-					uuid: 1
+					uuid: 1,
+					level_paket: 1,
+					departure_date: 1,
+					return_date: 1,
+					base_type: 1,
+					type_flight:1,
 				}
 			},
 			{ $skip: skip },

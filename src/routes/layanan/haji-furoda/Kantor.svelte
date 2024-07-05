@@ -13,18 +13,11 @@
 		<div class="grid gap-6 lg:pr-16 text-lg leading-relaxed">
 
 			<p>
-				Kami dari hajifuroda.id saat ini memiliki kantor di wilayah Pamulang, Tangerang Selatan, yang beralamat di Jl.
-				Candi Borobudur No. 1A, Pamulang, Tangerang Selatan. Alhamdulillah dengan adalanya layanan online melalui
-				website hajifuroda.id, kami tidak membatasi jamaah kami hanya untuk satu wilayah saja.
+				MNA Travel mempunyai kantor sendiri yang beralamat di Jl. Raya Condet No. 35, RT 5/RW 4, Batu Ampar, Kec. Kramat
+				Jati, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta, 13530.
 			</p>
-			<p>In Syaa Allah, dengan izin Allah, kami siap melayani seluruh jamaah yang tersebar di seluruh Nusantara,
-				Republik Indonesia. Kami memahami kekhawatiran para calon jamaah terhadap layanan online, terutama mengingat
-				biaya yang besar. Semoga Allah menjaga kami dari segala perilaku menyimpang dan merugikan, serta menjadikan
-				upaya kami sebagai bentuk pelayanan terbaik untuk tamu-tamu Allah yang mulia.</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur. Et tincidunt ac dui cum turpis aliquet. Urna molestie eget nibh erat.
-				Magna eleifend aliquam est sed tortor scelerisque. Bibendum consectetur mi ultrices phasellus amet magnis. Sem
-				aliquam risus sed tellus</p>
+			<p>Bagi yang berminat berangkat ke tanah suci bersama MNA Travel, juga dapat menghubungi kami melalui kontak yang
+				tertera, dan juga kami membuka keagenan bagi seluruh masyarakat di Indonesia.</p>
 		</div>
 	</div>
 </div>

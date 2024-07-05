@@ -9,6 +9,18 @@ const formatRupiah = (amount) => {
 	return formatter.format(amount);
 };
 
+const formatDollar = (amount) => {
+	const formatter = new Intl.NumberFormat('id-ID', {
+		style: 'decimal',
+		maximumFractionDigits: 0,
+		minimumFractionDigits: 0
+	});
+
+	// Format the amount with periods as thousands separators
+	let formattedAmount = '$'+formatter.format(amount);
+
+	return formattedAmount;
+};
 function formatDateToIndonesian(date) {
 	return date.toLocaleDateString('id-ID', {
 		day: 'numeric',
@@ -35,4 +47,4 @@ function getDifferenceInDays(start, end) {
 	return Math.ceil(difference / (1000 * 3600 * 24));
 }
 
-export { formatRupiah, capitalizeWords, formatDateToIndonesian,getDifferenceInDays };
+export { formatRupiah, capitalizeWords, formatDateToIndonesian,getDifferenceInDays, formatDollar };

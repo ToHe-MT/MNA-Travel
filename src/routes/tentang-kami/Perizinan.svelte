@@ -14,7 +14,7 @@
 				target="_blank"
 				class="contact py-4 flex items-center justify-center w-full"
 			>
-				<button class="bg-blue-700 px-6 py-3 rounded-xl font-medium tracking-wide opensans text-white flex justify-center items-center gap-2">
+				<button class="bg-gray-600 px-6 py-3 rounded-xl font-medium tracking-wide opensans flex justify-center items-center gap-2 text-gray-500" disabled>
 					Link SIMPU Kemenag <div class="w-7 h-7">
 					<svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="0.8399999999999999" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
 				</div>

@@ -1,17 +1,17 @@
 <script>
-	import { formatRupiah } from '$lib/function/format.js';
+	import { formatDollar } from '$lib/function/format.js';
 	import { goto } from '$app/navigation';
 
 	export let idx = 0;
 	export let paket = {
-		title: 'Umroh Premium',
-		base_price: 10_000_000,
+		title: 'Platinum',
+		base_price: 26_500,
 		bonus: [
-			{ title: 'Kereta Cepat' },
-			{ title: 'City Tour Thaif' },
-			{ title: 'Kunjungan Museum Wahyu' },
-			{ title: 'Albaik Chicken' },
-			{ title: 'Sertifikat Umroh' }
+			{ title: 'Hotel Mekkah Shofwa Tower/ Setaraf' },
+			{ title: 'Apartemen Transit' },
+			{ title: 'Maktab Mina VIP Zona 1' },
+			{ title: 'Hotel Madinah Dallah Taiba/ Setaraf' },
+			{ title: 'Flight By Saudia Airlines / Garuda Indonesia' }
 		],
 		slug: 'asdb'
 	};
@@ -38,9 +38,12 @@
 
 			<div class="py-4 flex flex-col gap-1">
 				<p class="{idx===1?'text-white':'text-gray-800'} text-sm">Harga mulai dari</p>
-				<p class="{idx===1?'text-white':'text-blue-700'} text-3xl font-semibold ">
-					{formatRupiah(paket.base_price)}
-				</p>
+				<div class="flex items-start gap-1">
+					<p class="{idx===1?'text-white':'text-blue-700'} text-3xl font-semibold ">
+						{formatDollar(paket.base_price)}
+					</p>
+					<p class="{idx===1?'text-white':'text-blue-700'} text-sm font-bold pt-1"> USD</p>
+				</div>
 			</div>
 			<div class="py-4">
 				<ul class="text-left mb-4 grid gap-2">
@@ -63,8 +66,9 @@
 		</div>
 		<div class="flex py-6 items-center justify-center h-full">
 			<button
+				disabled
 				on:click={() => {
-													goto(`/layanan/paket/umroh/${paket.slug}`);
+
 												}}
 				class="{idx===1?'bg-white text-blue-900 hover:bg-blue-200':'bg-blue-700 text-white hover:bg-blue-600'} w-full  px-4 py-2 rounded-xl  transition duration-300 font-semibold"
 			>Detail Paket

@@ -15,10 +15,9 @@
 		],
 		slug: 'asdb'
 	};
-	console.log(paket.airlines);
 </script>
 
-<a href="/layanan/paket/umroh/${paket.slug}"
+<a href="/layanan/paket/umroh/{paket.slug}"
 	 class="hover:scale-105 transition-all drop-shadow-lg {idx===1?'border-blue-700 border-2 rounded-lg':''}">
 	{#if idx === 1 }
 		<div class="bg-blue-700 text-white p-4 flex text-center justify-center">

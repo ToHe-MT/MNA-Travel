@@ -5,6 +5,7 @@
 	import NavBar from './layout/NavBar.svelte';
 	import 'material-icons/iconfont/filled.css';
 	import 'material-icons/iconfont/outlined.css';
+	import Analytics from './layout/Analytics.svelte';
 </script>
 
 <svelte:head>
@@ -15,6 +16,8 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+
+<Analytics/>
 <NavBar />
 <slot />
 <Footer />
