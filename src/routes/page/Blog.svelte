@@ -44,7 +44,7 @@ py-10"
 						<div class="grid p-5 bg-white rounded-b-xl gap-4">
 							<h1 class="text-lg font-semibold">{item.title}</h1>
 							<div><p class="text-sm font-light">{formatDateToIndonesian(item.created_at)}</p>
-								<p class="text-sm font-light">{item.title}.</p>
+								<p class="text-sm font-light">{item.deskripsi}</p>
 							</div>
 							<a href="/blog/{item.slug}" class="text-blue-700 flex gap-1 justify-start items-center"> Baca Selengkapnya
 								<div class="w-6 h-6">

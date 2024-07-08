@@ -1,7 +1,7 @@
 <script>
 	import Button from '$lib/button.svelte';
-	import { page } from '$app/stores';
 	import { writable } from 'svelte/store';
+	import { page } from '$app/stores';
 	import { createDropdownMenu, melt } from '@melt-ui/svelte';
 	import Modal from '../../lib/components/modal.svelte';
 
@@ -52,13 +52,13 @@
 		<div
 			class="justify-between hidden lg:flex transition-duration-75 text-black min-h-12"
 		>
-			<div class="image hidden lg:block">
+			<a class="image hidden lg:block" href="/">
 				<img
 					src="/logo-sky-long.png"
 					alt=""
 					class="h-16 w-auto object-cover py-2"
 				/>
-			</div>
+			</a>
 			<div class=" content flex justify-center align-middle gap-x-10 my-auto">
 				{#each dashboard.slice(0, 1) as item}
 					{#if item.type === 'normal'}

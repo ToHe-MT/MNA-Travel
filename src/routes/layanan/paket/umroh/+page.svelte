@@ -205,7 +205,7 @@
 				class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-3"
 			>
 				{#each umroh as paket, idx}
-					<UmrohCardNew umroh={umroh} {paket} {idx} link="/layanan/paket/umroh/" />
+					<UmrohCardNew umroh={umroh} {paket} link="/layanan/paket/umroh/" />
 				{/each}
 			</div>
 		{:else}
