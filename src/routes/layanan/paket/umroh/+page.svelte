@@ -121,7 +121,7 @@
 	<div class="absolute inset-0 bg-black/50 z-10"></div>
 	<div class="absolute inset-0 bg-blue-700/10 z-10"></div>
 	<div
-		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-2 md:gap-5 px-8 md:px-0 mt-16"
+		class="text-center text-white z-20 container lg:px-40 flex flex-col gap-4 md:gap-5 px-8 md:px-0 mt-16 py-12 md:py-0"
 	>
 		<h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold lg:tracking-wide">
 			Pengalaman Umrah Terbaik Menanti Anda

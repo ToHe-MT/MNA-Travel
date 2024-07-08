@@ -7,7 +7,7 @@
 >
 	<div class="container mx-auto p-6 flex flex-col gap-4 xl:gap-6 xl:px-24" style="text-align: justify">
 		<div class="flex flex-col xl:flex-row gap-12 lg:gap-12 pt-12">
-			<div class="w-full lg:px-0 min-w-[480px]">
+			<div class="w-full lg:px-0 md:min-w-[480px]">
 				<img src="/tentang-profile.svg" alt="" class="w-full">
 			</div>
 			<div class="grid gap-2 md:text-lg opensans">

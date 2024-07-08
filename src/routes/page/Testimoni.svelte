@@ -78,13 +78,13 @@
 			<div class="swiper card-slider">
 				<div class="swiper-wrapper py-10">
 					{#each testimonials as item,idx}
-						<div class="swiper-slide md:p-0 h-[400px]">
-							<div class="flex w-full bg-white rounded-lg drop-shadow-md h-[400px]">
-								<div class="w-[300px]">
-									<img src={item.picture_id} alt="" class="h-full w-auto rounded-l-lg object-cover">
+						<div class="swiper-slide md:p-0 sm:h-[400px]">
+							<div class="flex w-full flex-col sm:flex-row bg-white rounded-lg drop-shadow-md sm:h-[400px]">
+								<div class="w-full sm:w-[300px]">
+									<img src={item.picture_id} alt="" class="h-[250px] sm:h-full w-full sm:w-auto rounded-t-lg sm:rounded-l-lg object-cover">
 								</div>
 								<div class="w-full bg-white rounded-lg flex flex-col justify-between p-10 gap-4 h-full ">
-									<div class="py-6">
+									<div class="py-2 sm:py-6">
 										<svg
 											width="26"
 											height="24"

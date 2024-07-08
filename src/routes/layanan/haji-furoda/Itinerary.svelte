@@ -45,14 +45,14 @@
 			panduan untuk mengatur jadwal perjalanan, seperti cuti kerja atau perizinan lainnya. Semoga Allah memudahkan niat
 			Anda semua untuk berhaji tahun ini. Aamiin.</p>
 	</div>
-	<div class="w-full mx-auto mt-6 xl:px-24 container mx-auto overflow-x-auto">
+	<div class="w-full max-w-full mx-auto mt-6 xl:px-24 container overflow-x-auto">
 		<table class="min-w-full bg-white border border-gray-200 ">
 			<thead>
 			<tr>
 				<th rowspan="2" class="py-2 px-4 border border-gray-200 text-left">No</th>
 				<th rowspan="2" class="py-2 px-4 border border-gray-200 text-left">Hari</th>
 				<th colspan="2" class="py-2 px-4 border border-gray-200 text-left"><div class="flex justify-center items-center"> Tanggal </div></th>
-				<th rowspan="2" class="py-2 px-4 border border-gray-200 text-left">Keterangan</th>
+				<th rowspan="2" class="py-2 px-4 border border-gray-200 text-left min-w-[500px]">Keterangan</th>
 			</tr>
 			<tr>
 				<th class="py-2 px-4 border border-gray-200 text-left"><div class="flex justify-center items-center">2025 </div></th>

@@ -12,7 +12,7 @@
 
 		</div>
 		<div class="flex flex-col xl:flex-row gap-12 lg:gap-12">
-			<div class="w-full lg:px-0 min-w-[480px]">
+			<div class="w-full lg:px-0 md:min-w-[480px]">
 				<img src="/haji-furoda-kelebihan.svg" alt="" class="w-full">
 			</div>
 			<div class="grid gap-4 lg:pr-16 md:text-lg h-fit">

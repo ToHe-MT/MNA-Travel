@@ -24,7 +24,7 @@
 
 		</div>
 		<div class="flex flex-col lg:flex-row gap-y-4 gap-x-12 lg:gap-12">
-			<div class="w-full lg:px-0 min-w-[480px]">
+			<div class="w-full lg:px-0 md:min-w-[480px]">
 				<img src="/haji-furoda-hotel-1.svg" alt="" class="w-full">
 			</div>
 			<div class="grid gap-2 lg:pr-16 md:text-lg h-fit">
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col lg:flex-row gap-y-4 gap-x-12 lg:gap-12">
-			<div class="w-full lg:px-0 min-w-[480px]">
+			<div class="w-full lg:px-0 md:min-w-[480px]">
 				<img src="/haji-furoda-hotel-2.svg" alt="" class="w-full">
 			</div>
 			<div class="grid gap-2 lg:pr-16 md:text-lg h-fit">

@@ -48,35 +48,35 @@
 		{/if}
 	</div>
 	<div class="bg-white rounded-b-lg p-6 grid gap-4 h-max">
-		{#if paket.airlines && paket.airlines.length>0}
+		{#if paket.airlines && paket.airlines.length > 0}
 			{#each paket.airlines.slice(1) as item}
-			<li class="flex items-center gap-4 text-black">
+				<li class="flex items-center gap-4 text-black">
 																		<span
 																			class="material-icons material-symbols-outlined {idx===1?'text-black':'text-black'}"
 																			style="font-size: 18px">
 																			flight
 																		</span>
-				{item.airline_label} - {paket.type_flight}
-			</li>
-		{/each}
+					{item.airline_label} - {paket.type_flight}
+				</li>
+			{/each}
 		{/if}
 		{#if paket.base_type}
 
-		<li class="flex items-center gap-4 text-black">
+			<li class="flex items-center gap-4 text-black">
 																		<span
 																			class="material-icons material-symbols-outlined {idx===1?'text-black':'text-black'}"
 																			style="font-size: 18px">
 																			hotel
 																		</span>
-			{capitalizeWords(paket.base_type)}
-			{#if paket.base_type === "quad"}
-				Room (4 Orang)
-			{:else if paket.base_type === "double"}
-				Room (2 Orang)
-			{:else if paket.base_type === "triple"}
-				Room (3 Orang)
-			{/if}
-		</li>
+				{capitalizeWords(paket.base_type)}
+				{#if paket.base_type === "quad"}
+					Room (4 Orang)
+				{:else if paket.base_type === "double"}
+					Room (2 Orang)
+				{:else if paket.base_type === "triple"}
+					Room (3 Orang)
+				{/if}
+			</li>
 		{/if}
 		{#if paket.hotels && paket.hotels.length > 0}
 			{#each paket.hotels as item}
@@ -86,20 +86,16 @@
 						style="font-size: 18px">
 						apartment
 					</span>
-					<div class="flex gap-1">
-						<span>Hotel {capitalizeWords(item.hotels.countryc)}: {capitalizeWords(item.hotels.name)}</span>
-						<div class="flex gap-0 items-end">
-						{#each { length: parseInt(item.hotels.star) } as item}
-							<div>
+					<div class="gap-0">
 
+						<span>Hotel {capitalizeWords(item.hotels.country)}: {capitalizeWords(item.hotels.name)}</span>
+						<span class="pl-1">
+						{#each { length: parseInt(item.hotels.star) } as item}
 											<span
 												class="material-icons material-symbols-outlined text-yellow-200"
-												style="font-size: 18px">
-																			star
-																		</span>
-							</div>
+												style="font-size: 18px">star</span>
 						{/each}
-						</div>
+						</span>
 
 						/setaraf
 					</div>
@@ -109,11 +105,11 @@
 		{#if paket.bonus && paket.bonus.length > 0}
 			{#each paket.bonus as item}
 				{#if item.logo === ""}
-				<li class="flex items-center gap-4 text-black">
-					<img src="{import.meta.env.VITE_S3_PUBLIC_URL}/icon/{item.custom_icon}" alt="" height=18 width="18">
+					<li class="flex items-center gap-4 text-black">
+						<img src="{import.meta.env.VITE_S3_PUBLIC_URL}/icon/{item.custom_icon}" alt="" height=18 width="18">
 
-					{@html item.title}
-				</li>
+						{@html item.title}
+					</li>
 				{:else}
 					<li class="flex items-center gap-4 text-black">
 																		<span
@@ -122,8 +118,8 @@
 																			{item.logo}
 																		</span>
 
-					{@html item.title}
-				</li>
+						{@html item.title}
+					</li>
 				{/if}
 			{/each}
 		{/if}
