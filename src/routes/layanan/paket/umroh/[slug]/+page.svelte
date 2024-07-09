@@ -13,7 +13,12 @@
 	const flights = data.flights || [];
 	const hotel = data.penginapan || [];
 
-	import { formatRupiah, formatDateToIndonesian, capitalizeWords } from '$lib/function/format.js';
+	import {
+		formatRupiah,
+		formatDateToIndonesian,
+		capitalizeWords,
+		formatMonthToIndonesian
+	} from '$lib/function/format.js';
 
 	var swiper;
 	onMount(() => {
@@ -149,13 +154,22 @@
 							{#if paket.departure_date}
 								<div class="flex flex-col gap-0">
 									<h1 class="font-semibold">Departure Date</h1>
-									<p>{formatDateToIndonesian(paket.departure_date)}</p>
+									{#if paket.tipe_waktu == 'month'}
+										<p>{formatMonthToIndonesian(paket.departure_date)}</p>
+									{:else}
+										<p>{formatDateToIndonesian(paket.departure_date)}</p>
+									{/if}
+
 								</div>
 							{/if}
 							{#if paket.return_date}
 								<div class="flex flex-col gap-0">
 									<h1 class="font-semibold">Return Date</h1>
-									<p>{formatDateToIndonesian(paket.return_date)}</p>
+									{#if paket.tipe_waktu == 'month'}
+										<p>{formatMonthToIndonesian(paket.return_date)}</p>
+									{:else}
+										<p>{formatDateToIndonesian(paket.return_date)}</p>
+									{/if}
 								</div>
 							{/if}
 						</div>

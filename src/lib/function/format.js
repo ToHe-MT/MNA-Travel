@@ -28,6 +28,14 @@ function formatDateToIndonesian(date) {
 		year: 'numeric'
 	});
 }
+
+function formatMonthToIndonesian(date) {
+	return date.toLocaleDateString('id-ID', {
+		month: 'long',
+		year: 'numeric'
+	});
+}
+
 function capitalizeWords(str) {
 	if( !str) return ""
 	str = str.toLowerCase()
@@ -47,4 +55,4 @@ function getDifferenceInDays(start, end) {
 	return Math.ceil(difference / (1000 * 3600 * 24));
 }
 
-export { formatRupiah, capitalizeWords, formatDateToIndonesian,getDifferenceInDays, formatDollar };
+export { formatRupiah, capitalizeWords, formatDateToIndonesian,getDifferenceInDays, formatDollar, formatMonthToIndonesian};
