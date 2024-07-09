@@ -25,7 +25,7 @@
 <Profile/>
 <Video/>
 <VisiMisi/>
-<Perizinan/>
+<!--<Perizinan/>-->
 <Statistik/>
 <Testimoni/>
 <Kantor/>

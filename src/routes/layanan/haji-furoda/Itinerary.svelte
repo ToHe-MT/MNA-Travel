@@ -38,14 +38,14 @@
 	];
 </script>
 
-<div class="p-5 md:p-20 flex flex-col items-center justify-center md:gap-6 bg-blue-50 relative -z-50 ">
+<div class="p-5 md:p-20 flex flex-col items-center justify-center md:gap-6 bg-blue-50 -z-50 ">
 	<div class="grid gap-6 container mx-auto bg-blue-50 xl:px-24">
 		<h1 class="font-semibold text-xl md:text-2xl">Intinerary Haji Furoda</h1>
 		<p class="text-lg md:leading-8">Berikut ini adalah draf itinerary Haji Furoda 2024 yang dapat Anda gunakan sebagai
 			panduan untuk mengatur jadwal perjalanan, seperti cuti kerja atau perizinan lainnya. Semoga Allah memudahkan niat
 			Anda semua untuk berhaji tahun ini. Aamiin.</p>
 	</div>
-	<div class="w-full max-w-full mx-auto mt-6 xl:px-24 container overflow-x-auto">
+	<div class="xl:px-24 mx-auto mt-6 container overflow-x-auto">
 		<table class="min-w-full bg-white border border-gray-200 ">
 			<thead>
 			<tr>

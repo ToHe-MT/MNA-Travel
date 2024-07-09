@@ -34,8 +34,7 @@
 		});
 	});
 
-
-console.log(data.info_paket.departure_from);
+	console.log(data.info_paket);
 </script>
 
 {#if paket}
@@ -63,7 +62,7 @@ console.log(data.info_paket.departure_from);
 										<div
 											class="link property-gallery property-card__img flex justify-center items-center"
 										>
-<!--											src="../../../Sementara.jpg"-->
+											<!--											src="../../../Sementara.jpg"-->
 											<img
 												src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}"
 
@@ -81,9 +80,9 @@ console.log(data.info_paket.departure_from);
 										<div
 											class="link property-gallery property-card__img flex justify-center items-center"
 										>
-<!--												src="../../../Sementara2.jpg"-->
+											<!--												src="../../../Sementara2.jpg"-->
 											<img
-											 src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}"
+												src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}"
 												alt="foto hotel"
 												class="img-fluid h-auto w-full"
 												style="object-fit: cover"
@@ -93,16 +92,18 @@ console.log(data.info_paket.departure_from);
 								{/if}
 							{/each}
 						</div>
-						<div
-							class="swiper-button-prev property-gallery-slider__btn property-gallery-slider__btn-prev z-10"
-						>
-							<span class="material-icons">chevron_left</span>
-						</div>
-						<div
-							class="swiper-button-next property-gallery-slider__btn property-gallery-slider__btn-next z-10"
-						>
-							<span class="material-icons">chevron_right</span>
-						</div>
+						{#if images.length > 1}
+							<div
+								class="swiper-button-prev property-gallery-slider__btn property-gallery-slider__btn-prev z-10"
+							>
+								<span class="material-icons">chevron_left</span>
+							</div>
+							<div
+								class="swiper-button-next property-gallery-slider__btn property-gallery-slider__btn-next z-10"
+							>
+								<span class="material-icons">chevron_right</span>
+							</div>
+						{/if}
 					</div>
 				{:else}
 					<div class="min-h-[400px] w-full border flex justify-center items-center border-gray-400">
@@ -138,8 +139,8 @@ console.log(data.info_paket.departure_from);
 									<p>{paket.tour_guide}</p>
 								</div>
 							{/if}
-							
-							{#if paket.departure_from && paket.departure_from.length>0 && paket.departure_from[0].name}
+
+							{#if paket.departure_from && paket.departure_from.length > 0 && paket.departure_from[0].name}
 								<div class="flex flex-col gap-0">
 									<h1 class="font-semibold">Keberangkatan Dari</h1>
 									<p>{paket.departure_from[0].name} - {paket.departure_from[0].city}</p>
@@ -193,22 +194,22 @@ console.log(data.info_paket.departure_from);
 										{#if paket.hotel_price_quad}
 											<div>
 												Quad - 4 Person <span class="font-medium text-blue-500"
-													>{formatRupiah(paket.hotel_price_quad)}</span
-												>/pax
+											>{formatRupiah(paket.hotel_price_quad)}</span
+											>/pax
 											</div>
 										{/if}
 										{#if paket.hotel_price_triple}
 											<div>
 												Triple - 3 Person <span class="font-medium text-blue-500"
-													>{formatRupiah(paket.hotel_price_triple)}</span
-												>/pax
+											>{formatRupiah(paket.hotel_price_triple)}</span
+											>/pax
 											</div>
 										{/if}
 										{#if paket.hotel_price_quad}
 											<div>
 												Double - 2 Person <span class="font-medium text-blue-500"
-													>{formatRupiah(paket.hotel_price_double)}</span
-												>/pax
+											>{formatRupiah(paket.hotel_price_double)}</span
+											>/pax
 											</div>
 										{/if}
 									</div>
@@ -344,33 +345,35 @@ console.log(data.info_paket.departure_from);
 {/if}
 
 <style>
-	.material-icons {
-		font-size: 24px;
-		color: black;
-		font-weight: 100;
-	}
-	.swiper-button-prev,
-	.swiper-button-next {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 40px;
-		height: 40px;
-		background-color: rgba(255, 255, 255, 0.75);
-		color: black;
-		border-radius: 50%;
-		z-index: 10;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		border: none;
-	}
+    .material-icons {
+        font-size: 24px;
+        color: black;
+        font-weight: 100;
+    }
 
-	.swiper-button-prev {
-		left: 10px;
-	}
+    .swiper-button-prev,
+    .swiper-button-next {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: black;
+        border-radius: 50%;
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+    }
 
-	.swiper-button-next {
-		right: 10px;
-	}
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    .swiper-button-next {
+        right: 10px;
+    }
 </style>
