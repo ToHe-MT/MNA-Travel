@@ -14,7 +14,7 @@
 		<div class="text-black flex justify-center items-center flex-col">
 			<h3 class="text-center text-blue-700 text-lg md:text-xl md-2 md:mb-2 syne font-semibold">Paket Umroh</h3>
 			<h1 class="text-center text-lg md:text-2xl tracking-wide mb-8 max-w-[1000px]">
-				Paket Umroh September 2024
+				Paket Umroh Agustus - November 2024
 			</h1>
 		</div>
 		<div

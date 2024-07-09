@@ -70,7 +70,10 @@ export const load = async ({ url }) => {
 					departure_date: 1,
 					return_date: 1,
 					base_type: 1,
-					type_flight:1,
+					type_flight: 1,
+					tipe_waktu: 1,
+					duration: 1
+
 				}
 			},
 			{ $skip: skip },
@@ -132,28 +135,27 @@ export const load = async ({ url }) => {
 				const flight = db.collection('flights');
 				const airlines = await flight
 					.aggregate(
-
 						[
 							{
-								"$match": {
-									"schedule_id": "KPUR6OBBF"
+								'$match': {
+									'schedule_id': 'KPUR6OBBF'
 								}
 							},
 							{
-								"$lookup": {
-									"from": "airlines",
-									"localField": "airline_id",
-									"foreignField": "airline_id",
-									"as": "airline_data"
+								'$lookup': {
+									'from': 'airlines',
+									'localField': 'airline_id',
+									'foreignField': 'airline_id',
+									'as': 'airline_data'
 								}
 							},
 							{
-								"$unwind": "$airline_data"
+								'$unwind': '$airline_data'
 							},
 							{
-								"$project": {
-									"airline_label": "$airline_data.label",
-									"_id": 0
+								'$project': {
+									'airline_label': '$airline_data.label',
+									'_id': 0
 								}
 							}
 						]

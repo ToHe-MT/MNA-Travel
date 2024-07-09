@@ -15,6 +15,7 @@
 		],
 		slug: 'asdb'
 	};
+	console.log(paket);
 </script>
 
 <a href="/layanan/paket/umroh/{paket.slug}"
@@ -39,10 +40,15 @@
 					{formatRupiah(paket.base_price)}
 				</h2>
 				<h3 class="text-sm font-medium">
+					{#if paket.tipe_waktu === "month"}
+						{paket.duration}
+					{:else}
 					{getDifferenceInDays(
 						paket.departure_date,
 						paket.return_date
-					)} hari perjalanan - biaya <span class="font-semibold"> ALL IN</span>
+					)}
+					{/if}
+					hari perjalanan - biaya <span class="font-semibold"> ALL IN</span>
 				</h3>
 			</div>
 		{/if}

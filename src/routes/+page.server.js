@@ -27,7 +27,9 @@ export const load = async ({ url }) => {
 						return_date: 1,
 						base_type: 1,
 						type_flight:1,
-						priority: 1
+						priority: 1,
+						tipe_waktu: 1,
+						duration: 1
 					}
 				},
 				{ $sort: { priority: -1, base_price:1 } },
