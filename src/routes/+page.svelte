@@ -15,6 +15,7 @@
 	import Kontak from './page/Kontak.svelte';
 	import Partner from './page/Partner.svelte';
 	import Faq from './page/Faq.svelte';
+	import Video from './page/Video.svelte';
 
 	export let data;
 
@@ -35,6 +36,7 @@
 <!--<Pelayanan />-->
 <Umroh umroh={data.umroh} />
 <Layanan/>
+<Video/>
 <!--<Fasilitas />-->
 <!--<Flyer />-->
 <!--<Banner />-->
