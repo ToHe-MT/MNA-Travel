@@ -10,7 +10,7 @@
 		},
 		{
 			'title': 'Biaya Haji',
-			'text': '$20,000 (Silver) $24,000 (Gold) $28,000 (Platinum)'
+			'text': '$19,500 (Silver) $23,500 (Gold) $26,500 (Platinum)'
 		},
 		{
 			'title': 'Hotel Makkah',

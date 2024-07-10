@@ -14,7 +14,7 @@
 		</div>
 		<div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
 			<div class="w-full px-4 md:px-24 lg:px-0">
-				<img src="/haji-furoda-1.svg" alt="" class="w-full">
+				<img src="/haji-furoda-1.svg" alt="" class="w-full rounded-lg">
 			</div>
 			<div class="grid gap-4">
 				<div class="grid gap-4 lg:pr-16">

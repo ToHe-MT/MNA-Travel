@@ -20,9 +20,9 @@
 
 		<div class="grid gap-6">
 			<p class="md:text-lg leading-relaxed">
-				Lorem ipsum dolor sit amet consectetur. Phasellus mauris nam in netus fusce phasellus sollicitudin. Tincidunt
-				posuere nec in nec lobortis odio amet rhoncus laoreet. Mi tellus consequat varius a sem felis ac ullamcorper
-				sed. Arcu eleifend sapien augue egestas donec.</p>
+				Haji furoda adalah ibadah haji yang diatur dan dikelola oleh Pemerintah Arab Saudi secara langsung. Selain itu,
+				program haji furoda ini non kuota. Sehingga, waktu keberangkatan Jemaah tanpa perlu menunggu jadwal dari
+				Pemerintah Indonesia.</p>
 		</div>
 	</div>
 </div>

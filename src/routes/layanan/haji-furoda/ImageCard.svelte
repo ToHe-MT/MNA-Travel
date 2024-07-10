@@ -2,14 +2,14 @@
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper';
 	import { Navigation, Pagination } from 'swiper/modules';
-	import 'swiper/css'
+	import 'swiper/css';
 
 	export let images = [
-		{primary:true	},
-		{primary:false	},
-		{primary:true	},
-		{primary:false	},
-	]
+		{ primary: true },
+		{ primary: false },
+		{ primary: true },
+		{ primary: false }
+	];
 
 	var swiper;
 	onMount(() => {
@@ -36,19 +36,20 @@
 </script>
 
 {#if images && images.length > 0}
-	<div class="pakethaji swiper property-gallery-slider relative flex justify-center items-center w-full order-first lg:-order-none">
+	<div
+		class="pakethaji swiper property-gallery-slider relative flex justify-center items-center w-full order-first lg:-order-none">
 		<div class="swiper-wrapper flex content-center">
 			{#each images as image}
 				{#if image.primary === true}
 					<div class="swiper-slide" style="width: auto;">
 						<div
-							class="link property-gallery property-card__img flex justify-center items-center"
+							class="link property-gallery property-card__img flex justify-start items-center"
 						>
-<!--								src="../../../Sementara.jpg"-->
+							<!--								src="../../../Sementara.jpg"-->
 							<img
-								src="../../../haji-furoda-slider-1.svg"
+								src="../../../{image.picture_id}"
 								alt="Foto Label"
-								class="img-fluid  h-auto w-full rounded-lg"
+								class="img-fluid  h-auto w-auto rounded-lg  max-h-[500px]"
 								style="object-fit: cover"
 							/>
 						</div>
@@ -59,13 +60,13 @@
 				{#if image.primary === false}
 					<div class="swiper-slide" style="width: auto;">
 						<div
-							class="link property-gallery property-card__img flex justify-center items-center"
+							class="link property-gallery property-card__img flex justify-start items-center"
 						>
-							<!-- src="{import.meta.env.VITE_S3_PUBLIC_URL}/schedule/{image.picture_id}" -->
+							<!--								src="../../../Sementara.jpg"-->
 							<img
-								src="../../../haji-furoda-slider-2.svg"
-								alt="foto hotel"
-								class="img-fluid h-auto w-full rounded-lg"
+								src="../../../{image.picture_id}"
+								alt="Foto Label"
+								class="img-fluid  h-auto w-auto rounded-lg  max-h-[500px]"
 								style="object-fit: cover"
 							/>
 						</div>
@@ -73,17 +74,19 @@
 				{/if}
 			{/each}
 		</div>
-		<div
-			class="swiper-button-prev property-gallery-slider__btn property-gallery-slider__btn-prev z-10"
-		>
-			<span class="material-icons">chevron_left</span>
-		</div>
-		<div class="swiper-pagination flex absolute bottom-0 w-full justify-center items-center pb-5"></div>
-		<div
-			class="swiper-button-next property-gallery-slider__btn property-gallery-slider__btn-next z-10"
-		>
-			<span class="material-icons ">chevron_right</span>
-		</div>
+		{#if images && images.length > 1}
+			<div
+				class="swiper-button-prev property-gallery-slider__btn property-gallery-slider__btn-prev z-10"
+			>
+				<span class="material-icons">chevron_left</span>
+			</div>
+			<div class="swiper-pagination flex absolute bottom-0 w-full justify-center items-center pb-5"></div>
+			<div
+				class="swiper-button-next property-gallery-slider__btn property-gallery-slider__btn-next z-10"
+			>
+				<span class="material-icons ">chevron_right</span>
+			</div>
+		{/if}
 	</div>
 {:else}
 	<div class="min-h-[400px] w-full border flex justify-center items-center border-gray-400">
@@ -99,9 +102,10 @@
         color: inherit;
         font-weight: 100;
     }
+
     .swiper-button-prev,
     .swiper-button-next {
-				cursor: pointer;
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -118,8 +122,8 @@
     .swiper-button-prev {
         left: 10px;
         color: blue;
-				border: #5277DF 1px solid;
-				opacity: 50%;
+        border: #5277DF 1px solid;
+        opacity: 50%;
     }
 
     .swiper-button-next {

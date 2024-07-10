@@ -33,7 +33,7 @@
 <Biaya/>
 <Mengapa/>
 <Paket/>
-<PaketVIP/>
+<!--<PaketVIP/>-->
 <Kepastian/>
 <VisaGagal/>
 <VisaNonHaji/>
@@ -42,7 +42,7 @@
 <Kelemahan/>
 <Fasilitas/>
 <Motivasi/>
-<Itinerary/>
+<!--<Itinerary/>-->
 <Syarat/>
 <HajiMujamalah/>
 <Hotel/>
@@ -51,4 +51,4 @@
 <Kantor/>
 <Form/>
 <Daerah/>
-<Faq/>
+<!--<Faq/>-->

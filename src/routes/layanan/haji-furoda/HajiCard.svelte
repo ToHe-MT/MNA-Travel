@@ -32,7 +32,7 @@
 					<h2 class="text-2xl font-medium {idx===1?'text-white':'text-gray-900'}">
 						{paket.title}
 					</h2>
-					<p class="{idx===1?'text-white':'text-gray-700'}">Lorem ipsum dolor sit amet consectetur. Mauris nisl nam.</p>
+<!--					<p class="{idx===1?'text-white':'text-gray-700'}">Lorem ipsum dolor sit amet consectetur. Mauris nisl nam.</p>-->
 				</div>
 			</div>
 

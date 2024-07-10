@@ -14,7 +14,13 @@
 					{ title: 'Hotel Madinah Manazel Falah / Setaraf' },
 					{ title: 'Flight By Etihad / Oman Air / Qatar Airways' }
 				],
-				slug: 'asdb'
+				slug: 'asdb',
+				images: [
+					{
+						primary: true,
+						picture_id: 'haji-furoda-silver.svg'
+					}
+				]
 			},
 			{
 				title: 'Gold',
@@ -26,7 +32,13 @@
 					{ title: 'Hotel Madinah Manazel Falah / Setaraf' },
 					{ title: 'Flight By Saudia Airlines / Garuda Indonesia' }
 				],
-				slug: 'asdb'
+				slug: 'asdb',
+				images: [
+					{
+						primary: true,
+						picture_id: 'haji-furoda-gold.svg'
+					}
+				]
 			}, {
 				title: 'Platinum',
 				base_price: 26_500,
@@ -37,7 +49,13 @@
 					{ title: 'Hotel Madinah Dallah Taiba/ Setaraf' },
 					{ title: 'Flight By Saudia Airlines / Garuda Indonesia' }
 				],
-				slug: 'asdb'
+				slug: 'asdb',
+			images: [
+				{
+					primary: true,
+					picture_id: 'haji-furoda-platinum.svg'
+				}
+			]
 			}
 
 		]
@@ -60,7 +78,7 @@
 		{#each paket as item}
 			<div class="grid lg:grid-cols-2 gap-y-6 gap-x-10 xl:px-0">
 				<HajiCard paket="{item}" />
-				<ImageCard />
+				<ImageCard images="{item.images}" />
 			</div>
 		{/each}
 	</div>
