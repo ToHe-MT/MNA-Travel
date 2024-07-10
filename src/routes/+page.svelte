@@ -1,21 +1,21 @@
 <script>
-	import Banner from './page/Banner.svelte';
-	import Fasilitas from './page/Fasilitas.svelte';
-	import Floating from './layout/Floating.svelte';
-	import Gallery from './page/Gallery.svelte';
-	import Hero from './page/Hero.svelte';
-	import Pelayanan from './page/Pelayanan.svelte';
-	import Testimoni from './page/Testimoni.svelte';
-	import Umroh from './page/Umroh.svelte';
-	import Flyer from './page/Flyer.svelte';
-	import PopUp from './page/PopUp.svelte';
-	import Tentang from './page/Tentang.svelte';
-	import Layanan from './page/Layanan.svelte';
-	import Blog from './page/Blog.svelte';
-	import Kontak from './page/Kontak.svelte';
-	import Partner from './page/Partner.svelte';
-	import Faq from './page/Faq.svelte';
-	import Video from './page/Video.svelte';
+	import Banner from './(page)/Banner.svelte';
+	import Fasilitas from './(page)/Fasilitas.svelte';
+	import Floating from './(layout)/Floating.svelte';
+	import Gallery from './(page)/Gallery.svelte';
+	import Hero from './(page)/Hero.svelte';
+	import Pelayanan from './(page)/Pelayanan.svelte';
+	import Testimoni from './(page)/Testimoni.svelte';
+	import Umroh from './(page)/Umroh.svelte';
+	import Flyer from './(page)/Flyer.svelte';
+	import PopUp from './(page)/PopUp.svelte';
+	import Tentang from './(page)/Tentang.svelte';
+	import Layanan from './(page)/Layanan.svelte';
+	import Blog from './(page)/Blog.svelte';
+	import Kontak from './(page)/Kontak.svelte';
+	import Partner from './(page)/Partner.svelte';
+	import Faq from './(page)/Faq.svelte';
+	import Video from './(page)/Video.svelte';
 
 	export let data;
 

@@ -20,6 +20,7 @@
 		name="description"
 		content="MNA Travel | Pusat Umroh & Haji Indonesia memberikan solusi layanan penyelenggara Umroh & Haji yang ramah dan profesional bagi seluruh kaum Muslim."
 	/>
+	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
 </svelte:head>
 
 <Profile/>

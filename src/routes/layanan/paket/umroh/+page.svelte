@@ -5,7 +5,7 @@
 	import Pagination from '../../../../lib/components/Pagination.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import UmrohCardNew from '../../../page/UmrohCardNew.svelte';
+	import UmrohCardNew from '../../../(page)/UmrohCardNew.svelte';
 
 	export let data;
 	console.log("ASD");
