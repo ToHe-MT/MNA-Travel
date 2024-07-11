@@ -12,7 +12,7 @@
 
 	export let title = 'TItle Please';
 
-	export let className = "px-0 lg:px-6 w-full max-w-full";
+	export let className = 'px-0 lg:px-6 w-full max-w-full';
 </script>
 
 <div class="mx-auto  rounded-xl bg-white {className}" {...$root}>
@@ -24,10 +24,12 @@
 				class="flex justify-between w-full cursor-pointer items-center bg-blue-200 px-4 py-4
 				text-base font-medium leading-none text-gray-700 transition-colors hover:bg-blue-300 focus:!ring-0 focus-visible:text-magnum-800"
 			>
-				<h1>
-					{title}
-				</h1>
-				<div class="icon-wrapper relative inline-block w-6 h-6">
+				<div>
+					<h1 class="text-left leading-relaxed">
+						{title}
+					</h1>
+				</div>
+				<div class="icon-wrapper relative inline-block w-fit min-w-6 min-h-6">
 					<span
 						class="material-icons absolute inset-0 transition duration-300 {$isSelected(title)
 							? 'opacity-100 '
@@ -53,7 +55,7 @@
 </div>
 
 <style lang="postcss">
-	/* .content {
-		box-shadow: inset 0px 1px 0px theme('colors.neutral.300');
-	} */
+    /* .content {
+			box-shadow: inset 0px 1px 0px theme('colors.neutral.300');
+		} */
 </style>

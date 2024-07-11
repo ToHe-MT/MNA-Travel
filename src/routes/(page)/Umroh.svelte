@@ -19,7 +19,7 @@
 		</div>
 		<div
 			class="grid grid-cols-1 md:grid-cols-1 {umroh && umroh.length ? umroh.length : '2'}
-			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-6 gap-y-4 md:py-4 items-center"
+			 lg:grid-cols-3 {umroh && umroh.length ? umroh.length : '3'} gap-x-6 gap-y-6 md:py-4 items-center"
 		>
 			{#if umroh && umroh.length > 0}
 				{#each umroh as paket,idx}

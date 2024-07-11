@@ -83,11 +83,10 @@
 								<div class="w-full sm:w-[300px]">
 									<img src={item.picture_id} alt="" class="h-[250px] sm:h-full w-full sm:w-auto rounded-t-lg sm:rounded-l-lg object-cover">
 								</div>
-								<div class="w-full bg-white rounded-lg flex flex-col justify-between p-10 gap-4 h-full ">
-									<div class="py-2 sm:py-6">
+								<div class="w-full bg-white rounded-lg flex flex-col justify-between p-10 gap-6 h-full ">
+									<div class="py-2 sm:py-6 w-[20px] h-[16px] md:w-[26px] md:h-[24px]">
 										<svg
-											width="26"
-											height="24"
+
 											viewBox="0 0 26 24"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +98,7 @@
 										</svg>
 									</div>
 									<div>
-										<p class="text-black">
+										<p class="text-black text-sm md:text-base">
 											{item.description}
 										</p>
 									</div>

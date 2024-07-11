@@ -47,7 +47,7 @@
 	<div class="container mx-auto mt-10 lg:mt-20 px-5 sm:px-0">
 		<div class="flex justify-center items-center flex-col gap-2 pt-24">
 			<h6 class="font-semibold text-blue-700">{formatDateToIndonesian(paket.departure_date)}</h6>
-			<h1 class="text-4xl font-semibold text-center">{paket.title}</h1>
+			<h1 class="text-xl md:text-4xl font-semibold text-center">{paket.title}</h1>
 			<!-- <p class="w-full sm:w-full md:w-1/2 lg:w-1/3 text-center">
                 Lorem ipsum dolor sit amet consectetur. Eu congue sodales ac egestas a adipiscing imperdiet nulla. Tortor eu quis ut egestas arcu
             </p> -->
@@ -128,7 +128,7 @@
 						</div>
 					{/if}
 					<!-- ? Detail Paket -->
-					<div class="grid grid-cols-2 gap-">
+					<div class="grid md:grid-cols-2 gap-4">
 						<div class="flex flex-col gap-4">
 							{#if paket.title}
 								<div class="flex flex-col gap-0">
@@ -153,7 +153,7 @@
 							{/if}
 							{#if paket.departure_date}
 								<div class="flex flex-col gap-0">
-									<h1 class="font-semibold">Departure Date</h1>
+									<h1 class="font-semibold">Tanggal Keberangkatan</h1>
 									{#if paket.tipe_waktu == 'month'}
 										<p>{formatMonthToIndonesian(paket.departure_date)}</p>
 									{:else}
@@ -164,7 +164,7 @@
 							{/if}
 							{#if paket.return_date}
 								<div class="flex flex-col gap-0">
-									<h1 class="font-semibold">Return Date</h1>
+									<h1 class="font-semibold">Tanggal Kepulangan</h1>
 									{#if paket.tipe_waktu == 'month'}
 										<p>{formatMonthToIndonesian(paket.return_date)}</p>
 									{:else}
@@ -239,7 +239,7 @@
 				<!-- ! Included -->
 				{#if included && included.length > 0}
 					<!-- content here -->
-					<AccordionIncluded title="What's Included">
+					<AccordionIncluded title="Sudah Termasuk">
 						<div class="flex flex-col p-3 gap-2">
 							{#each included as item}
 								<div class="flex gap-5 justify-start items-center">
@@ -261,7 +261,7 @@
 				<!-- ! Not Included -->
 				{#if not_included && not_included.length > 0}
 					<!-- content here -->
-					<AccordionIncluded title="What's Not Included">
+					<AccordionIncluded title="Belum Termasuk">
 						<div class="flex flex-col p-3 gap-2">
 							{#each not_included as item}
 								<div class="flex gap-5 justify-start items-center">
@@ -292,6 +292,9 @@
 									<span>{capitalizeWords(item.route)}</span>
 								</div>
 							{/each}
+							<div class="flex gap-3">
+								<span class="font-bold">*NB : Itenary bisa berubah sewaktu-waktu</span>
+							</div>
 						</div>
 					</AccordionIncluded>
 				{/if}

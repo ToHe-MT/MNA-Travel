@@ -1,5 +1,18 @@
 <script>
-
+let youtube = [
+	{
+		id: "lcb45Iq0PiA",
+		desc: "Hotel Makkah"
+	},
+	{
+		id: "W3nNSMzb4Ds",
+		desc: "Hotel Madinah"
+	},
+	{
+		id: "HQl_fBlu4OQ",
+		desc: "Manfaat Niat dalam Ber-Ihram"
+	}
+]
 </script>
 
 <div
@@ -10,15 +23,18 @@
 			<h3 class="text-center text-black text-2xl md:text-4xl md-2 md:mb-2 font-semibold">Dokumentasi Ibadah Haji</h3>
 		</div>
 		<div class="grid md:grid-cols-3 gap-8">
-			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/lcb45Iq0PiA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			{#each youtube as item}
+			<div class="grid gap-1">
+				<div class="video">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/{item.id}" frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+				</div>
+				<div class="w-full flex items-center justify-center">
+					<h1 class="font-medium">{item.desc}</h1>
+				</div>
 			</div>
-			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/W3nNSMzb4Ds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/HQl_fBlu4OQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
+			{/each}
 		</div>
 	</div>
 </div>

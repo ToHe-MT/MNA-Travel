@@ -35,7 +35,7 @@
 				<div class="grid w-full lg:grid-cols-2 gap-6 h-fit">
 					<div class="grid w-full gap-2 h-fit">
 						<label for="name">Nama</label>
-						<input required bind:value={name} id="name" type="text" placeholder="Jane"
+						<input required bind:value={name} id="name" type="text" placeholder="Masukan Nama Anda"
 									 class="rounded-xl border border-gray-500/30">
 					</div>
 					<div class="grid w-full gap-2 h-fit">
@@ -46,7 +46,7 @@
 				</div>
 				<div class="grid w-full gap-2 h-fit">
 					<label for="message">Pertanyaan/Komentar</label>
-					<textarea required bind:value={komentar} id="message" placeholder="Enter your question or comment"
+					<textarea required bind:value={komentar} id="message" placeholder="Masukan Pertanyaan atau Komentar anda"
 										class="rounded-xl border border-gray-500/30"></textarea>
 				</div>
 				<div>

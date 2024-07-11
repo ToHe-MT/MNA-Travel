@@ -25,7 +25,7 @@
 			<h1> Paling Banyak Dipilih</h1>
 		</div>
 	{/if}
-	<div class=" {idx===1?'bg-blue-100':'rounded-t-lg bg-blue-900'} p-6 grid gap-6">
+	<div class=" {idx===1?'bg-blue-100':'rounded-t-lg bg-blue-900'} p-6 grid gap-3 md:gap-6">
 		{#if paket.level_paket}
 			<div class="bg-blue-500 px-6 py-2 w-fit">
 				<h1 class="text-white text-xs font-semibold">
@@ -33,27 +33,27 @@
 				</h1>
 			</div>
 			<div class="grid gap-2 {idx==1?'text-black':'text-white'}">
-				<h1 class="font-medium text-lg">
+				<h1 class="font-medium md:text-lg">
 					{capitalizeWords(paket.title)}
 				</h1>
-				<h2 class="text-3xl font-semibold">
+				<h2 class="text-2xl md:text-3xl font-semibold">
 					{formatRupiah(paket.base_price)}
 				</h2>
 				<h3 class="text-sm font-medium">
 					{#if paket.tipe_waktu === "month"}
 						{paket.duration}
 					{:else}
-					{getDifferenceInDays(
-						paket.departure_date,
-						paket.return_date
-					)}
+						{getDifferenceInDays(
+							paket.departure_date,
+							paket.return_date
+						)}
 					{/if}
 					hari perjalanan - biaya <span class="font-semibold"> ALL IN</span>
 				</h3>
 			</div>
 		{/if}
 	</div>
-	<div class="bg-white rounded-b-lg p-6 grid gap-4 h-max">
+	<div class="bg-white md:rounded-b-lg p-6 grid gap-3 md:gap-4 h-max text-sm">
 		{#if paket.airlines && paket.airlines.length > 0}
 			{#each paket.airlines.slice(1) as item}
 				<li class="flex items-center gap-4 text-black">
@@ -129,6 +129,9 @@
 				{/if}
 			{/each}
 		{/if}
+	</div>
+	<div class="flex justify-end md:hidden bg-white rounded-b-lg px-4 py-2">
+		<h1 class="text-gray-400 text-xs font-medium">Click for Details</h1>
 	</div>
 </a>
 <!--<div-->

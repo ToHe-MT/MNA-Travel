@@ -87,7 +87,7 @@
 	>
 		<div class="rounded-t-lg bg-blue-200 w-full">
 			<div class="flex justify-start items-center p-3 px-5">
-				<h1 class="text-lg font-medium">Booking Form</h1>
+				<h1 class="text-lg font-medium">Formulir Booking</h1>
 			</div>
 		</div>
 		<div class="bg-white rounded-b-lg">
