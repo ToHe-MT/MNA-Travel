@@ -26,7 +26,14 @@
 	import Daerah from './Daerah.svelte';
 	import Faq from './Faq.svelte';
 </script>
-
+<svelte:head>
+	<title>Haji Furoda 2024 | MNA Travel</title>
+	<meta
+		name="description"
+		content="Dapatkan informasi lengkap tentang paket Haji Furoda 2024 bersama MNA Travel. Pilih paket Haji dengan fasilitas terbaik dan bimbingan ibadah yang terpercaya untuk perjalanan suci Anda."
+	/>
+	<meta name="keywords" content="Haji Furoda 2024, Paket Haji Furoda 2024, Info Haji Furoda MNA Travel, Biaya Haji Furoda 2024, Jadwal Haji Furoda, Layanan Haji Furoda, Agen Haji Furoda, Travel Haji Furoda Terpercaya, Haji Furoda MNA Travel, Persiapan Haji Furoda" />
+</svelte:head>
 <Hero/>
 <Mujamalah/>
 <Dokumentasi/>

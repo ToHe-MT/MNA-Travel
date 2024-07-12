@@ -12,10 +12,14 @@ export const load = async ({ url }) => {
 				{ $match: filter },
 				{
 					$project: {
-						_id: 0,
-                        content_html:0,
+						_id: 0, content_html:0,
 					}
 				},
+				{
+					$sort: {
+						created_at: -1
+					}
+				}
 				// { $limit: 1 }
 			])
 			.toArray();

@@ -23,27 +23,28 @@
 </script>
 
 <svelte:head>
-	<title>MNA - Travel | Pelayanan Umroh Terbaik</title>
+	<title>MNA Travel | Travel Haji & Umroh Terbaik & Terpercaya Tahun 2024</title>
 	<meta
 		name="description"
-		content="Umroh Terbaik dan Terpercaya di Indonesia. ✔ Biaya Terjangkau, ✔ Profesional, ✔ Pasti Berangkat, ✔ Bonus City Tour Thaif, ✔ Bonus Haramian Express, ✔ Bonus Perlengkapan, ✔ Bonus Museum Wahyu, ✔ Bonus Ice Cream Uhud, ✔ Bonus Merchandise, ✔ Bonus Album Digital, ✔ Bonus Fotografer, ✔ Bonus Bus Daerah"
+		content="Temukan pengalaman Travel Haji & Umroh terbaik dan terpercaya tahun 2024 dengan MNA Travel. Dapatkan informasi tentang biaya Umroh 2024, Haji Furoda 2025, dan harga Umroh 2025. Nikmati layanan Umroh Plus Turki dan biro Umroh terpercaya untuk paket Umroh murah dan hemat, serta layanan Umroh private keluarga dengan proses visa Haji Furoda yang mudah. Bergabunglah dengan kami untuk doa Umroh yang tulus dan pengalaman Haji Umroh resmi yang tak terlupakan."
 	/>
-	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
+	<meta name="keywords" content="Biaya Umroh 2024, Haji Furoda 2025, Harga Umroh 2025, Umroh Plus Turki, Biro Umroh Terpercaya, Paket Umroh Murah, Travel Umroh Terbaik, Umroh Hemat, Harga Haji Furoda, Travel Umroh Jateng, Visa Haji Furoda, Doa Umroh, Biaya Haji Plus, Umroh Private Keluarga, Haji Umroh Resmi
+" />
 </svelte:head>
 
 <Hero />
-<Tentang/>
+<Tentang />
 <!--<Pelayanan />-->
 <Umroh umroh={data.umroh} />
-<Layanan/>
-<Video/>
+<Layanan />
+<Video />
 <!--<Fasilitas />-->
 <!--<Flyer />-->
 <!--<Banner />-->
 <Testimoni />
 <Gallery />
-<Blog blog={data.blog}/>
-<Kontak/>
-<Faq/>
-<Partner/>
+<Blog blog={data.blog} />
+<Kontak />
+<Faq />
+<Partner />
 <!--<PopUp/>-->

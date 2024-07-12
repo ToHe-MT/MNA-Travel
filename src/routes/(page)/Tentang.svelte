@@ -14,7 +14,9 @@
 			<!-- <p class="text-gray-700">Menyediakan layanan Umroh yang profesional, aman, dan nyaman bagi seluruh jamaah
 			</p> -->
 			<p class="text-gray-500 max-w-[900px] leading-relaxed text-sm md:text-base">
-				Jumlah penduduk muslim di Indonesia yang mencapai 200 juta menjadi amanah besar bagi kami sebagai fasilitator para tamu Allah yang mulia. Meskipun banyak penyelenggara Haji Khusus dan Umrah yang juga berkomitmen untuk memberikan pelayanan terbaik bagi seluruh jamaahnya, MNA Travel hadir bersama mitra-mitra terbaik untuk memberikan solusi layanan penyelenggaraan Haji Khusus dan Umrah bagi seluruh kaum muslimin dengan niat tulus sebagai fasilitator terbaik bagi para tamu Allah yang mulia. Semoga ini menjadi ladang pahala bagi kami semua. Aamiin Allahumma Aamiin.
+				Jumlah penduduk <b>muslim di Indonesia</b> yang mencapai 200 juta menjadi amanah besar bagi kami sebagai fasilitator para
+				<b>tamu Allah yang mulia</b>. Meskipun banyak penyelenggara <b>Haji Khusus dan Umrah</b> yang juga berkomitmen untuk memberikan pelayanan terbaik bagi seluruh jamaahnya, MNA Travel hadir bersama mitra-mitra terbaik untuk memberikan solusi layanan penyelenggaraan
+				<b>Haji Khusus dan Umrah</b> bagi seluruh kaum muslimin dengan niat tulus sebagai fasilitator terbaik bagi para tamu Allah yang mulia. Semoga ini menjadi ladang pahala bagi kami semua. Aamiin Allahumma Aamiin.
 			</p>
 
 			<a

@@ -7,12 +7,12 @@
 </script>
 
 <svelte:head>
-	<title>MNA Travel | Penyelenggara Umroh & Haji Profesional Indonesia</title>
+	<title>Blog | MNA Travel</title>
 	<meta
 		name="description"
-		content="MNA Travel | Pusat Umroh & Haji Indonesia memberikan solusi layanan penyelenggara Umroh & Haji yang ramah dan profesional bagi seluruh kaum Muslim."
+		content="Baca blog MNA Travel untuk informasi terbaru seputar Umroh, Haji, dan destinasi wisata religi. Temukan tips perjalanan dan cerita inspiratif untuk persiapan ibadah Anda."
 	/>
-	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
+	<meta name="keywords" content="Blog MNA Travel, Tips Umroh, Informasi Umroh Terbaru, Destinasi Wisata Religi, Cerita Umroh, Panduan Haji, Travel Haji dan Umroh, Artikel Umroh MNA Travel, Inspirasi Umroh, Panduan Wisata Religi" />
 </svelte:head>
 
 <Header/>

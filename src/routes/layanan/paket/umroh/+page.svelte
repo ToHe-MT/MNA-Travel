@@ -106,12 +106,12 @@
 </script>
 
 <svelte:head>
-	<title>MNA - Travel | Layanan Paket Umrah</title>
+	<title>Paket Umroh | MNA Travel</title>
 	<meta
 		name="description"
-		content="Paket Biaya dan Jadwal Umroh Murah Terbaru 2024 - 2025 1446H, ✔Harga Realistis ✔Pesawat Direct ✔Jaminan 100% Berangkat"
+		content="Temukan berbagai pilihan paket Umroh terbaik dengan MNA Travel. Dapatkan layanan istimewa dan bimbingan ibadah yang terpercaya untuk perjalanan ibadah Anda."
 	/>
-	<meta name="keywords" content="Umroh, Travel, Pelayanan Umroh, Umroh Terbaik, MNA Travel" />
+	<meta name="keywords" content="Paket Umroh, Paket Umroh Terbaik, Harga Paket Umroh, Layanan Umroh MNA Travel, Info Paket Umroh, Paket Umroh 2024, Agen Paket Umroh, Travel Umroh Terpercaya, Paket Umroh Ekonomis, Paket Umroh Premium" />
 </svelte:head>
 
 <div

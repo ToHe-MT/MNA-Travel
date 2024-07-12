@@ -84,11 +84,13 @@
 						</a>
 					</div> -->
 				</div>
+				<h1 class="font-semibold">
+					MNA Travel Umroh & Haji
+
+				</h1>
 				<p>
-					Travel umroh dan haji MNA Travel, merupakan salah satu travel sunnah yang memberikan
-					bimbingan ibadah umroh dan haji sesuai sunnah Rasulullah juga pembimbing ustadz-ustadz
-					sunnah.
-				</p>
+					Mengantarkan Anda menuju perjalanan suci dengan pelayanan terbaik. Kami hadir untuk memudahkan ibadah Anda
+					dengan paket Umroh dan Haji yang terpercaya dan berpengalaman. </p>
 			</div>
 			<div class="flex flex-col xl:flex-row gap-12 lg:gap-6 py-12">
 				<div class="flex flex-col gap-2 min-w-48">
@@ -103,19 +105,19 @@
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">email</span>
 						<a href="mailto:cs@mnatravel.com" target="_blank" class="hover:text-blue-700"
-							>cs@mnatravel.com</a
+						>cs@mnatravel.com</a
 						>
 					</div>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">phone</span>
 						<a href="https://wa.me/6282240406568" target="_blank" class="hover:text-blue-700"
-							>+62 822-4040-6568</a
+						>+62 822-4040-6568</a
 						>
 					</div>
 					<div class="flex items-center">
 						<span class="material-icons mr-2 text-blue-700">phone</span>
 						<a href="https://wa.me/6282240406569" target="_blank" class="hover:text-blue-700"
-							>+62 822-4040-6569</a
+						>+62 822-4040-6569</a
 						>
 					</div>
 					<div class="flex items-center">
@@ -124,7 +126,7 @@
 							href="https://maps.app.goo.gl/zn92phrH1Uyebe117"
 							target="_blank"
 							class="hover:text-blue-700"
-							>Jl. Raya Condet No.35, RT.5/RW.4, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,
+						>Jl. Raya Condet No.35, RT.5/RW.4, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,
 							Daerah Khusus Ibukota Jakarta 13530
 						</a>
 					</div>
